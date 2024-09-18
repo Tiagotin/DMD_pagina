@@ -1,0 +1,311 @@
+* {
+    padding: 0; 
+    margin: 0;
+}
+
+:root {
+    --font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --rojo-pantone: #9d034f; /* Pantone 200 C */
+    --azul-pantone: #146597; /* Pantone 7462 C */
+    --blanco: #fff;
+    --rojo: #cc0000;
+    --fondo-header: #20507a;
+    --fondo-nav: #fff;
+    --fondo-spantext: #799fbf;
+    --fcolor-desc-spantext: #001d36;
+    --fondo-desc: #d7e6ee;
+    --fcolor-desc-h4text: #296599;
+    --fondo-productos-h1: #292d99;
+    --fondo-footer: #142497;
+    --border-footer: #1919bb;
+    --gris-pantone: #607387; /* Pantone Cool Gray 5 C */
+    --nplx-img: 500px;
+}
+
+body {
+    margin: 0; 
+    padding: 0; 
+    font-family: var(--font-system); 
+    background-color: var(--blanco);     
+}
+
+
+
+
+
+
+.bgParallax {
+    background: url(../img/nosotros/img1.webp);
+    /*background-color: #eee;*/
+    height: 260px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+section.noParallax {
+    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
+    padding: 40px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.noParallax img {
+    width: var(--nplx-img);
+    height: auto;
+    object-fit: cover;
+}
+
+.noParallax .text {
+    width: calc(100% - (var(--nplx-img) + 60px));
+    margin: 0 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.noParallax .text h1, .noParallax .text h2 {
+    font-size: 2rem;
+    color: var(--fcolor-desc-h4text);
+}
+
+.noParallax .text span {
+    font-size: 1rem;
+    color: var(--fcolor-desc-spantext);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+.trayectoria{
+    
+    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+section.trayectoria #titulo h3{
+    
+    color: white;
+    background-color: #24659C;
+    padding: 10px 20px;
+    font-size: 2rem;
+    text-align: center;
+    
+}
+
+.trayectoria .contenido{
+    display: flex; flex-wrap: wrap;
+    margin: 0 70px ;
+}
+
+
+
+.trayectoria .contenido aside{
+    display: flex; flex-direction: column;
+    padding-bottom: 50px;
+}
+
+
+.trayectoria .contenido #aside1{
+    width: 40%;
+    border-right: #24659C solid 5px; color: var(--azul-pantone);
+    padding-right: 40px;
+    align-items: center;
+}
+
+
+
+.trayectoria .contenido #aside1 img{
+    width: 120px;
+    padding: 15px 0 5px;
+}
+.trayectoria .contenido #aside1 span#trayectoria{
+    background-color: var(--azul-pantone);
+    font-size: 1.5rem; font-weight: 700; text-align: center; color: #fff;
+    padding: 5px 10px; margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+
+
+.trayectoria .contenido #aside1 h1{
+    background: none; 
+    text-align: center; font-size: 1.8rem; font-weight: bold; color: #1c4e7a;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 0 15px; margin: 0;    
+}
+
+.trayectoria .contenido  #aside1 hr{
+    width: 90%;
+    margin: 20px auto;
+    color: var(--azul-pantone);
+}
+
+.trayectoria .contenido  #aside1 span{    
+    margin: 0 50px ;
+    text-align: center; font-size: 1.2rem; font-weight: 800; color: var(--azul-pantone);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+.trayectoria .contenido  aside#aside2{
+    flex: 1;
+    padding: 10px;
+    display: flex; flex-direction: column; align-items: center;
+}
+
+.trayectoria .contenido  aside#aside2 .compromiso{
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center; color: #3b7936; font-size: 1.1rem; font-weight: 700;  
+    padding: 15px 0 5px;
+}
+.trayectoria .contenido  aside#aside2 .compromiso img{width: 100px;}
+
+
+.trayectoria  .contenido aside#aside2 h4{
+    color: #fff; text-align: center; font-size: 1rem; font-weight: 600; 
+    width: 90%;
+    margin: 15px 0; padding: 8px;
+    background-color: #3b7936;
+}
+
+
+
+.trayectoria .contenido  #aside2 hr{
+    color: #3b7936; width: 90%;
+    margin: 20px auto;
+}
+
+
+
+.trayectoria  .contenido aside#aside2 h1{
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif; color: #176b10;
+    text-align: center; font-size: 1.8rem; font-weight: 800;
+    width: 85%;
+}
+.trayectoria .contenido  #aside2 span{    
+    margin: 0 50px;
+    font-family: Arial, Helvetica, sans-serif; color: #077a07;
+    font-size: 1.2rem; text-align: center; font-weight: 800;
+}
+
+
+.logros{
+    background-color: #24659c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.logros img{
+    width: 100px;
+    padding: 5px 0 10px;
+}
+
+.logros h3{
+    background-color: #a01f24;
+    color: #fff; font-weight: 500; font-size: 1.2rem;
+    text-align: center;
+    padding: 8px 15px;
+    border-radius: 25px;
+    margin: 0 0 25px;
+}
+
+.logros #resultados{
+    display: flex;
+    gap: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0 100px;
+}
+.logros #resultados hr{color: #fff;}
+
+.logros #resultados .cifras{ 
+    color: #fff; text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.logros #resultados .cifras p{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.logros #resultados .cifras span{
+    font-weight: 500;
+    font-size: 1.0.5em;
+}
+@media (max-width: 1200px) {
+    section.noParallax {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    .noParallax img {
+        width: 300px; height: auto;
+    }
+
+    .noParallax .text {width: 100%;}
+
+    .noParallax .text h1, .noParallax .text h2 {font-size: 1.5rem;}
+
+    .noParallax .text span {font-size: 0.9rem;}
+
+    
+    
+
+    section.trayectoria #titulo h3{font-size: 1.5rem;}
+
+    .trayectoria .contenido{
+        flex-wrap: nowrap; flex-direction: column; 
+        align-items: center;
+        padding-bottom: 30px;
+        
+    }
+
+    .trayectoria .contenido #aside1{
+        padding: 0 0 30px; margin: 0 25px;
+        border: none; border-bottom: #24659C solid;
+        width: 100%;
+    }
+
+        
+    .trayectoria .contenido  #aside1 span{margin: 0 10px;}
+    .trayectoria .contenido  #aside2 span{margin: 20px 10px;}
+
+    
+    .logros #resultados{
+        flex-direction: column;  
+        width: 70%;  
+        
+    }
+    logros #resultados .cifras{
+    }
+}

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/componentes/header.css">
+    <link rel="stylesheet" href="assets/css/componentes/footer.css">
+    <link rel="icon" href="assets/img/image001 (copia 1).png">
+    <title> DMD</title>
+</head>
+<body>
+
+<!--------------- Header y Nav----------------------------------------->
+    <header>
+        <span id="email">info@dmdcompresores.com</span>
+        <div id="rLogos">
+            <i class="fa-brands fa-linkedin logos" data-url="https://www.linkedin.com/company/dmd-compresores/"></i>
+            <i class="fa-brands fa-whatsapp logos" data-url="https://wa.me/1159380579"></i>
+            <i class="fa-brands fa-facebook-f logos" data-url="https://www.facebook.com/DMDCOMPRESORES"></i>
+            <i class="fa-brands fa-instagram logos" data-url="https://www.instagram.com/dmdcompresores/"></i>
+        </div>
+    </header>
+
+    <nav>
+
+        <div class="dmdLogo"><img id="dmdLogo" src="assets/img/logo2.png" alt="DMD Logo"></div>
+        
+        <div class="navText">
+            <!--<i class="fa-solid fa-bars" id="navList"></i>-->
+            <p class="aText" id="inicio">Inicio</p>
+            <p class="aText" id="nosotros">Nosotros</p>
+            <p class="aText" id="contacto">Contacto</p>
+        </div>
+
+    </nav>
+    
+<!-------------------------------------------------------------------------------------------------->
+
+<!------------ Carrusel imagenes dmd --------------------------------------------------->
+
+    <div class="Carousel">
+        
+        <div class="slides">
+            <div class="content active">
+                <article>
+                    <h1>Contenido 1</h1>
+                </article>
+            </div>
+            <div class="content">
+                <article>
+                    <h1>Contenido 2</h1>
+                </article>
+            </div>
+            <div class="content">
+                <article>
+                    <h1>Contenido 3</h1>
+                </article>
+            </div>
+            <div class="content">
+                <article>
+                    <h1>Contenido 4</h1>
+                </article>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <span class="next">&#10095;</span>
+            <span class="prev">&#10094;</span>
+        </div>
+
+        <div class="dotsContainer">
+            <div class="dot active" attr='0' onclick="switchImage(this)"></div>
+            <div class="dot" attr='1' onclick="switchImage(this)"></div>
+            <div class="dot" attr='2' onclick="switchImage(this)"></div>
+            <div class="dot" attr='3' onclick="switchImage(this)"></div>
+            
+        </div>
+
+    </div>
+    
+<!--------------------------------------------------------------------------------------------------->
+
+<!---------------Main Descripción----------------------------------------------------------------->
+
+
+    <main id="descripcion">
+        <article>
+                <span>Vendemos a TODO el pais!</span>
+                <h4>Desde hace 45 años entendemos, diseñamos y brindamos soluciones integrales para el aire comprimido industrial, ofreciendo un servicio de pre y post venta basado en una respuesta dinamica que asegura confiabilidad, eficiencia y respaldo sin generar cautividad para las empresas que nos eligen como sus proveedores.
+                    ​</h4>
+                <div class="btn" id="btn">
+                    <button id="buttonH2">Solicitar presupuesto</button>
+                </div>
+        </article>
+
+    </main>
+
+
+<!-------------------------------------------------------------------------------------------------->
+
+<!-------------------PRODUCTOS Y SERVICIOS------------------------------------------- -->
+    <div class="textom">
+        <h1>Nuestros productos</h1>
+    </div>
+    <!-- Acordeón para categorías de productos -->
+    <div class="accordion">
+        <button class="accordion-button">Tratamientos - Información</button>
+
+        <div class="accordion-content">
+
+            <div class="cards">
+
+                <div class="productosCards" 
+                    data-product-name="Tratamiento Económico y Adaptado" 
+                    data-product-desc="Nuestro servicio mejora la productividad, alarga la vida útil de las herramientas, reduce los costos de mantenimiento y asegura un trabajo final de calidad, todo cumpliendo con las normas y evitando pérdidas innecesarias."  
+                    data-product-image="assets/img/productos/economico.jpg">
+                    <img src="assets/img/logos/etiqueta.jpg" alt="">
+                    <h3>Tratamiento Económico</h3>
+                </div>
+
+
+                <div class="productosCards" 
+                    data-product-name="Tratamiento Eficiente General" 
+                    data-product-desc="Como punto de partida nuestro departamento
+                    de ingeniería sugiere una aire de calidad
+                    normalizada según la NORMA ISO 8573-1
+                    Clase 1.4.1; que técnicamente es lo
+                    recomendado para lograr el cumplimiento
+                    de las reglamentaciones en cualquier sistema
+                    productivo industrial." 
+                    data-product-image="assets/img/productos/esquema.webp">
+                    <img src="assets/img/logos/ingeniero.jpg" alt="">
+                    <h3>Esquema General</h3>
+                </div>
+
+                
+                <div class="productosCards" 
+                    data-product-name="Aplicaciones del Tratamiento" 
+                    data-product-desc="Este sistema de tratamiento de aire comprimido combina compresores, filtros y secadores avanzados para proporcionar aire limpio y seco. Con componentes como el filtro de partículas AA y secadores frigoríficos, asegura un alto nivel de pureza, ideal para proteger equipos y mantener procesos en óptimas condiciones en industrias como la automotriz, plástica y textil." 
+                    data-product-image="assets/img/productos/circuito.png">
+                    <img src="assets/img/logos/engranajes.jpg" alt="">
+                    <h3>Esquema de Aplicaciones</h3>
+                </div>
+
+                
+                <div class="productosCards" 
+                    data-product-name="Etapas de Tratamiento" 
+                    data-product-desc="Los post enfriadores de aire comprimido reducen la temperatura del aire, que normalmente sale de los compresores entre 50 y 60°C, a un rango óptimo de 35-40°C para garantizar la eficiencia del sistema de tratamiento. Para el secado, se utilizan secadores por refrigeración en procesos industriales generales y secadores de adsorción para aplicaciones más exigentes, logrando puntos de rocío a presión de hasta -70°C. Finalmente, los filtros de aire comprimido eliminan partículas, aerosoles y vapor de agua/aceite para evitar daños en la instalación y cumplir con las normas de calidad del aire en procesos críticos." 
+                    data-product-image="assets/img/productos/etapas.png">
+                    <img src="assets/img/logos/convertidor.jpg" alt="">
+                    <h3>Equipamiento</h3>
+                </div>
+
+                <div class="productosCards" 
+                    data-product-name="Tratamiento y Eliminación de Condensados" 
+                    data-product-desc="Los separadores agua-aceite eliminan el aceite del condensado con alta eficiencia, reduciendo costos de residuos en hasta un 90%, y trabajan a presiones de 4 a 16 bar. Los drenadores automáticos purgan los condensados sin consumir energía ni aire, operando a presiones de 3 a 16 bar con capacidades de hasta 1000 litros por hora." 
+                    data-product-image="assets/img/productos/condensador.png">
+                    <img src="assets/img/logos/manguera.jpg" alt="">
+                    <h3>Eliminación</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="accordion-button">Compresores</button>
+
+        <div class="accordion-content">
+
+            <div class="cards">
+
+                <div class="productosCards" 
+                    data-product-name="COMPRESORES CLASE ZERO" 
+                    data-product-desc="El compresor Clase Zero, con sistema de lubricación de sellado a base de agua, ofrece alta eficiencia energética, bajos costos de operación y mantenimiento, es la tecnología más respetuosa del medio ambiente y garantiza aire comprimido 100% libre de aceite, con un caudal de 1-8 Nm³/min, presión de trabajo de 6.5-8 barg y potencias entre 15 y 45 kW, ideal para aplicaciones industriales y hospitalarias."  
+                    data-product-image="assets/img/productos/ZERO.webp">
+                    <img src="assets/img/logos/compresor.jpg" alt="">
+                    <h3>OIL FREE</h3>
+                </div>
+
+                
+                <div class="productosCards" 
+                    data-product-name="COMPRESORES LUBRICADOS" 
+                    data-product-desc="El compresor lubricado garantiza mayor eficiencia energética, ofrece cero cautividad y dependencia con insumos de fácil localización, genera ahorros mínimos promedio del 40%, y está respaldado por 15 años de especialización en tecnología de potencia variable con más de 1100 máquinas instaladas en todo el mundo." 
+                    data-product-image="assets/img/productos/LUBRICADO.webp">
+                    <img src="assets/img/logos/compresor.jpg" alt="">
+                    <h3>EFFICIENS</h3>
+                </div>
+
+            </div>
+        </div>
+
+        <button class="accordion-button">Servicios</button>
+
+        <div class="accordion-content">
+
+            <div class="cards">
+
+                <div class="productosCards" 
+                    data-product-name="PRE-VENTA" 
+                    data-product-desc="El tercer producto es de la más alta calidad."  
+                    data-product-image="assets/img/img2.jpg">
+                    <img src="assets/img/logos/fabrica.jpg" alt="">
+                    <h3>PRE-VETNA</h3>
+                </div>
+
+                
+                <div class="productosCards" 
+                    data-product-name="POST-VENTA"  
+                    data-product-desc="El cuarto producto ofrece el mejor valor del mercado." 
+                    data-product-image="assets/img/img3.jpg">
+                    <img src="assets/img/logos/billete.jpg" alt="">
+                    <h3>POST-VENTA</h3>
+                </div>
+
+                <div class="productosCards" 
+                    data-product-name="PERSONALIZADOS"  
+                    data-product-desc="El cuarto producto ofrece el mejor valor del mercado." 
+                    data-product-image="assets/img/img3.jpg">
+                    <img src="assets/img/logos/martillo.jpg" alt="">
+                    <h3>PERSONALIZADOS</h3>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Detalle de Producto (Modal) -->
+    <div id="product-detail" class="product-detail hidden">
+        <img id="product-image" src="" alt="Imagen del Producto">
+        <h3 id="product-title"></h3>
+        <p id="product-description"></p>
+        <button id="close-detail">Cerrar</button>
+    </div>
+
+    <!-- Fondo oscuro cuando el modal está abierto -->
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+
+
+<!--boton de saber mas-->
+    <div class="textom" id="quieroSaberMas"><H3>QUIERO SABER MAS</H3></div>
+<!-------------------------------------------------------------------------------------------------->
+
+ <!--------------- Clientes Carousel --------------------------------------------->
+
+
+    <h1 id="clientesText" style="margin: 0;">Nuestros Clientes</h1>
+            
+    <div class="sliderClientes" style="
+    --width: 140px;
+    --height: 140px;
+    --quantity: 8;    
+    ">
+    <div class="lista">
+        <div class="clientes" style="--position: 1"><img class="imagenCliente" src="assets/img/logos/alberdi.png" alt=""></div>
+        <div class="clientes" style="--position: 2"><img class="imagenCliente" src="assets/img/logos/alladio.jpg" alt=""></div>
+        <div class="clientes" style="--position: 3"><img class="imagenCliente" src="assets/img/logos/arlei.jpg" alt=""></div>
+        <div class="clientes" style="--position: 4"><img class="imagenCliente" src="assets/img/logos/celulosa.png" alt=""></div>
+        <div class="clientes" style="--position: 5"><img class="imagenCliente" src="assets/img/logos/galgo.jpg" alt=""></div>
+        <div class="clientes" style="--position: 6"><img class="imagenCliente" src="assets/img/logos/moraleja.jpg" alt=""></div>
+        <div class="clientes" style="--position: 7"><img class="imagenCliente" src="assets/img/logos/novocap2.jpg" alt=""></div>
+        <div class="clientes" style="--position: 8"><img class="imagenCliente" src="assets/img/logos/parnor.jpg" alt=""></div>
+        </div>
+    </div>
+    </section>
+ <!-------------------------------------------------------------------------------------------------->
+
+<!----------------------------Clientes y footer-------------------------- -->
+    
+
+        
+
+    <footer>
+        <div class="redes">
+            <h2>Contactanos</h2><br>
+            <span><i class="fa-solid fa-envelope fContacto"></i>info@dmdcompresores.com</span><br>
+            <span><i class="fa-solid fa-phone fContacto" ></i>11-3959-2363</span><br>
+
+        </div>
+        <div class="indnac">
+            <img src="assets/img/arg.jpg" alt="">
+            <h1>INDUSTRIA NACIONAL</h1>
+            <img src="assets/img/ind.png" alt="">
+        </div>
+        <div class="ubic">
+            <h2>OFICINA CENTRAL</h2>
+            <span>Gobernador Oliden 2768</span>
+            <span>Lanus Oste, Buenos Aires</span>
+        </div>
+    </footer>
+
+
+
+<!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/link.js"></script>
+    <script src="assets/js/carrusel.js"></script>
+    <script src="assets/js/productos.js"></script>
+
+</body>
+</html>
