@@ -44,6 +44,27 @@
     --rich-black: #0e0f19;
 }
 
+/*whatsapp*/
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.2);
+}
+
+.whatsapp-logo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
 
 /*--------footer*/
 footer{
