@@ -39,26 +39,40 @@ document.addEventListener('DOMContentLoaded',()=>{
                openModal(productData);
            });
        });
-       
+
        // Cerrar el modal al hacer clic en el botón de cerrar
        closeModalButton.addEventListener('click', closeModal);
        
        // Cerrar el modal al hacer clic fuera del modal (en el fondo oscuro)
        backdrop.addEventListener('click', closeModal);
+    });    
+
        
-       // Lógica para el acordeón desplegable
-       const accordionButtons = document.querySelectorAll('.accordion-button');
-       
-       accordionButtons.forEach(button => {
-           button.addEventListener('click', function() {
-               const content = this.nextElementSibling;
-               
-               // Mostrar o esconder el contenido del acordeón
-               if (content.style.display === 'block') {
-                   content.style.display = 'none';
-               } else {
-                   content.style.display = 'block';
-               }
-           });
-       });
-   });   
+      // Lógica para el acordeón desplegable
+const accordionButtons = document.querySelectorAll('.accordion-button');
+
+accordionButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        const flecha = this.querySelector('.flecha'); // Selecciona la flecha correspondiente al botón actual
+
+        // Alternar la visibilidad del contenido del acordeón
+        if (content.style.display === 'block') {
+            content.style.display = 'none';
+            flecha.classList.remove('active'); // Elimina la clase 'active' si el contenido está oculto
+        } else {
+            // Oculta el contenido de todos los acordeones
+            accordionButtons.forEach(btn => {
+                const btnContent = btn.nextElementSibling;
+                const btnFlecha = btn.querySelector('.flecha');
+                btnContent.style.display = 'none';
+                btnFlecha.classList.remove('active');
+            });
+
+            // Muestra el contenido y activa la flecha del acordeón clicado
+            content.style.display = 'block';
+            flecha.classList.add('active');
+        }
+    });
+});
+

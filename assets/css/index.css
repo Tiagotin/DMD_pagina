@@ -33,14 +33,15 @@
     --Logo-tamaño:65px;
     --logo-tamaño-responsive: 65px;
 
-
-  --azul-dmd: #146597;
-  --azul-oscurito: #0e103d;
-  --rojito-dmd: #ae0d24;
-  --gold: #e8aa14;
-  --ivory: #f5f9e9;
-  --azure-web: #e6fdff;
-  --rich-black: #0e0f19;
+    /*Paleta de Colores*/
+    --azul-dmd: #146597;
+    --azul-oscurito: #0e103d;
+    --rojito-dmd: #ae0d24;
+    --gold: #e8aa14;
+    --ivory: #f5f9e9;
+    --azure-web: #e6fdff;
+    --rich-black: #0e0f19;
+    --azul-francia: #1c77c3;
 }
 
 
@@ -116,14 +117,15 @@ span.next{right: 20px;}
 span.prev{left: 20px;}
 
 span.next:hover, span.prev:hover{
-    background-color: #ede6d6;
-    color: #222;
+    background-color: var(--rojito-dmd);
+    
+    color: var(--rich-black);
 } 
 .dotsContainer{
     position: absolute;
     width: auto;
     display: flex; justify-content: center;
-    bottom: 10px;
+    bottom: 30px;
     z-index: 3;
     left: 50%;
     transform: translateX(-50%);
@@ -186,59 +188,66 @@ span.next:hover, span.prev:hover{
 
         
 #descripcion{
-    background-color: var(--fondo-desc);
+    /*background-color: #dadff7;*/
+    background-color: #f2f2f2;
+    
+
 }
 
 #descripcion article{
         margin: 0 auto;
         display: grid;
-        grid-template-columns: 80% 1fr;
-        grid-template-rows: 60px auto;
+        grid-template-rows: 80px auto;
+        grid-template-columns: 70% 1fr;
         grid-template-areas: 
         "span1 span1"
         " h4 btn"
         ;
+        
     }
-
-    #descripcion article span{
+    
+    #descripcion article p {
         grid-area: span1;
-        background-color: var(--fondo-spantext);
-        color: var(--fcolor-desc-spantext);
         font-size: 1.6rem;
         padding: 20px 40px;
-        font-weight: 500;
-        display: flex; align-items: center;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
     }
+
+    #descripcion article span#destacado {
+        color: var(--rojito-dmd); /* Cambia este color según prefieras */
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
     #descripcion article h4 {
+        color: var(--azul-oscurito);
         grid-area: h4; 
-        padding: 50px 50px;
-        font-size: 1rem;
-        background-color: var(--fondo-desc-h1);
+        margin-left: 50px;
+        padding: 0px 0 30px;
+        font-size: 1.035rem;
+        font-weight: 600;
         border-radius: 5px;
-        color: var(--fcolor-desc-h4text);
     }
     #descripcion article .btn {
         grid-area: btn; 
-        margin: 0 auto;
-        display: flex; align-items: center; justify-content: center;
-        width: 150px;
-        
+        height: 50px;
+        display: flex;
     }
-    #descripcion article .btn button{
-        border: none;
-        padding: 5px 1px;
-        margin: 10px;
-        display: flex; align-items: center; justify-content: center;
+    #descripcion article .btn #buttonH2{
+        border: solid 1px;
+        padding: 0 90px;
         background-color: #fff; 
         border-radius: 4px;
         font-size: 1rem;
         transition: 0.1s linear;
     }
 
-    #descripcion article .btn button:hover{
+    #descripcion article .btn #buttonH2:hover{
         cursor: pointer;
-        background-color: var(--rojo);
         color: #fff;
+        background-color: var(--rojo);
         border: solid 2px #7e0000;
     }
 
@@ -260,7 +269,7 @@ span.next:hover, span.prev:hover{
         }
         #descripcion article .btn{
             width: 300px;
-            margin: 20px auto;
+            border: solid 1px;
         }
         #descripcion article .btn button{
             height: auto;
@@ -274,33 +283,21 @@ span.next:hover, span.prev:hover{
 
         
 /* Textos Productos y Clientes*/
+
 .textom{ display: flex; justify-content: center;}
 .textom h1{
     font-size: 2rem;
     padding: 15px;  
     text-align: center;
     width: 100%;
-    background-color: var(--fondo-productos-h1);
+    background: linear-gradient(to bottom, 
+    #da1f3b,
+     var(--rojito-dmd));
     color: white;
+    letter-spacing: 1.8px;
 }
 
-/*boton quiero saber mas*/
-.textom h3{
-    margin-top: 20px;
-    margin-bottom: 40px;
-    font-size: 1rem;
-    padding: 15px;  
-    text-align: center;
-    width: 30%;
-    background-color: red;
-    color: white;
-    border-radius: 10px;
-    border: black 4px outset;
-}
-.textom h3:hover{
-   background-color: rgb(170, 10, 10);
-   cursor: pointer;
-}
+
 /*productos o servicios--------------------------*/
     
 /*Detalle del Producto ---------------------------------------------------------*/
@@ -319,7 +316,7 @@ span.next:hover, span.prev:hover{
     display: none;
     width: 100%;
     border-radius: 10px;
-    background-color: #41414163;
+    background-color: var(--azul-pantone);
     position: relative;
     padding: 40px 0 0;
     bottom: 40px;
@@ -332,6 +329,7 @@ span.next:hover, span.prev:hover{
     grid-template-columns: repeat(auto-fill, 270px);
     gap: 20px;
     justify-content: space-evenly;
+    
 }
 
 
@@ -340,27 +338,45 @@ span.next:hover, span.prev:hover{
     margin: 20px 0 0;
     padding: 20px 15px;
     border-radius: 7px;
-    background-color: #007bff;
+
+    background: linear-gradient(to bottom, 
+    #3095e7 20%,
+    var(--azul-francia) 70%,
+    #186baf
+    );
+
+    color: white;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    font-size: 1.4rem;
+
     color: white;
     text-align: left;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 1.2rem;
     position: relative;
     z-index: 1;
 }
 
-.accordion-button:hover {
-    background-color: #0056b3;
+
+
+.accordion-button .flecha{
+    display: inline-block;
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    right: 20px;
+    transition: 0.2s;
+}
+
+.accordion-button .flecha.active{
+    transform: scaleY(-1);
 }
 
 
-
-
-
 .productosCards {
-    background-color: #fff;
+    background-color: #f7f7f7;
     border: solid 1px #5e5e5e;
     padding: 8px;
     width: 250px;
@@ -386,6 +402,8 @@ span.next:hover, span.prev:hover{
     border-color: #cf0707;
 
 }
+
+
 
 
 @media (max-width: 450px){
@@ -425,6 +443,10 @@ span.next:hover, span.prev:hover{
 
 
 
+
+
+
+
 /* Imagen dentro del modal */
 .product-detail img {
     width:auto;
@@ -459,6 +481,33 @@ span.next:hover, span.prev:hover{
     display: none;
 }
 
+/*========================*/
+/*boton quiero saber mas*/
+/*========================*/
+
+.saberMas{
+    margin: 30px auto 50px;
+    font-size: 1.2rem;
+    padding: 15px;  
+    text-align: center;
+    width: 22%;
+    color: #fff;
+    background-color: var(--gold);
+    border-radius: 10px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    }
+    
+.saberMas:hover{
+
+    text-shadow: 
+        0.5px 0.5px 0 var(--rich-black), /* Sombra en la esquina inferior derecha */
+        -0.5px -0.5px 0 var(--rich-black), /* Sombra en la esquina superior izquierda */
+        0.5px -0.5px 0 var(--rich-black), /* Sombra en la esquina superior derecha */
+        -1px 1px 0 var(--rich-black); /* Sombra en la esquina inferior izquierda */
+    transform: scale(1.05);
+    cursor: pointer;
+}
 
 
 
@@ -466,12 +515,13 @@ span.next:hover, span.prev:hover{
 
 #clientesText{
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.35rem;
+    padding: 40px 0 0px;
 }
 
 .sliderClientes{
         
-    margin: 30px auto 50px;
+    margin: 10px auto 70px;
     width: 95%;
     height: var(--height);
     overflow: hidden;
