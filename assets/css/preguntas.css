@@ -3,6 +3,16 @@
 	--gris-claro: #B8B8B8;
 	--sombra: 0 0 13px 0 rgba(185,185,185, .25);
 	--secundario:rgb(0, 0, 255);
+
+
+    /*Paleta de Colores*/
+    --azul-dmd: #146597;
+    --azul-oscurito: #0e103d;
+    --rojito-dmd: #ae0d24;
+    --gold: #e8aa14;
+    --ivory: #f5f9e9;
+    --azure-web: #e6fdff;
+    --rich-black: #0e0f19;
 }
 
 * {

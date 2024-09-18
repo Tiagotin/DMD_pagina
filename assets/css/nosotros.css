@@ -20,6 +20,16 @@
     --border-footer: #1919bb;
     --gris-pantone: #607387; /* Pantone Cool Gray 5 C */
     --nplx-img: 500px;
+
+
+    /*Paleta de Colores*/
+    --azul-dmd: #146597;
+    --azul-oscurito: #0e103d;
+    --rojito-dmd: #ae0d24;
+    --gold: #e8aa14;
+    --ivory: #f5f9e9;
+    --azure-web: #e6fdff;
+    --rich-black: #0e0f19;
 }
 
 body {
