@@ -339,11 +339,9 @@ span.next:hover, span.prev:hover{
     padding: 20px 15px;
     border-radius: 7px;
 
-    background: linear-gradient(to bottom, 
-    #3095e7 20%,
-    var(--azul-francia) 70%,
-    #186baf
-    );
+    background: 
+    var(--azul-francia)
+    ;
 
     color: white;
     letter-spacing: 0.5px;
