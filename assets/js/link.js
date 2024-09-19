@@ -41,6 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const inicio = document.getElementById('inicio');
     const nosotros = document.getElementById('nosotros');
     const dmdLogo = document.getElementById('dmdLogo');
+
+      // Crear un elemento <a> y envolver la imagen dentro de este
+   const logoLink = document.createElement('a');
+   logoLink.href = 'index.html'; // Enlace al que quieres que redirija
+   dmdLogo.parentNode.insertBefore(logoLink, dmdLogo); // Inserta el enlace antes de la imagen
+   logoLink.appendChild(dmdLogo); // Mueve la imagen dentro del enlace
   
     contacto.addEventListener('click', () => {
         // Redirige al usuario a contacto.html
@@ -55,13 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'nosotros.html';
     });
 
-    dmdLogo.addEventListener('click', () =>{
-        // Redirige al usuario a index.html
-        window.location.href = 'index.html';
-    })
+ 
 });
 
-// Footer -----------------------------------
+// Switch -----------------------------------
 
 
 const colorSwitch = document.querySelector('#switch input[type="checkbox"]');
@@ -76,6 +79,10 @@ function cambiaTema(ev) {
 colorSwitch.addEventListener('change', cambiaTema);
 
 
+
+//----------------------------------------------------------
+//-------------------- Footer -----------------------------------
+//------------------------------------------------------------
 
 // Funcionalidad para abrir el cliente de correo
 document.querySelector('.fa-envelope.fContacto').addEventListener('click', function() {
