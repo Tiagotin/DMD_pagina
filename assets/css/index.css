@@ -2,6 +2,12 @@
 *{
     padding: 0; margin: 0;
 }
+:root{
+    /*tamaños*/
+    --Cheight: 500px;
+    --Logo-tamaño:65px;
+    --logo-tamaño-responsive: 65px;
+}
 
 [tema = "light"] {
     --font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -11,8 +17,9 @@
 /*===============================*/
     /*Carousel*/
 /*===============================*/
-    --dots: #283388;
-    --dotsFondo: rgba(0, 0, 0, 0.181);
+    --dots: #fff;
+    --dotsActive: #283388;
+    --dotsFondo: rgba(5, 0, 0, 0.305);
     --arrowsHover: #0e0f19;
     --arrowsHoverFondo: #ae0d24;
 /*==============================*/
@@ -24,8 +31,8 @@
     --descFondo: #f2f2f2;
     --descSpanColorDest: #ae0d24;
     --descH4Color: #0e103d;
-    --descButtonFondo: #fff;
-    --descButtonFondoHover: red;
+    --descButtonFondo: #ffffff;
+    --descButtonFondoHover: rgb(7, 147, 240);
     --descButtonBorder: #000;
     --descButtonBorderHover: #7e0000;
     --descButtonText: #000;
@@ -61,19 +68,6 @@
 /*===============================*/
 /*===============================*/
 
-
-    --fondo-spantext: #799fbf;
-    --fcolor-desc-spantext:#001d36;
-    --fondo-desc: #d7e6ee;
-    --fcolor-desc-h4text:#296599;
-    --fondo-productos-h1:#292d99;
-    --fondo-footer:#142497;
-    --border-footer: #1919bb;
-    --gris-pantone: #607387; /* Pantone Cool Gray 5 C */
-    /*tamaños*/
-    --Carousel-height: 480px;
-    --Logo-tamaño:65px;
-    --logo-tamaño-responsive: 65px;
     /*Paleta de Colores*/
     --azul-dmd: #146597;
     --azul-oscurito: #0e103d;
@@ -84,6 +78,7 @@
     --rich-black: #0e0f19;
     --azul-francia: #1c77c3;
 }
+
 
 
 body[tema="dark"] {
@@ -161,7 +156,7 @@ body {
 .Carousel{
     position: relative;
     width: 100%;
-    height: var(--Carousel-height);
+    height: var(--Cheight);
 }
 .Carousel .slides{
     width: 100%;
@@ -237,17 +232,17 @@ span.next:hover, span.prev:hover{
 
     width: 10px;
     height: 10px;
-    background-color: #fff;
+    background-color: var(--dotsFondo);
     margin: 15px;
     border-radius: 20px;
-
     display: inline-block;
     cursor: pointer;
     transition: background-color 1s ease;
     transition: 0.5s ease;
+    background-color: var(--dots);
 }
 .dotsContainer .active{
-    background-color: #283388;
+    background-color: var(--dotsActive);
     width: 25px;
 }
 
@@ -339,7 +334,7 @@ span.next:hover, span.prev:hover{
     #descripcion article .btn #buttonH2{
         border: solid 1px;
         padding: 0 90px;
-        background-color: #fff; 
+        background-color: var(--descButtonFondo); 
         border-radius: 4px;
         font-size: 1rem;
         transition: 0.1s linear;
