@@ -243,3 +243,61 @@ nav .navText .aText.sticky{
     /*-----------------------------*/
 }
 /*------------------------------------------------------*/
+
+ /* Estilo general del switch */
+#switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Ocultar el checkbox real */
+#switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Estilo del slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2196F3; /* Fondo del slider */
+    transition: .4s; /* Transición suave */
+    border-radius: 34px; /* Redondear el slider */
+}
+
+.slider:after {
+    position: absolute;
+    content: "";
+    height: 26px; /* Altura del círculo */
+    width: 26px; /* Ancho del círculo */
+    left: 4px; /* Posición inicial del círculo a la izquierda */
+    bottom: 4px; /* Posición desde la parte inferior */
+    background-color: white; /* Color del círculo */
+    transition: .4s; /* Transición suave */
+    border-radius: 50%; /* Hacer el círculo redondo */
+}
+
+/* Cuando el input está marcado (checked) */
+input:checked + .slider:after {
+    transform: translateX(26px); /* Mueve el círculo hacia la derecha */
+}
+
+/* Para aplicar otros estilos al slider en estado checked */
+input:checked + .slider {
+    background-color: #000; /* Cambia el fondo del slider */
+}
+
+.slider.round {
+    border-radius: 34px; /* Redondea el slider */
+}
+
+.slider.round:before {
+    border-radius: 50%; /* Hace el círculo completamente redondo */
+}

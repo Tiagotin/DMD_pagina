@@ -2,37 +2,78 @@
 *{
     padding: 0; margin: 0;
 }
-:root {
+
+[tema = "light"] {
     --font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-    /* Colores */
-    --rojo-pantone: #9d034f; /* Pantone 200 C */
-    --azul-pantone: #146597; /* Pantone 7462 C */
 
-    --blanco: #fff;
-    --rojo: #cc0000;
+/*          Colores              */
+/*===============================*/
+    /*Carousel*/
+/*===============================*/
+    --dots: #283388;
+    --dotsFondo: rgba(0, 0, 0, 0.181);
+    --arrowsHover: #0e0f19;
+    --arrowsHoverFondo: #ae0d24;
+/*==============================*/
 
-    --fondo-header: #20507a;
-    --fondo-nav: #fff;
-    
+
+/*==============================*/
+    /*Vendemos a Todo el País*/
+/*===============================*/   
+    --descFondo: #f2f2f2;
+    --descSpanColorDest: #ae0d24;
+    --descH4Color: #0e103d;
+    --descButtonFondo: #fff;
+    --descButtonFondoHover: red;
+    --descButtonBorder: #000;
+    --descButtonBorderHover: #7e0000;
+    --descButtonText: #000;
+    --descButtonTextHover: #ffffff;
+/*===============================*/
+/*===============================*/
+
+
+/*==============================*/
+    /*Nuestros Productos*/
+/*==============================*/
+    --prodTittleFondo1: #da1f3b;
+    --prodTittleFondo2: #ae0d24;
+    --prodTittleText: #fff;
+    --prodAcnButtonFondo: #1c77c3;
+    --prodAcnButtonText: #fff;
+    --prodAcntCardFondo: #f7f7f7;
+    --prodAcntCardText: #000;
+    --prodAcntCardBorder: #5e5e5e;
+    --prodAcntCardBorderHover: #cf0707;
+    --prodDetailProdFondo: #f8f9fa;
+    --prodDetailProdButton: #007bff;
+    --prodDetailProdButtonHover: #0056b3;
+    --prodButtonSM: #cb1a35;
+/*===============================*/
+/*===============================*/
+
+
+/*==============================*/
+    /*Nuestros Clientes*/
+/*===============================*/   
+    --ClientesText: #000;
+/*===============================*/
+/*===============================*/
+
+
     --fondo-spantext: #799fbf;
     --fcolor-desc-spantext:#001d36;
-
     --fondo-desc: #d7e6ee;
     --fcolor-desc-h4text:#296599;
-
-
     --fondo-productos-h1:#292d99;
     --fondo-footer:#142497;
     --border-footer: #1919bb;
-
     --gris-pantone: #607387; /* Pantone Cool Gray 5 C */
-
     /*tamaños*/
     --Carousel-height: 480px;
     --Logo-tamaño:65px;
     --logo-tamaño-responsive: 65px;
-
     /*Paleta de Colores*/
     --azul-dmd: #146597;
     --azul-oscurito: #0e103d;
@@ -43,6 +84,66 @@
     --rich-black: #0e0f19;
     --azul-francia: #1c77c3;
 }
+
+
+body[tema="dark"] {
+
+    /*          Colores              */
+    /*===============================*/
+        /*Carousel*/
+    /*===============================*/
+    --dots: #9aabf0; /* color claro para los puntos */
+    --dotsFondo: rgba(255, 255, 255, 0.181); /* fondo más claro */
+    --arrowsHover: #e0e1e6; /* color claro para las flechas */
+    --arrowsHoverFondo: #6c0e1e; /* fondo oscuro para el hover de flechas */
+    /*==============================*/
+    
+    
+    /*==============================*/
+    /*Vendemos a Todo el País*/
+    /*===============================*/   
+    --descFondo: #1e1e1e; /* fondo oscuro para la descripción */
+    --descSpanColorDest: #e06c75; /* color más claro para destacar */
+    --descH4Color: #e0e1e6; /* color claro para el texto */
+    --descButtonFondo: #333; /* fondo oscuro para los botones */
+    --descButtonFondoHover: #7d0000; /* fondo oscuro para el hover */
+    --descButtonBorder: #555; /* borde oscuro para los botones */
+    --descButtonBorderHover: #b30000; /* borde oscuro para el hover */
+    --descButtonText: #e0e1e6; /* texto claro en los botones */
+    --descButtonTextHover: #000000; /* texto oscuro en el hover */
+    /*===============================*/
+    /*===============================*/
+    
+    
+    /*==============================*/
+    /*Nuestros Productos*/
+    /*==============================*/
+    --prodTittleFondo1: #b33144; /* título más oscuro */
+    --prodTittleFondo2: #a0372c; /* fondo oscuro para el título */
+    --prodTittleText: #e0e1e6; /* texto claro para el título */
+    --prodAcnButtonFondo: #3b6aa0; /* fondo oscuro para los botones de acción */
+    --prodAcnButtonText: #e0e1e6; /* texto claro en los botones */
+    --prodAcntCardFondo: #2a2a2a; /* fondo oscuro para las tarjetas */
+    --prodAcntCardText: #e0e1e6; /* texto claro en las tarjetas */
+    --prodAcntCardBorder: #777; /* borde oscuro para las tarjetas */
+    --prodAcntCardBorderHover: #c80000; /* borde oscuro para el hover */
+    --prodDetailProdFondo: #1c1c1c; /* fondo oscuro para detalles de productos */
+    --prodDetailProdButton: #0056b3; /* botón más claro para detalles */
+    --prodDetailProdButtonHover: #003d79; /* botón más oscuro para el hover */
+    --prodButtonSM: #a41c32; /* botón pequeño con un tono más oscuro */
+    /*===============================*/
+    /*===============================*/
+    
+    
+    /*==============================*/
+    /*Nuestros Clientes*/
+    /*===============================*/   
+    --ClientesText: #e0e1e6; /* texto claro para clientes */
+    /*===============================*/
+    /*===============================*/
+    
+    
+    }
 
 
 body {
@@ -130,7 +231,7 @@ span.next:hover, span.prev:hover{
     left: 50%;
     transform: translateX(-50%);
     border-radius: 15px;
-    background-color: #ffffff15;
+    background-color: var(--dotsFondo);
 }
 .dotsContainer .dot{
 
@@ -189,7 +290,7 @@ span.next:hover, span.prev:hover{
         
 #descripcion{
     /*background-color: #dadff7;*/
-    background-color: #f2f2f2;
+    background-color: var(--descFondo);
     
 
 }
@@ -216,13 +317,13 @@ span.next:hover, span.prev:hover{
     }
 
     #descripcion article span#destacado {
-        color: var(--rojito-dmd); /* Cambia este color según prefieras */
+        color: var(--descSpanColorDest); /* Cambia este color según prefieras */
         font-size: 1.8rem;
         font-weight: 600;
     }
 
     #descripcion article h4 {
-        color: var(--azul-oscurito);
+        color: var(--descH4Color);
         grid-area: h4; 
         margin-left: 50px;
         padding: 0px 0 30px;
@@ -246,9 +347,9 @@ span.next:hover, span.prev:hover{
 
     #descripcion article .btn #buttonH2:hover{
         cursor: pointer;
-        color: #fff;
-        background-color: var(--rojo);
-        border: solid 2px #7e0000;
+        color: var(--descButtonTextHover);
+        background-color: var(--descButtonFondoHover);
+        border: solid 2px var(--descButtonBorderHover);
     }
 
     @media (max-width: 700px){
@@ -291,9 +392,9 @@ span.next:hover, span.prev:hover{
     text-align: center;
     width: 100%;
     background: linear-gradient(to bottom, 
-    #da1f3b,
-     var(--rojito-dmd));
-    color: white;
+    var(--prodTittleFondo1),
+    var(--prodTittleFondo2));
+    color: var(--prodTittleText);
     letter-spacing: 1.8px;
 }
 
@@ -335,26 +436,19 @@ span.next:hover, span.prev:hover{
 
 .accordion-button {
     width: 100%;
-    margin: 20px 0 0;
-    padding: 20px 15px;
+    margin: 20px 0 0; padding: 20px 15px;
     border-radius: 7px;
-
-    background: 
-    var(--azul-francia)
-    ;
-
-    color: white;
     letter-spacing: 0.5px;
     font-weight: 500;
     font-size: 1.4rem;
-
-    color: white;
     text-align: left;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: relative;
     z-index: 1;
+    background:var(--prodAcnButtonFondo);
+    color: var(--prodAcnButtonText);
 }
 
 
@@ -374,14 +468,22 @@ span.next:hover, span.prev:hover{
 
 
 .productosCards {
-    background-color: #f7f7f7;
-    border: solid 1px #5e5e5e;
+    background-color: var(--prodAcntCardFondo);
+    border: solid 2px var(--prodAcntCardBorder);
+    color:            var(--prodAcntCardText);
+
     padding: 8px;
     width: 250px;
     text-align: center;
     border-radius: 5px;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
     cursor: pointer;
+}
+
+.productosCards:hover {
+    transform: scale(1.05);
+    border-color: var(--prodAcntCardBorderHover);
+
 }
 
 .productosCards img {
@@ -395,11 +497,6 @@ span.next:hover, span.prev:hover{
 }
 
 
-.productosCards:hover {
-    transform: scale(1.05);
-    border-color: #cf0707;
-
-}
 
 
 
@@ -419,7 +516,6 @@ span.next:hover, span.prev:hover{
 
 
 
-
 .product-detail {
     display: none;
     position: fixed;
@@ -430,9 +526,9 @@ span.next:hover, span.prev:hover{
     max-height: 80%;
     padding: 20px;
     border-radius: 10px;
-    background-color: #f8f9fa;
+    background-color: var(--prodDetailProdFondo);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow-y: auto;
+    overflow: visible;
     z-index: 1000;
     flex-direction: column;
     gap: 10px;
@@ -455,16 +551,17 @@ span.next:hover, span.prev:hover{
 
 /* Botón de cierre */
 #close-detail {
-    background-color: #007bff;
+    background-color: var(--prodDetailProdButton);
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    transition: 0.1s ease;
 }
 
 #close-detail:hover {
-    background-color: #0056b3;
+    background-color: var(--prodDetailProdButtonHover);
 }
 
 /* Fondo oscuro cuando el modal está abierto */
@@ -479,6 +576,40 @@ span.next:hover, span.prev:hover{
     display: none;
 }
 
+
+
+/* Imagen normal */
+#product-image {
+    max-width: 100%;
+    transition: all 0.3s ease; /* Transición suave para cambios */
+    cursor: zoom-in; /* Para indicar que se puede hacer zoom */
+}
+
+/* Cuando la imagen está en modo de zoom */
+.product-detail img.enlarged {
+    position: fixed; /* Para que la imagen salga del contenedor */
+    top: 50%; /* Centramos verticalmente */
+    left: 50%; /* Centramos horizontalmente */
+    transform: translate(-50%, -50%) scale(0.9); /* Escalado para agrandar la imagen */
+    z-index: 9999; /* Asegura que la imagen esté encima de todo */
+    cursor: zoom-out; /* Cambia el cursor para indicar que se puede salir del zoom */
+    transition: transform 0s ease; /* Transición suave para el zoom */
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+}
+
+
+/* Centrado de la imagen dentro del modal */
+.modal-content img {
+    max-width: 90%; /* Asegura que la imagen no se desborde */
+    max-height: 90vh; /* Mantiene la imagen dentro de la ventana visible */
+    margin: auto;
+    display: block; /* Centra la imagen */
+}
+
+
 /*========================*/
 /*boton quiero saber mas*/
 /*========================*/
@@ -490,7 +621,7 @@ span.next:hover, span.prev:hover{
     text-align: center;
     width: 22%;
     color: #fff;
-    background-color: var(--gold);
+    background-color: var(--prodButtonSM);
     border-radius: 10px;
     letter-spacing: 2px;
     transition: 0.3s;
@@ -515,6 +646,7 @@ span.next:hover, span.prev:hover{
     text-align: center;
     font-size: 2.35rem;
     padding: 40px 0 0px;
+    color: var(--ClientesText);
 }
 
 .sliderClientes{

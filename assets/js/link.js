@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contacto = document.getElementById('contacto');
     const inicio = document.getElementById('inicio');
     const nosotros = document.getElementById('nosotros');
+    const dmdLogo = document.getElementById('dmdLogo');
   
     contacto.addEventListener('click', () => {
         // Redirige al usuario a contacto.html
@@ -53,9 +54,29 @@ document.addEventListener('DOMContentLoaded', () => {
         // Redirige al usuario a contacto.html
         window.location.href = 'nosotros.html';
     });
+
+    dmdLogo.addEventListener('click', () =>{
+        // Redirige al usuario a index.html
+        window.location.href = 'index.html';
+    })
 });
 
 // Footer -----------------------------------
+
+
+const colorSwitch = document.querySelector('#switch input[type="checkbox"]');
+const body = document.body;
+function cambiaTema(ev) {
+    if (ev.target.checked) {
+        body.setAttribute('tema', 'dark');
+    } else {
+        body.setAttribute('tema', 'light');
+    }
+}
+colorSwitch.addEventListener('change', cambiaTema);
+
+
+
 // Funcionalidad para abrir el cliente de correo
 document.querySelector('.fa-envelope.fContacto').addEventListener('click', function() {
     window.location.href = "mailto:info@dmdcompresores.com";
