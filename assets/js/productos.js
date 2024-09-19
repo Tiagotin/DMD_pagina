@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded',()=>{
        const productTitle = document.getElementById('product-title');
        const productDescription = document.getElementById('product-description');
        
+       
        // Función para abrir el modal con los detalles del producto
        function openModal(productData) {
            // Actualizar el contenido del modal
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded',()=>{
        function closeModal() {
            modal.style.display = 'none';
            backdrop.style.display = 'none';
+           productImage.classList.remove('enlarged'); // Restablecer tamaño al cerrar
        }
        
        // Agregar evento de clic a cada tarjeta de producto
@@ -45,6 +47,15 @@ document.addEventListener('DOMContentLoaded',()=>{
        
        // Cerrar el modal al hacer clic fuera del modal (en el fondo oscuro)
        backdrop.addEventListener('click', closeModal);
+
+           // Agrandar imagen al hacer clic en ella
+           productImage.addEventListener('click', function() {
+            if (this.classList.contains('enlarged')) {
+                this.classList.remove('enlarged'); // Si ya está ampliada, la reducimos
+            } else {
+                this.classList.add('enlarged'); // Si no está ampliada, la ampliamos
+            }
+        });
     });    
 
        

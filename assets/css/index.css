@@ -432,7 +432,7 @@ span.next:hover, span.prev:hover{
     border-radius: 10px;
     background-color: #f8f9fa;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow-y: auto;
+    overflow: visible;
     z-index: 1000;
     flex-direction: column;
     gap: 10px;
@@ -478,6 +478,40 @@ span.next:hover, span.prev:hover{
     z-index: 999;
     display: none;
 }
+
+
+
+/* Imagen normal */
+#product-image {
+    max-width: 100%;
+    transition: all 0.3s ease; /* Transición suave para cambios */
+    cursor: zoom-in; /* Para indicar que se puede hacer zoom */
+}
+
+/* Cuando la imagen está en modo de zoom */
+.product-detail img.enlarged {
+    position: fixed; /* Para que la imagen salga del contenedor */
+    top: 50%; /* Centramos verticalmente */
+    left: 50%; /* Centramos horizontalmente */
+    transform: translate(-50%, -50%) scale(0.9); /* Escalado para agrandar la imagen */
+    z-index: 9999; /* Asegura que la imagen esté encima de todo */
+    cursor: zoom-out; /* Cambia el cursor para indicar que se puede salir del zoom */
+    transition: transform 0s ease; /* Transición suave para el zoom */
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+}
+
+
+/* Centrado de la imagen dentro del modal */
+.modal-content img {
+    max-width: 90%; /* Asegura que la imagen no se desborde */
+    max-height: 90vh; /* Mantiene la imagen dentro de la ventana visible */
+    margin: auto;
+    display: block; /* Centra la imagen */
+}
+
 
 /*========================*/
 /*boton quiero saber mas*/
