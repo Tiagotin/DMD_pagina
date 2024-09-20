@@ -42,6 +42,8 @@
     --ivory: #f5f9e9;
     --azure-web: #e6fdff;
     --rich-black: #0e0f19;
+
+    --formFondo: #80afd2ab;
 }
 
 
@@ -54,32 +56,37 @@ body {
 
 
 /*contacto.html-----------------------------------*/
+/*-------------------------------------------------*/
+
+
+/*======Mapa======*/
 .map{
     height: 470px;
-    min-height: 50vh;
-    margin: 10px 30px;
-    border: solid 3px rgb(160, 160, 160);
-    
+    min-height: 50vh;        
 }
+/*================*/
 
-#sectionForm {
-    text-align: center;
-    padding: 0 0 40px ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--gris-pantone);
-}
 
+/*======Form======*/
+#sectionForm {background-color: var(--formFondo);}
 #sectionForm h2{
     width: 100%;
-    margin: 0; padding: 0;
-    margin-bottom: 30px;
+    margin: 0 auto; padding: 0;
     background-color: #cf203a;
     color: #ffffff;
-    display: flex; align-items: center; justify-content: center;
 }
+
+#sectionForm form{
+    padding: 20px;
+    margin: 0 auto;
+    width: 80%;
+    border: solid 1px;
+}
+/*=================*/
+
+
+/*--------------------------------------------------------------------------------
+
 #sectionForm form{
     background-color: #ffffff41;
     width: 500px;
@@ -131,7 +138,7 @@ textarea{
     font-size: 1.1em;
     background-color: #fff;
     cursor: pointer;
-    border: solid rgb(82, 82, 82) 2px;
+    border: solid rgb(82, 82, 82) 3px;
     border-radius: 4px;
     width: 120px;
     min-width: 10%;
@@ -161,6 +168,6 @@ textarea{
         
     }
 }
-
+-------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------*/
 
