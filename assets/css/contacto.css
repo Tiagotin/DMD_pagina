@@ -43,7 +43,7 @@
     --azure-web: #e6fdff;
     --rich-black: #0e0f19;
 
-    --formFondo: #80afd2ab;
+    --formFondo: #ffffffab;
 }
 
 
@@ -68,20 +68,97 @@ body {
 
 
 /*======Form======*/
-#sectionForm {background-color: var(--formFondo);}
-#sectionForm h2{
-    width: 100%;
-    margin: 0 auto; padding: 0;
-    background-color: #cf203a;
-    color: #ffffff;
+
+#sectionForm {background-color: var(--formFondo); 
+    display: grid;
+    grid-auto-columns: 6fr 10fr;
+    grid-row: 200px 200px;
+    grid-template-areas: 
+    "formh2 formh2"
+    "formredes formf "
+    ;
 }
 
-#sectionForm form{
-    padding: 20px;
-    margin: 0 auto;
-    width: 80%;
-    border: solid 1px;
+#sectionForm h2{
+    grid-area: formh2;
+    width: 100%;
+    background-color: #cf203a;
+    color: #ffffff;
+    text-align: center;
 }
+
+
+#sectionForm aside {
+    grid-area: formredes;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#sectionForm aside .info-wrap {
+    width: 100%;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    padding: 30px;
+    background: #fff;
+}
+
+#sectionForm aside .info {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    margin-bottom: 15px;
+}
+
+.redesImg {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+
+
+
+#sectionForm .formcont{
+    grid-area: formf;
+}
+
+form{    
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+input{
+    height: 20px; width: 45%; 
+    font-size: 1rem;
+    padding: 10px;
+}
+
+
+.mensaje{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+form button{
+    border: none;
+    width: 50%;
+    height: 30px;
+    border-radius: 20px;
+}
+
+textarea{
+    resize: vertical;
+    width: 90%;
+    height: 100px;
+    max-height: 300px; min-height: 50px;
+}
+
+
 /*=================*/
 
 
@@ -121,17 +198,6 @@ textarea{
 
 }
 
-#sectionForm form input:focus{
-    outline: solid 2.5px #bfe3ec;
-}
-#sectionForm form input#nombre,input#email{
-    height: 10px;
-    
-}
-#sectionForm form input#mensaje{
-    height: 40px;
-    white-space: nowrap;
-}
 
 #sectionForm form #formBtn{
     margin: 10px;
