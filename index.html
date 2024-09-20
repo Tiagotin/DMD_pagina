@@ -15,7 +15,7 @@
 <!--------------- Header y Nav----------------------------------------->
     <header>
         <span id="email">info@dmdcompresores.com</span>
-        
+        <button id="language-toggle">Switch to English</button>
         <div id="rLogos">
             <i class="fa-brands fa-linkedin logos" data-url="https://www.linkedin.com/company/dmd-compresores/"></i>
             <i class="fa-brands fa-whatsapp logos" data-url="https://wa.me/1159380579"></i>
@@ -35,10 +35,9 @@
 
         <div class="navText">
             <!--<i class="fa-solid fa-bars" id="navList"></i>-->
-            <p class="aText" id="inicio">Inicio</p>
-            
-            <p class="aText" id="nosotros">Nosotros</p>
-            <p class="aText" id="contacto">Contacto</p>
+            <p class="aText" id="inicio" data-es="Inicio" data-en="Home">Inicio</p>
+            <p class="aText" id="nosotros" data-es="Nosotros" data-en="About Us">Nosotros</p>
+            <p class="aText" id="contacto" data-es="Contacto" data-en="Contact">Contacto</p>
         </div>
 
     </nav>
@@ -94,11 +93,15 @@
 
 <main id="descripcion">
     <article>
-        <p>¡Vendemos a &nbsp;<span id="destacado">TODO</span>&nbsp; el país!</p>
-        <h4>Desde hace 45 años entendemos, diseñamos y brindamos soluciones integrales para el aire comprimido industrial, ofreciendo un servicio de pre y post venta basado en una respuesta dinámica que asegura confiabilidad, eficiencia y respaldo sin generar cautividad para las empresas que nos eligen como sus proveedores.
+        <p data-es="¡Vendemos a TODO el país!" data-en="We sell to the WHOLE country!">¡Vendemos a TODO el país!</p>
+
+        <h4 data-es="Desde hace 45 años entendemos, diseñamos y brindamos soluciones integrales para el aire comprimido industrial, ofreciendo un servicio de pre y post venta basado en una respuesta dinámica que asegura confiabilidad, eficiencia y respaldo sin generar cautividad para las empresas que nos eligen como sus proveedores." 
+            data-en="For 45 years, we have understood, designed, and provided integral solutions for industrial compressed air, offering pre-sales and after-sales services based on dynamic responses that ensure reliability, efficiency, and support without creating dependency for companies that choose us as their suppliers.">
+            Desde hace 45 años entendemos, diseñamos y brindamos soluciones integrales para el aire comprimido industrial, ofreciendo un servicio de pre y post venta basado en una respuesta dinámica que asegura confiabilidad, eficiencia y respaldo sin generar cautividad para las empresas que nos eligen como sus proveedores.
         </h4>
+
         <div class="btn" id="btn">
-            <button id="buttonH2">Solicitar Presupuesto</button>
+            <button id="buttonH2" data-es="Solicitar Presupuesto" data-en="Request a Quote">Solicitar Presupuesto</button>
         </div>
     </article>
 </main>
@@ -110,13 +113,13 @@
 
     <div class="textom">
 
-        <h1>Nuestros Productos</h1>
+        <h1 data-es="Nuestros Productos" data-en="Our Products">Nuestros Productos</h1>
 
     </div>
 
     <!-- Acordeón para categorías de productos -->
     <div class="accordion">
-        <button class="accordion-button">Tratamientos
+        <button class="accordion-button" data-es="Tratamientos" data-en="Treatments">Tratamientos
             <div class="flecha " id="tp">&#x25BC;</div>
         </button>
 
@@ -125,11 +128,13 @@
             <div class="cards">
 
                 <div class="productosCards" 
-                    data-product-name="Tratamiento Económico y Adaptado" 
-                    data-product-desc="Nuestro servicio mejora la productividad, alarga la vida útil de las herramientas, reduce los costos de mantenimiento y asegura un trabajo final de calidad, todo cumpliendo con las normas y evitando pérdidas innecesarias."  
-                    data-product-image="assets/img/productos/economico.jpg">
-                    <img src="assets/img/logos/etiqueta.jpg" alt="">
-                    <h3>Tratamiento Económico</h3>
+                data-product-name-es="Tratamiento Económico y Adaptado" 
+                data-product-name-en="Economic and Tailored Treatment"
+                data-product-desc-es="Nuestro servicio mejora la productividad, alarga la vida útil de las herramientas..."
+                data-product-desc-en="Our service improves productivity, extends the lifespan of tools..."
+                data-product-image="assets/img/productos/economico.jpg">
+                <img src="assets/img/logos/etiqueta.jpg" alt="">
+                <h3>Tratamiento Económico</h3>
                 </div>
 
 
@@ -256,7 +261,7 @@
 
 
 <!--boton de saber mas-->
-    <div class="saberMas" id="quieroSaberMas"><H3>QUIERO SABER MAS</H3></div>
+    <div class="saberMas" id="quieroSaberMas"><H3 data-es="QUIERO SABER MÁS" data-en="I WANT TO KNOW MORE">QUIERO SABER MÁS</H3></div>
 <!-------------------------------------------------------------------------------------------------->
 
  <!--------------- Clientes Carousel --------------------------------------------->
@@ -291,7 +296,7 @@
     </a>
         
 
-    <footer>
+    <footer id="footer">
         <div class="redes">
             <h2>Contactanos</h2><br>
             <span><i class="fa-solid fa-envelope fContacto"></i>info@dmdcompresores.com</span><br>
@@ -317,6 +322,6 @@
     <script src="assets/js/link.js"></script>
     <script src="assets/js/carrusel.js"></script>
     <script src="assets/js/productos.js"></script>
-
+    <script src="assets/js/lenguaje.js"></script>
 </body>
 </html>

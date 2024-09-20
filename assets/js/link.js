@@ -81,6 +81,36 @@ colorSwitch.addEventListener('change', cambiaTema);
 
 
 //----------------------------------------------------------
+//-------------------- wpp -----------------------------------
+//------------------------------------------------------------
+
+window.addEventListener('scroll', function() {
+    var whatsappFloat = document.querySelector('.whatsapp-float');
+    var footer = document.getElementById('footer');
+
+    // Obtener la posición del footer en relación con la parte superior de la ventana
+    var footerTop = footer.getBoundingClientRect().top;
+    var windowHeight = window.innerHeight;
+
+    // Si el logo está tocando el footer, lo hacemos "sticky" justo antes de que toque el footer
+    if (footerTop <= windowHeight + 0) { // 90px es el tamaño del logo más margen
+        whatsappFloat.style.position = 'absolute';
+        whatsappFloat.style.bottom = (windowHeight - footerTop + 2) + 'px';
+    } else {
+        whatsappFloat.style.position = 'fixed';
+        whatsappFloat.style.bottom = '2px';
+    }
+});
+
+
+
+
+
+
+
+
+
+//----------------------------------------------------------
 //-------------------- Footer -----------------------------------
 //------------------------------------------------------------
 
