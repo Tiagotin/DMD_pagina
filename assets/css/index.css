@@ -1,6 +1,7 @@
 /*transition: transform .6s ease-in-out,-webkit-transform .6s ease-in-out;*/
 *{
     padding: 0; margin: 0;
+    transition: 1s ease;
 }
 :root{
     /*tamaños*/
@@ -20,8 +21,10 @@
     --dots: #fff;
     --dotsActive: #283388;
     --dotsFondo: rgba(5, 0, 0, 0.305);
-    --arrowsHover: #0e0f19;
-    --arrowsHoverFondo: #ae0d24;
+    
+    --arrowsColor: #fff;
+    --arrowsHover: #3847ba;
+    --arrowsHoverFondo: #2833886b;
 /*==============================*/
 
 
@@ -44,6 +47,7 @@
 /*==============================*/
     /*Nuestros Productos*/
 /*==============================*/
+    --prodFondo: #ffffff;
     --prodTittleFondo1: #da1f3b;
     --prodTittleFondo2: #ae0d24;
     --prodTittleText: #fff;
@@ -83,61 +87,67 @@
 
 body[tema="dark"] {
 
-    /*          Colores              */
-    /*===============================*/
-        /*Carousel*/
-    /*===============================*/
-    --dots: #9aabf0; /* color claro para los puntos */
-    --dotsFondo: rgba(255, 255, 255, 0.181); /* fondo más claro */
-    --arrowsHover: #e0e1e6; /* color claro para las flechas */
-    --arrowsHoverFondo: #6c0e1e; /* fondo oscuro para el hover de flechas */
-    /*==============================*/
-    
-    
-    /*==============================*/
-    /*Vendemos a Todo el País*/
-    /*===============================*/   
-    --descFondo: #1e1e1e; /* fondo oscuro para la descripción */
-    --descSpanColorDest: #e06c75; /* color más claro para destacar */
-    --descH4Color: #e0e1e6; /* color claro para el texto */
-    --descButtonFondo: #333; /* fondo oscuro para los botones */
-    --descButtonFondoHover: #7d0000; /* fondo oscuro para el hover */
-    --descButtonBorder: #555; /* borde oscuro para los botones */
-    --descButtonBorderHover: #b30000; /* borde oscuro para el hover */
-    --descButtonText: #e0e1e6; /* texto claro en los botones */
-    --descButtonTextHover: #000000; /* texto oscuro en el hover */
-    /*===============================*/
-    /*===============================*/
-    
-    
-    /*==============================*/
-    /*Nuestros Productos*/
-    /*==============================*/
-    --prodTittleFondo1: #b33144; /* título más oscuro */
-    --prodTittleFondo2: #a0372c; /* fondo oscuro para el título */
-    --prodTittleText: #e0e1e6; /* texto claro para el título */
-    --prodAcnButtonFondo: #3b6aa0; /* fondo oscuro para los botones de acción */
-    --prodAcnButtonText: #e0e1e6; /* texto claro en los botones */
-    --prodAcntCardFondo: #2a2a2a; /* fondo oscuro para las tarjetas */
-    --prodAcntCardText: #e0e1e6; /* texto claro en las tarjetas */
-    --prodAcntCardBorder: #777; /* borde oscuro para las tarjetas */
-    --prodAcntCardBorderHover: #c80000; /* borde oscuro para el hover */
-    --prodDetailProdFondo: #1c1c1c; /* fondo oscuro para detalles de productos */
-    --prodDetailProdButton: #0056b3; /* botón más claro para detalles */
-    --prodDetailProdButtonHover: #003d79; /* botón más oscuro para el hover */
-    --prodButtonSM: #a41c32; /* botón pequeño con un tono más oscuro */
-    /*===============================*/
-    /*===============================*/
-    
-    
-    /*==============================*/
-    /*Nuestros Clientes*/
-    /*===============================*/   
-    --ClientesText: #e0e1e6; /* texto claro para clientes */
-    /*===============================*/
-    /*===============================*/
-    
-    
+/*          Colores              */
+
+
+     --body: gray;
+
+
+
+/*===============================*/
+/*Carousel*/
+/*===============================*/
+--dotsFondo: #ffffff2e; 
+--dots: #000000cc; /* color claro para los puntos */
+--dotsActive: #260080;
+
+--arrowsColor: #3e1c8d;
+--arrowsHover: #ffffff; /* color claro para las flechas */
+--arrowsHoverFondo: #ffffff4a; /* fondo oscuro para el hover de flechas */
+/*==============================*/
+
+/*==============================*/
+/*Vendemos a Todo el País*/
+/*===============================*/   
+--descFondo: rgba(255, 255, 255, 0.8); /* fondo oscuro para la descripción */
+--descSpanColorDest: rgba(0, 0, 0, 0.8); /* color más claro para destacar */
+--descH4Color: rgba(0, 0, 0, 0.8); /* color claro para el texto */
+--descButtonFondo: rgba(0, 0, 0, 0.8); /* fondo oscuro para los botones */
+--descButtonFondoHover: rgba(0, 0, 0, 0.8); /* fondo oscuro para el hover */
+--descButtonBorder: rgba(0, 0, 0, 0.8); /* borde oscuro para los botones */
+--descButtonBorderHover: rgba(0, 0, 0, 0.8); /* borde oscuro para el hover */
+--descButtonText: rgba(0, 0, 0, 0.8); /* texto claro en los botones */
+--descButtonTextHover: rgba(0, 0, 0, 0.8); /* texto oscuro en el hover */
+/*===============================*/
+/*===============================*/
+
+/*==============================*/
+/*Nuestros Productos*/
+/*===============================*/
+--prodFondo: #181a1b;
+--prodTittleFondo1: rgba(0, 0, 0, 0.8); /* título más oscuro */
+--prodTittleFondo2: rgba(0, 0, 0, 0.8); /* fondo oscuro para el título */
+--prodTittleText: rgba(0, 0, 0, 0.8); /* texto claro para el título */
+--prodAcnButtonFondo: rgba(0, 0, 0, 0.8); /* fondo oscuro para los botones de acción */
+--prodAcnButtonText: rgba(0, 0, 0, 0.8); /* texto claro en los botones */
+--prodAcntCardFondo: rgba(0, 0, 0, 0.8); /* fondo oscuro para las tarjetas */
+--prodAcntCardText: rgba(0, 0, 0, 0.8); /* texto claro en las tarjetas */
+--prodAcntCardBorder: rgba(0, 0, 0, 0.8); /* borde oscuro para las tarjetas */
+--prodAcntCardBorderHover: rgba(0, 0, 0, 0.8); /* borde oscuro para el hover */
+--prodDetailProdFondo: rgba(0, 0, 0, 0.8); /* fondo oscuro para detalles de productos */
+--prodDetailProdButton: rgba(0, 0, 0, 0.8); /* botón más claro para detalles */
+--prodDetailProdButtonHover: rgba(0, 0, 0, 0.8); /* botón más oscuro para el hover */
+--prodButtonSM: rgba(0, 0, 0, 0.8); /* botón pequeño con un tono más oscuro */
+/*===============================*/
+/*===============================*/
+
+/*==============================*/
+/*Nuestros Clientes*/
+/*===============================*/   
+--ClientesText: rgba(0, 0, 0, 0.8); /* texto claro para clientes */
+/*===============================*/
+/*===============================*/
+
     }
 
 
@@ -145,7 +155,7 @@ body {
     margin: 0; 
     padding: 0; 
     font-family: var(--font-system); 
-    background-color: var(--blanco);     
+    background-color: var(--prodFondo);     
 }
 
 
@@ -175,7 +185,6 @@ body {
 }
 
 .Carousel .slides .content article{
-    background-color: #f5f5f527;
     position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%);
     display: flex; align-items: center; justify-content: center;
     width: 40vw; height: 100px;
@@ -198,24 +207,25 @@ span.next, span.prev{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 14px;
-    color: #ffffff;
+    z-index: 1;
     font-size: 24px;
     font-weight: bold;
-    transition: 0.2s;
-    border-radius: 3px;
     user-select: none;
     cursor: pointer;
-    z-index: 1;
+    padding: 10px;
+    border: solid 1px;
+    border-radius: 20px;
+    backdrop-filter: blur(2px); 
+    color: var(--arrowsColor);
+    transition: 0.1s ease;
 }
 
 span.next{right: 20px;}
 span.prev{left: 20px;}
 
 span.next:hover, span.prev:hover{
-    background-color: var(--rojito-dmd);
-    
-    color: var(--rich-black);
+    color: var(--arrowsHover);
+    background-color: var(--arrowsHoverFondo);
 } 
 .dotsContainer{
     position: absolute;
@@ -403,8 +413,9 @@ span.next:hover, span.prev:hover{
 
 /* Estilos para el acordeón */
 .accordion{
+    background-color: var(--prodFondo);
     display: flex; align-items: center; flex-direction: column;
-    margin: 30px;; width: 90%; margin: 0 auto;
+     width: 90%; margin: 0 auto;
     position: relative;
 }
 
