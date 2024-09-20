@@ -71,7 +71,7 @@ body {
 
 #sectionForm {background-color: var(--formFondo); 
     display: grid;
-    grid-auto-columns: 6fr 10fr;
+    grid-auto-columns: 5fr 11fr;
     grid-row: 200px 200px;
     grid-template-areas: 
     "formh2 formh2"
@@ -97,7 +97,7 @@ body {
 
 #sectionForm aside .info-wrap {
     width: 100%;
-    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.26);
     padding: 30px;
     background: #fff;
 }
@@ -120,10 +120,13 @@ body {
 
 #sectionForm .formcont{
     grid-area: formf;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.26);
+    margin: 20px;
+    padding: 80px 20px 20px;
+
 }
 
 form{    
-    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -149,8 +152,13 @@ form button{
     width: 50%;
     height: 30px;
     border-radius: 20px;
+    transition: 0.2s ease;
 }
 
+form button:hover{
+    background-color: var(--azul-dmd);
+    color: #fff;
+}
 textarea{
     resize: vertical;
     width: 90%;
