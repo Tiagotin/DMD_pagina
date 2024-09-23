@@ -93,9 +93,9 @@
         
         <div class="formcont">
             <h2>FORMULARIO</h2>
-            <form action="">
+            <form id="formulario" action="">
                 <!--<label for="telefono">Telefono:</label><br>-->
-                <input type="text" id="telefono" name="telefono" placeholder="Telefono" required>
+                <input type="tel" id="telefono" name="telefono" placeholder="Telefono" required pattern="[0-9]+" title="Por favor, ingresa solo números">
 
                 <!--<label for="empresa">Empresa:</label><br>-->
                 <input type="text" id="empresa" name="empresa" placeholder="Empresa" required>
