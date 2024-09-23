@@ -5,35 +5,6 @@
 :root {
     --font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-    /* Colores */
-    --rojo-pantone: #9d034f; /* Pantone 200 C */
-    --azul-pantone: #146597; /* Pantone 7462 C */
-
-    --blanco: #fff;
-    --rojo: #cc0000;
-
-    --fondo-header: #20507a;
-    --fondo-nav: #fff;
-    
-    --fondo-spantext: #799fbf;
-    --fcolor-desc-spantext:#001d36;
-
-    --fondo-desc: #d7e6ee;
-    --fcolor-desc-h4text:#296599;
-
-
-    --fondo-productos-h1:#292d99;
-    --fondo-footer:#142497;
-    --border-footer: #1919bb;
-
-    --gris-pantone: #607387; /* Pantone Cool Gray 5 C */
-
-    /*tamaños*/
-    --Carousel-height: 480px;
-    --Logo-tamaño:65px;
-    --logo-tamaño-responsive: 65px;
-
-
     /*Paleta de Colores*/
     --azul-dmd: #146597;
     --azul-oscurito: #0e103d;
@@ -42,11 +13,17 @@
     --ivory: #f5f9e9;
     --azure-web: #e6fdff;
     --rich-black: #0e0f19;
+    --rojo-pantone: #9d034f; /* Pantone 200 C */
+    --azul-pantone: #146597; /* Pantone 7462 C */
+    --gris-pantone: #607387; /* Pantone Cool Gray 5 C */
+}
 
-
+[tema="light"]{
+    --bodyColor: #fff;
     --contFormFondo: #fff;
     --asideFondo: #ffffff;
     --asideFondo2: #fff;
+    --asideText: #000000;
 
     --formFondo: #ffffff;
     --formTituloText: #fff;
@@ -56,7 +33,45 @@
     --formInputFondo:#fff;
     --formInputBorder:#c0c0c0;
 
-    --formInputBorderFocus:#cf203a;
+    --formInputFocus:#cf203a;
+
+    --formMsjTituloTexto: #000;
+    --formMsjComentText: #000;
+    --formMsjComentFondo: #fff;
+    --formMsjComentButtonTexto: #000000;
+    --formMsjComentButtonFondo:  #dedede;
+    
+    --formMsjComentButtonBorderHover: #000;
+    --formMsjComentButtonTextoHover: #fff;
+    --formMsjComentButtonFondoHover:  #146597;
+}
+
+    [tema="dark"]{
+    --bodyColor: #181a1b;
+    --contFormFondo: #181a1b;
+    --asideFondo: #181a1b;
+    --asideFondo2: #181a1b;
+    --asideText: #fff;
+
+    --formFondo: #181a1b;
+    --formTituloText: #e8e6e3;
+    --formTituloFondo: #a61a2e;
+
+    --formInputTextColor: #e8e6e3;
+    --formInputFondo: #181a1b;
+    --formInputBorder: #42474a;
+
+    --formInputFocus: #9f192c;
+
+    --formMsjTituloTexto: #e8e6e3;
+    --formMsjComentText: #e8e6e3;
+    --formMsjComentFondo: #181a1b;
+    --formMsjComentButtonTexto: #e8e6e3;
+    --formMsjComentButtonFondo: #2b2e30;
+
+    --formMsjComentButtonBorderHover: #8c8273;
+    --formMsjComentButtonTextoHover: #e8e6e3;
+    --formMsjComentButtonFondoHover: #105179;
 }
 
 
@@ -64,7 +79,7 @@ body {
     margin: 0; 
     padding: 0; 
     font-family: var(--font-system); 
-    background-color: var(--blanco);     
+    background-color: var(--bodyColor);     
 }
 
 
@@ -95,6 +110,7 @@ body {
     "formredes formf "
     ;
     gap: 20px;
+    margin-bottom: 50px;
 }
 
 
@@ -129,18 +145,13 @@ body {
     background-color: var(--asideFondo2);
     padding: 15px;
     gap: 20px;
-    
-}
-
-:root{
-    --tRedesImg:40px
+    color: var(--asideText);
 }
 
 .redesImg {
     display: inline-block;
-    width: var(--tRedesImg);
-    height: var(--tRedesImg);
-
+    font-size: 2rem;
+    color: var(--asideText);
 }
 
 
@@ -203,7 +214,9 @@ input{
 }
 
 input:focus, textarea:focus{
-    outline: 1px var(--formInputBorderFocus) solid;
+    transition: 0.2s ease;
+    outline: 1px var(--formInputFocus) solid;
+    border: none;
 }
 
 .mensaje{
@@ -219,6 +232,7 @@ input:focus, textarea:focus{
 
 .mensaje label{
     margin-bottom: 10px;
+    color: var(--formMsjTituloTexto);
 }
 form button{
     border: none;
@@ -226,13 +240,15 @@ form button{
     height: 30px;
     border-radius: 20px;
     transition: 0.2s ease;
-    border: solid 1px;
     cursor: pointer;
+    color: var(--formMsjComentButtonTexto);
+    background-color: var(--formMsjComentButtonFondo);
 }
 
 form button:hover{
-    background-color: var(--azul-dmd);
-    color: #fff;
+    background-color: var(--formMsjComentButtonFondoHover);
+    color: var(--formMsjComentButtonTextoHover);
+    border: solid 1px var(--formMsjComentButtonBorderHover);
 }
 textarea{
     border: solid 1px;
@@ -242,6 +258,8 @@ textarea{
     width: 90%;
     height: 100px;
     max-height: 300px; min-height: 50px;
+    background-color: var(--formMsjComentFondo);
+    color: var(--formMsjComentText);
 }
 
 @media (max-width: 750px){
@@ -268,61 +286,6 @@ textarea{
 /*=================*/
 
 
-/*--------------------------------------------------------------------------------
-
-#sectionForm form{
-    background-color: #ffffff41;
-    width: 500px;
-    padding: 10px;
-    display: flex;
-    align-items: center; justify-content: center;
-    flex-direction: column;
-    gap: 0px;
-    border-radius: 10px;
-}
-
-textarea{
-    border-radius: 10px;
-    resize: both; 
-}
-
-#sectionForm form input,label,textarea{
-    width: 400px
-}
-
-#sectionForm form label{
-    font-size: 1.5rem;
-    text-align: start;
-    
-    
-}
-
-#sectionForm form input{
-    border: solid 2.5px rgb(124, 124, 124);
-    border-radius: 15px;
-    padding: 10px 20px;
-
-}
-
-
-#sectionForm form #formBtn{
-    margin: 10px;
-    font-size: 1.1em;
-    background-color: #fff;
-    cursor: pointer;
-    border: solid rgb(82, 82, 82) 3px;
-    border-radius: 4px;
-    width: 120px;
-    min-width: 10%;
-    transition: 0.2s ease;
-}
-
-#sectionForm form #formBtn:hover{
-    border: solid 2px #7e0000;
-    background-color: var(--rojo);
-    color: white;
-}
-
 
 @media (max-width: 600px){
     #sectionForm form{
@@ -340,6 +303,4 @@ textarea{
         
     }
 }
--------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------*/
-
+/*-------------------------------------------------------------------------------*/
