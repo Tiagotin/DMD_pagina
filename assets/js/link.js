@@ -19,7 +19,9 @@ window.addEventListener("scroll", function(){
     const logoHeight = document.querySelector("#dmdLogo");
     const navText = document.querySelector(".navText");
     const aText = document.querySelectorAll(".aText");
+    const switchTema = document.querySelector(".switchTema");
 
+    switchTema.classList.toggle("sticky", window.scrollY > 0);
     nav.classList.toggle("sticky", window.scrollY > 0);
     logo.classList.toggle("sticky", window.scrollY > 0);
     logoHeight.classList.toggle("sticky", window.scrollY > 0);

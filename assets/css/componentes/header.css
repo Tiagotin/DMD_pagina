@@ -1,40 +1,19 @@
 /*transition: transform .6s ease-in-out,-webkit-transform .6s ease-in-out;*/
 *{
     padding: 0; margin: 0;
+    transition: background-color 0.1s ease;
 }
 :root {
     --font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-    /* Colores */
-    --rojo-pantone: #9d034f; /* Pantone 200 C */
-    --azul-pantone: #146597; /* Pantone 7462 C */
-
-    --blanco: #fff;
-    --rojo: #cc0000;
-
-    --fondo-header: #20507a;
-    --fondo-nav: #fff;
-    --nav-dmd: #fff;
-    --fondo-spantext: #799fbf;
-    --fcolor-desc-spantext:#001d36;
-
-    --fondo-desc: #d7e6ee;
-    --fcolor-desc-h4text:#296599;
-
-
-    --fondo-productos-h1:#292d99;
-    --fondo-footer:#142497;
-    --border-footer: #1919bb;
-
-    --gris-pantone: #607387; /* Pantone Cool Gray 5 C */
-
     /*tamaños*/
-    --Carousel-height: 480px;
     --Logo-tamaño:65px;
     --logo-tamaño-responsive: 65px;
 
-
     /*Paleta de Colores*/
+    --rojo-pantone: #9d034f; /* Pantone 200 C */
+    --azul-pantone: #146597; /* Pantone 7462 C */
+    --gris-pantone: #607387; /* Pantone Cool Gray 5 C */
     --azul-dmd: #146597;
     --azul-oscurito: #0e103d;
     --rojito-dmd: #ae0d24;
@@ -45,6 +24,68 @@
 }
 
 
+[tema = "light"] {
+    /* Colores */
+
+    
+/*==============================*/
+/*      Header 
+/*===============================*/   
+    --headerFondo:#20507a;
+    --headerSpanColor:#fff;
+    --headerBottonText:#000;
+    --headerBottonFondo:#a3a3a3;
+    /*--headerBottonTextHover:;
+    --headerBottonFondoHover:;*/
+/*==============================*/    
+/*==============================*/
+
+/*==============================*/
+/*      Nav 
+/*===============================*/ 
+    --navFondo:#fff;
+    --navTextColor:#000;
+    --navTextColorHover:#fff;   
+    --navTextFondoHover:#2970af;
+    --navSwitchThemeFondo:#2196F3;
+    --navSwitchThemeColor:#fff;
+/*==============================*/    
+/*==============================*/
+
+
+}
+
+[tema = "dark"] {
+    /* Colores */
+
+/*========================================*/
+/*      Header 
+/*========================================*/   
+--headerFondo: #1a4062;
+--headerSpanColor: #e8e6e3;
+--headerBottonText: #e8e6e3;
+--headerBottonFondo: #4c5255;
+/*--headerBottonTextHover:; 
+--headerBottonFondoHover:;*/
+/*========================================*/    
+/*========================================*/
+
+/*========================================*/
+/*      Nav 
+/*========================================*/ 
+--navFondo: #181a1b;
+--navTextColor: #e8e6e3;
+--navTextColorHover: #e8e6e3;   
+--navTextFondoHover: #215a8c;
+--navSwitchThemeFondo: #0a6ab6;
+--navSwitchThemeColor: #181a1b;
+--navSwitchThemeFondoDark: #818181;
+--navSwitchThemeColorDark: #000000;
+/*========================================*/    
+/*========================================*/
+
+
+}
 /*---------------------------------------------*/
 
 
@@ -52,86 +93,157 @@
 header {
     display: flex; justify-content: space-between; align-items: center;
     padding: 4px;
-    background-color: var(--fondo-header);
+    background-color: var(--headerFondo);
     }
 
-header #email {font-size: 0.95rem; color: #fff; padding: 0; margin: 0;} 
+header #email {
+    font-size: 0.95rem; color: var(--headerSpanColor); 
+    padding: 0; margin: 0 0 0 15px;
+} 
 
-header #rLogos { display: flex; gap: 15px; padding-right: 15px;} 
+header #rLogos { 
+    display: flex; 
+    gap: 15px; 
+    margin: 0 25px 0 0;
+    color: var(--headerSpanColor);
+    font-size: 1.3rem; 
+}
 
-header #rLogos .logos {font-size: 1.3rem; color: #fff;} 
+header #rLogos .logos {cursor: pointer;} 
 
-#rLogos:hover{cursor: pointer;}
-
-
+header #rLogos button{
+    border: none;
+    background-color: var(--headerBottonFondo);
+    color: var(--headerBottonText);
+    cursor: pointer;
+    display: none;
+}
 
 nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    width: 100%;
     display: flex; 
-    justify-content: space-between; 
     align-items: center; 
     flex-wrap: wrap;
     padding: 0px 10px; 
-    background-color: var(--nav-dmd);
-    color: #000;
+    background-color: var(--navFondo);
     transition: 0.2s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 
 
-nav .dmdLogo {padding: 0px 7px; display: flex; align-items: center;}
+nav .dmdLogo {
+    padding: 0px 7px; 
+    display: flex; align-items: center;
+}
 
 
-nav .dmdLogo #dmdLogo 
-{
+nav .dmdLogo #dmdLogo{
     height: var(--Logo-tamaño);
     object-fit: cover;
-    }
+}
     
 
 
-nav .navText 
-{
-    width: 40vw;
+nav .navText {
     display: flex; justify-content: end;
     gap: 50px;
-    margin-right: 50px;
-    
-    }
+    color: var(--navTextColor);
+    font-size: 1rem;
+}
 
 
-nav .navText .aText
-{
+nav .navText .aText{
     /*clapm(min,def,max*/
     padding: 5px;
     font-size: 1.3rem;
     display: flex;
     align-items: center; justify-content: center;
     border-radius: 5px;
-    transition: 0.4s ease;
-    }
+    transition: 0.2s ease;
+}
 
+.switchTema{
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+ /* Estilo general del switch */
+ #switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 26px;
+    flex-grow: 1;
+}
+
+/* Ocultar el checkbox real */
+#switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Estilo del slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--navSwitchThemeFondo); /* Fondo del slider */
+    transition: .4s; /* Transición suave */
+    
+}
+
+.slider:after {
+    position: absolute;
+    content: "";
+    height: 80%; /* Altura del círculo */
+    width: 35%; /* Ancho del círculo */
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    
+    background-color: var(--navSwitchThemeColor); /* Color del círculo */
+    transition: .4s; /* Transición suave */
+    border-radius: 50%; /* Hacer el círculo redondo */
+}
+
+/* Cuando el input está marcado (checked) */
+input:checked + .slider:after {
+    left: 75%;
+    background-color: var(--navSwitchThemeColorDark);
+}
+
+/* Para aplicar otros estilos al slider en estado checked */
+input:checked + .slider {
+    background-color:  var(--navSwitchThemeFondoDark); /* Cambia el fondo del slider */
+}
+
+.slider.round {
+    border-radius: 34px; /* Redondea el slider */
+}
+
+.slider.round:before {
+    border-radius: 50%; /* Hace el círculo completamente redondo */
+}
 
     
 
 
-nav .navText .aText:hover
-{
+nav .navText .aText:hover{
     cursor: pointer;
-    background-color: #2970af;
-    color: #fff;    
-    }
+    background-color: var(--navTextFondoHover);
+    color: var(--navTextColorHover);
+}
 
 
 /*---------------------------Nav Sticky---------------------------*/
 
-nav.sticky{
-    background-color: #fff;
-}
 
 nav .dmdLogo #dmdLogo.sticky{
     
@@ -139,11 +251,12 @@ nav .dmdLogo #dmdLogo.sticky{
     
 }
 nav.sticky{  
-    padding: 5px 0;
+    padding: 10px;
     margin: 0;
 }
 nav .navText .aText.sticky{
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+
 }
 
 /*------------------------------------------------------------------*/
@@ -168,6 +281,9 @@ nav .navText .aText.sticky{
         padding: 5px;
         gap: 10px;
     }
+    .switchTema{
+        margin-left: 0px;
+    }
     nav .navText {
         display: flex;
         justify-content: space-between;
@@ -177,15 +293,15 @@ nav .navText .aText.sticky{
 
     nav .dmdLogo #dmdLogo{
         width: var(--logo-tamaño-responsive);
-        height: 100%;   
+        height: 50%;   
         object-fit: cover;
         object-position: center;
     }
 
     /*----Nav Sticky Responsive----*/
-    nav .dmdLogo #dmdLogo.sticky{
-        display: none;
-    }
+    nav .dmdLogo #dmdLogo.sticky{display: none;}
+    nav .switchTema.sticky{display: none;}
+
     nav.sticky{padding: 0; margin: 0;}
     /*-----------------------------*/
 }
@@ -243,61 +359,3 @@ nav .navText .aText.sticky{
     /*-----------------------------*/
 }
 /*------------------------------------------------------*/
-
- /* Estilo general del switch */
-#switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-/* Ocultar el checkbox real */
-#switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-/* Estilo del slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #2196F3; /* Fondo del slider */
-    transition: .4s; /* Transición suave */
-    border-radius: 34px; /* Redondear el slider */
-}
-
-.slider:after {
-    position: absolute;
-    content: "";
-    height: 26px; /* Altura del círculo */
-    width: 26px; /* Ancho del círculo */
-    left: 4px; /* Posición inicial del círculo a la izquierda */
-    bottom: 4px; /* Posición desde la parte inferior */
-    background-color: white; /* Color del círculo */
-    transition: .4s; /* Transición suave */
-    border-radius: 50%; /* Hacer el círculo redondo */
-}
-
-/* Cuando el input está marcado (checked) */
-input:checked + .slider:after {
-    transform: translateX(26px); /* Mueve el círculo hacia la derecha */
-}
-
-/* Para aplicar otros estilos al slider en estado checked */
-input:checked + .slider {
-    background-color: #000; /* Cambia el fondo del slider */
-}
-
-.slider.round {
-    border-radius: 34px; /* Redondea el slider */
-}
-
-.slider.round:before {
-    border-radius: 50%; /* Hace el círculo completamente redondo */
-}

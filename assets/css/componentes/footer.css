@@ -5,36 +5,10 @@
 :root {
     --font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-    /* Colores */
+    /*Paleta de Colores*/
     --rojo-pantone: #9d034f; /* Pantone 200 C */
     --azul-pantone: #146597; /* Pantone 7462 C */
-
-    --blanco: #fff;
-    --rojo: #cc0000;
-
-    --fondo-header: #20507a;
-    --fondo-nav: #fff;
-    
-    --fondo-spantext: #799fbf;
-    --fcolor-desc-spantext:#001d36;
-
-    --fondo-desc: #d7e6ee;
-    --fcolor-desc-h4text:#296599;
-
-
-    --fondo-productos-h1:#292d99;
-    --fondo-footer:#142497;
-    --border-footer: red;
-
     --gris-pantone: #607387; /* Pantone Cool Gray 5 C */
-
-    /*tamaños*/
-    --Carousel-height: 480px;
-    --Logo-tamaño:65px;
-    --logo-tamaño-responsive: 65px;
-
-
-    /*Paleta de Colores*/
     --azul-dmd: #146597;
     --azul-oscurito: #0e103d;
     --rojito-dmd: #ae0d24;
@@ -43,6 +17,20 @@
     --azure-web: #e6fdff;
     --rich-black: #0e0f19;
 }
+
+
+[tema = "light"] {
+    --footerFondo: #142497;
+    --footerTextColor: #fff;
+    --footerBorderTopColor: #ae0d24;
+}
+
+[tema = "dark"] {
+    --footerFondo: #0d1661;
+    --footerTextColor: #cacaca;
+    --footerBorderTopColor: #7c0d1e;
+}
+
 
 /*whatsapp*/
 .whatsapp-float {
@@ -70,33 +58,32 @@
 
 /*--------footer*/
 footer{
-    border-top: solid 10px var(--border-footer);
-    background-color: var(--fondo-footer);
-    height: 140px;
-    color: #fff;
+    border-top: solid 10px var(--footerBorderTopColor);
+    background-color: var(--footerFondo);
+    color: var(--footerTextColor);
     font-size: 0.95rem;
     display: flex;
     justify-content: space-between;
 }
 .redes{
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3px;
+    display: flex; flex-direction: column;
+    padding: 20px 20px 30px;
 }
-
-footer .redes span .fContacto{
-    padding-right: 5px;
+.redes h2{
+    font-size: 1.6rem;
+    padding-bottom: 10px; 
+}
+.redes span i{transition: 0.1s ease;}
+.redes span i:hover{transform: scale(1.1);}
+.redes span{
+    display: flex; align-items: center;
+    gap: 8px;
     cursor: pointer;
-    transition: 0.1s ease;
+    font-size: 0.9rem;
+    padding-bottom: 2px;
 }
 
-footer .redes span .fContacto:hover{
-    transform: scale(1.1);
-}
-
-footer .indnac{
+.indnac{
     padding: 20px;
     display: flex;    
     align-items: center;
@@ -104,20 +91,20 @@ footer .indnac{
 
 }
 
-footer .indnac img{
+.indnac img{
     width: 2rem;
     height: 2rem;
     object-fit: cover;
 }
 
-footer .indnac h1{
+.indnac h1{
     font-size: 1.2rem;
     text-align: center;
 }
 
 .ubic{
     text-align: end;
-    padding: 20px;
+    padding: 20px 20px 30px;
     display: flex;
     flex-direction: column;
     align-items: end;

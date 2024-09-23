@@ -1,7 +1,7 @@
 /*transition: transform .6s ease-in-out,-webkit-transform .6s ease-in-out;*/
 *{
     padding: 0; margin: 0;
-    transition: 1s ease;
+    transition: background-color 1s ease;
 }
 :root{
     /*tamaños*/
@@ -32,7 +32,8 @@
     /*Vendemos a Todo el País*/
 /*===============================*/   
     --descFondo: #f2f2f2;
-    --descSpanColorDest: #ae0d24;
+    --descSpanColor: #000;
+    /* --descSpanColorDest: #ae0d24; */
     --descH4Color: #0e103d;
     --descButtonFondo: #ffffff;
     --descButtonFondoHover: rgb(7, 147, 240);
@@ -53,13 +54,16 @@
     --prodTittleText: #fff;
     --prodAcnButtonFondo: #1c77c3;
     --prodAcnButtonText: #fff;
+    --prodAcntContFondo: #146597;
     --prodAcntCardFondo: #f7f7f7;
     --prodAcntCardText: #000;
     --prodAcntCardBorder: #5e5e5e;
     --prodAcntCardBorderHover: #cf0707;
+    --prodDetailProdTextColor: #000;
     --prodDetailProdFondo: #f8f9fa;
     --prodDetailProdButton: #007bff;
     --prodDetailProdButtonHover: #0056b3;
+    --prodButtonText: #fff;
     --prodButtonSM: #cb1a35;
 /*===============================*/
 /*===============================*/
@@ -88,67 +92,72 @@
 body[tema="dark"] {
 
 /*          Colores              */
-
-
-     --body: gray;
-
-
-
-/*===============================*/
+/*          Colores Actualizados           */
+/*========================================*/
 /*Carousel*/
-/*===============================*/
---dotsFondo: #ffffff2e; 
---dots: #000000cc; /* color claro para los puntos */
---dotsActive: #260080;
+/*========================================*/
+--dots: #181a1b;
+--dotsActive: #20296d;
+--dotsFondo: rgba(4, 0, 0, 0.3);
 
---arrowsColor: #3e1c8d;
---arrowsHover: #ffffff; /* color claro para las flechas */
---arrowsHoverFondo: #ffffff4a; /* fondo oscuro para el hover de flechas */
-/*==============================*/
+--arrowsColor: #e8e6e3;
+--arrowsHover: #6893d2;
+--arrowsHoverFondo: rgba(32, 41, 109, 0.42);
+/*========================================*/
 
-/*==============================*/
+/*========================================*/
 /*Vendemos a Todo el País*/
-/*===============================*/   
---descFondo: rgba(255, 255, 255, 0.8); /* fondo oscuro para la descripción */
---descSpanColorDest: rgba(0, 0, 0, 0.8); /* color más claro para destacar */
---descH4Color: rgba(0, 0, 0, 0.8); /* color claro para el texto */
---descButtonFondo: rgba(0, 0, 0, 0.8); /* fondo oscuro para los botones */
---descButtonFondoHover: rgba(0, 0, 0, 0.8); /* fondo oscuro para el hover */
---descButtonBorder: rgba(0, 0, 0, 0.8); /* borde oscuro para los botones */
---descButtonBorderHover: rgba(0, 0, 0, 0.8); /* borde oscuro para el hover */
---descButtonText: rgba(0, 0, 0, 0.8); /* texto claro en los botones */
---descButtonTextHover: rgba(0, 0, 0, 0.8); /* texto oscuro en el hover */
-/*===============================*/
-/*===============================*/
+/*========================================*/   
+--descFondo: #1f2223;
+--descSpanColor: #d0ccc6;
+--descSpanColorDest: #f2566c;
+--descH4Color: #d0ccc6;
+--descButtonFondo: #181a1b;
+--descButtonFondoHover: #0676c0;
+--descButtonBorder: #8c8273;
+--descButtonBorderHover: #d90000;
+--descButtonText: #e8e6e3;
+--descButtonTextHover: #e8e6e3;
+/*========================================*/
+/*========================================*/
 
-/*==============================*/
+/*========================================*/
 /*Nuestros Productos*/
-/*===============================*/
+/*========================================*/
 --prodFondo: #181a1b;
---prodTittleFondo1: rgba(0, 0, 0, 0.8); /* título más oscuro */
---prodTittleFondo2: rgba(0, 0, 0, 0.8); /* fondo oscuro para el título */
---prodTittleText: rgba(0, 0, 0, 0.8); /* texto claro para el título */
---prodAcnButtonFondo: rgba(0, 0, 0, 0.8); /* fondo oscuro para los botones de acción */
---prodAcnButtonText: rgba(0, 0, 0, 0.8); /* texto claro en los botones */
---prodAcntCardFondo: rgba(0, 0, 0, 0.8); /* fondo oscuro para las tarjetas */
---prodAcntCardText: rgba(0, 0, 0, 0.8); /* texto claro en las tarjetas */
---prodAcntCardBorder: rgba(0, 0, 0, 0.8); /* borde oscuro para las tarjetas */
---prodAcntCardBorderHover: rgba(0, 0, 0, 0.8); /* borde oscuro para el hover */
---prodDetailProdFondo: rgba(0, 0, 0, 0.8); /* fondo oscuro para detalles de productos */
---prodDetailProdButton: rgba(0, 0, 0, 0.8); /* botón más claro para detalles */
---prodDetailProdButtonHover: rgba(0, 0, 0, 0.8); /* botón más oscuro para el hover */
---prodButtonSM: rgba(0, 0, 0, 0.8); /* botón pequeño con un tono más oscuro */
-/*===============================*/
-/*===============================*/
+--prodTittleFondo1: #ae192f;
+--prodTittleFondo2: #8b0a1d;
+--prodTittleText: #e8e6e3;
+--prodAcnButtonFondo: #165f9c;
+--prodAcnButtonText: #e8e6e3;
+--prodAcntCardFondo: #1d1f20;
+--prodAcntCardText: #e8e6e3;
+--prodAcntCardBorder: #6d655a;
+--prodAcntCardBorderHover: #b90606;
+--prodDetailProdTextColor: #fff;
+--prodDetailProdFondo: #1b1e1f;
+--prodDetailProdButton: #0062cc;
+--prodDetailProdButtonHover: #00458f;
+--prodButtonText: #e9e9e9;
+--prodButtonSM: #a2152a;
+/*========================================*/
+/*========================================*/
 
-/*==============================*/
+/*========================================*/
 /*Nuestros Clientes*/
-/*===============================*/   
---ClientesText: rgba(0, 0, 0, 0.8); /* texto claro para clientes */
-/*===============================*/
-/*===============================*/
+/*========================================*/   
+--ClientesText: #e8e6e3;
+/*========================================*/
+/*========================================*/
 
-    }
+/*Paleta de Colores*/
+--azul-dmd: #007bff;
+--rojito-dmd: #ff4f00;
+--ivory: #e8e6e3;
+--rich-black: #181a1b;
+
+}
+
 
 
 body {
@@ -227,10 +236,12 @@ span.next:hover, span.prev:hover{
     color: var(--arrowsHover);
     background-color: var(--arrowsHoverFondo);
 } 
-.dotsContainer{
+
+.dotsContainer {
     position: absolute;
     width: auto;
-    display: flex; justify-content: center;
+    display: flex;
+    justify-content: center;
     bottom: 30px;
     z-index: 3;
     left: 50%;
@@ -238,8 +249,9 @@ span.next:hover, span.prev:hover{
     border-radius: 15px;
     background-color: var(--dotsFondo);
 }
-.dotsContainer .dot{
 
+.dotsContainer .dot {
+    position: relative;
     width: 10px;
     height: 10px;
     background-color: var(--dotsFondo);
@@ -251,6 +263,18 @@ span.next:hover, span.prev:hover{
     transition: 0.5s ease;
     background-color: var(--dots);
 }
+
+/* Expande el área clicable sin cambiar el tamaño visual */
+.dotsContainer .dot::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* Expande hacia arriba */
+    left: -10px; /* Expande hacia la izquierda */
+    right: -10px; /* Expande hacia la derecha */
+    bottom: -10px; /* Expande hacia abajo */
+}
+
+
 .dotsContainer .active{
     background-color: var(--dotsActive);
     width: 25px;
@@ -302,9 +326,10 @@ span.next:hover, span.prev:hover{
 
 #descripcion article{
         margin: 0 auto;
+        padding: 30px;
         display: grid;
-        grid-template-rows: 80px auto;
-        grid-template-columns: 70% 1fr;
+        grid-template-rows: 75px auto;
+        grid-template-columns: 75% 1fr;
         grid-template-areas: 
         "span1 span1"
         " h4 btn"
@@ -314,25 +339,25 @@ span.next:hover, span.prev:hover{
     
     #descripcion article p {
         grid-area: span1;
-        font-size: 1.6rem;
-        padding: 20px 40px;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
+        color: var(--descSpanColor);
+        font-size: 1.6rem; font-weight: 700;
+        display: flex; align-items: center;
+        height: max-content;
+        margin-left: 20px;
     }
-
+/*
     #descripcion article span#destacado {
-        color: var(--descSpanColorDest); /* Cambia este color según prefieras */
-        font-size: 1.8rem;
+        color: var(--descSpanColorDest); 
+        font-size: 4rem;
         font-weight: 600;
     }
-
+*/
     #descripcion article h4 {
+        padding: 0; margin: 0;
         color: var(--descH4Color);
         grid-area: h4; 
         margin-left: 50px;
-        padding: 0px 0 30px;
-        font-size: 1.035rem;
+        font-size: 1.08rem;
         font-weight: 600;
         border-radius: 5px;
     }
@@ -340,10 +365,13 @@ span.next:hover, span.prev:hover{
         grid-area: btn; 
         height: 50px;
         display: flex;
+        margin: 0 60px 0 50px;
     }
     #descripcion article .btn #buttonH2{
-        border: solid 1px;
-        padding: 0 90px;
+        width: 100%;
+        margin: 0 auto;
+        border: solid 1px var(--descButtonBorder);
+        color: var(--descButtonText);
         background-color: var(--descButtonFondo); 
         border-radius: 4px;
         font-size: 1rem;
@@ -360,7 +388,7 @@ span.next:hover, span.prev:hover{
     @media (max-width: 700px){
 
         #descripcion{
-            padding: 0 20px;
+            padding: 0px;
         }
 
 
@@ -368,10 +396,17 @@ span.next:hover, span.prev:hover{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            padding: 20px;
         }    
+
+        #descripcion article p{
+            margin: 0 0 5px;
+            text-align: center;
+        }
         #descripcion article h4{
-        padding: 15px 5px;
-        width: 80%;
+            margin: 15px;
+            width: 80%;
+            text-align: center;
         }
         #descripcion article .btn{
             width: 300px;
@@ -423,7 +458,7 @@ span.next:hover, span.prev:hover{
     display: none;
     width: 100%;
     border-radius: 10px;
-    background-color: var(--azul-pantone);
+    background-color: var(--prodAcntContFondo);
     position: relative;
     padding: 40px 0 0;
     bottom: 40px;
@@ -442,7 +477,8 @@ span.next:hover, span.prev:hover{
 
 .accordion-button {
     width: 100%;
-    margin: 20px 0 0; padding: 20px 15px;
+    margin: 20px 20px 0; 
+    padding: 20px 15px;
     border-radius: 7px;
     letter-spacing: 0.5px;
     font-weight: 500;
@@ -583,6 +619,9 @@ span.next:hover, span.prev:hover{
 }
 
 
+.product-detail{
+    color: var(--prodDetailProdTextColor);
+}
 
 /* Imagen normal */
 #product-image {
@@ -622,15 +661,13 @@ span.next:hover, span.prev:hover{
 
 .saberMas{
     margin: 30px auto 50px;
-    font-size: 1.2rem;
     padding: 15px;  
-    text-align: center;
-    width: 22%;
-    color: #fff;
+    text-align: center; font-size: 1.2rem; letter-spacing: 2px;
+    color: var(--prodButtonText);
     background-color: var(--prodButtonSM);
     border-radius: 10px;
-    letter-spacing: 2px;
     transition: 0.3s;
+    width: 30%;
     }
     
 .saberMas:hover{
@@ -644,7 +681,11 @@ span.next:hover, span.prev:hover{
     cursor: pointer;
 }
 
-
+@media (max-width: 850px){
+    .saberMas{
+        width: 40%;
+    }
+}
 
 /*carrusel logos----------------------------------------*/
 
