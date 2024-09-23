@@ -10,10 +10,14 @@
     <link rel="icon" href="assets/img/image001 (copia 1).png">
     <title>Contacto</title>
 </head>
-<body id="bContacto">
+<body tema="light">
+
+<!--------------- Header y Nav----------------------------------------->
     <header>
         <span id="email">info@dmdcompresores.com</span>
+        
         <div id="rLogos">
+            <button id="language-toggle">Switch to English</button>
             <i class="fa-brands fa-linkedin logos" data-url="https://www.linkedin.com/company/dmd-compresores/"></i>
             <i class="fa-brands fa-whatsapp logos" data-url="https://wa.me/1159380579"></i>
             <i class="fa-brands fa-facebook-f logos" data-url="https://www.facebook.com/DMDCOMPRESORES"></i>
@@ -24,51 +28,69 @@
     <nav>
 
         <div class="dmdLogo"><img id="dmdLogo" src="assets/img/logo2.png" alt="DMD Logo"></div>
-        
+
+        <div class="switchTema">
+        <label id="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        </div>
         <div class="navText">
-            <p class="aText" id="inicio">Inicio</p>
-            <p class="aText" id="nosotros">Nosotros</p>
-            <p class="aText" id="contacto">Contacto</p>
+            <!--<i class="fa-solid fa-bars" id="navList"></i>-->
+            <p class="aText" id="inicio" data-es="Inicio" data-en="Home">Inicio</p>
+            <p class="aText" id="nosotros" data-es="Nosotros" data-en="About Us">Nosotros</p>
+            <p class="aText" id="contacto" data-es="Contacto" data-en="Contact">Contacto</p>
         </div>
 
     </nav>
+    
+<!-------------------------------------------------------------------------------------------------->
+
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.4902598028294!2d-58.422838!3d-34.690556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f8!3m3!1m2!1s0x95bccc91f7abe89b%3A0xb6f1f94c5b17da99!2sCompresores%20Dmd!5e0!3m2!1ses-419!2sar!4v1727098801825!5m2!1ses-419!2sar"
+     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 
 
-
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d434.4566833988849!2d-58.422854337823885!3d-34.690544680178284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccc91f7abe89b%3A0xb6f1f94c5b17da99!2sCompresores%20Dmd!5e0!3m2!1ses-419!2sar!4v1724961012986!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
 
 
 
     <section id="sectionForm">
         
-        <h2>FORMULARIO</h2>
         <aside>
             <div class="info-wrap">
                 <div class="row">
-                    <div class="col-lg-4 info">
+
+                    <div class="items">
                         <img src="assets/img/logos/google-map.svg" alt="d" class="redesImg">
-                        <h4>Texto:</h4>
-                        <p>dasda</p>
+                        <div class="col-lg-4 info">
+                            <h4>Texto:</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, repudiandae!</p>
+                        </div>
                     </div>
-        
-                    <div class="col-lg-4 info mt-4 mt-lg-0">
+
+                    <div class="items">
                         <img src="asd" alt="e" class="redesImg">
-                        <h4>Texto:</h4>
-                        <p>dasdas</p>
+                        <div class="col-lg-4 info mt-4 mt-lg-0">
+                            <h4>Texto:</h4>
+                            <p>dasdas</p>
+                        </div>
                     </div>
-        
-                    <div class="col-lg-4 info mt-4 mt-lg-0">
+
+                    <div class="items">
+    
                         <img src="asd" alt="t" class="redesImg">
-                        <h4>Texto:</h4>
-                        <p><strong>Texto:</strong><br>texto2</p>
+                        <div class="col-lg-4 info mt-4 mt-lg-0">
+                            <h4>Texto:</h4>
+                            <p>|||||||||||||||texto2</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </aside>
         
         <div class="formcont">
+            <h2>FORMULARIO</h2>
             <form action="">
                 <!--<label for="telefono">Telefono:</label><br>-->
                 <input type="text" id="telefono" name="telefono" placeholder="Telefono" required>
@@ -86,6 +108,7 @@
                     <label for="mensaje">Mensaje:</label><br>
                     <textarea id="mensaje" name="mensaje" required></textarea><br><br>
                 </div>
+                
                 <button type="submit">Enviar</button>
             </form>
         </div>

@@ -4,34 +4,50 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="assets/css/preguntas.css">
 	<link rel="stylesheet" href="assets/css/componentes/header.css">
 	<link rel="stylesheet" href="assets/css/componentes/footer.css">
 	<title>Preguntas Frecuentes</title>
 </head>
-<body>
-	<header>
+<body tema="light">
+
+<!--------------- Header y Nav----------------------------------------->
+    <header>
         <span id="email">info@dmdcompresores.com</span>
+        
         <div id="rLogos">
+            <button id="language-toggle">Switch to English</button>
             <i class="fa-brands fa-linkedin logos" data-url="https://www.linkedin.com/company/dmd-compresores/"></i>
             <i class="fa-brands fa-whatsapp logos" data-url="https://wa.me/1159380579"></i>
             <i class="fa-brands fa-facebook-f logos" data-url="https://www.facebook.com/DMDCOMPRESORES"></i>
             <i class="fa-brands fa-instagram logos" data-url="https://www.instagram.com/dmdcompresores/"></i>
         </div>
     </header>
-	<nav>
+
+    <nav>
 
         <div class="dmdLogo"><img id="dmdLogo" src="assets/img/logo2.png" alt="DMD Logo"></div>
-        
+
+        <div class="switchTema">
+        <label id="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+		</div>
         <div class="navText">
             <!--<i class="fa-solid fa-bars" id="navList"></i>-->
-            <p class="aText" id="inicio">Inicio</p>
-            <p class="aText" id="nosotros">Nosotros</p>
-            <p class="aText" id="contacto">Contacto</p>
+            <p class="aText" id="inicio" data-es="Inicio" data-en="Home">Inicio</p>
+            <p class="aText" id="nosotros" data-es="Nosotros" data-en="About Us">Nosotros</p>
+            <p class="aText" id="contacto" data-es="Contacto" data-en="Contact">Contacto</p>
         </div>
 
     </nav>
+    
+<!-------------------------------------------------------------------------------------------------->
+
 	<main>
 		<h1 class="titulo">Preguntas Frecuentes</h1>
 		<div class="categorias" id="categorias">
