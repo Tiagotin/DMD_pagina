@@ -94,6 +94,7 @@ body {
     "formh2 formh2"
     "formredes formf "
     ;
+    gap: 20px;
 }
 
 
@@ -123,17 +124,23 @@ body {
 #sectionForm aside .items {
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.125);
     padding: 10px 20px;
-    
     display: flex;
+    align-items: center;
     background-color: var(--asideFondo2);
+    padding: 15px;
+    gap: 20px;
     
+}
+
+:root{
+    --tRedesImg:40px
 }
 
 .redesImg {
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+    width: var(--tRedesImg);
+    height: var(--tRedesImg);
+
 }
 
 
@@ -142,7 +149,7 @@ body {
 #sectionForm .formcont{
     grid-area: formf;
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.26);
-    margin: 20px;
+    margin: 20px 20px 40px 0;
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -237,7 +244,7 @@ textarea{
     max-height: 300px; min-height: 50px;
 }
 
-@media (max-width: 550px){
+@media (max-width: 750px){
     #sectionForm{
         display: flex;
         flex-direction: column;
