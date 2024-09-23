@@ -3,9 +3,10 @@
     padding: 0; margin: 0;
     transition: background-color 1s ease;
 }
+
 :root{
     /*tamaños*/
-    --Cheight: 500px;
+    --Cheight: 700px;
     --Logo-tamaño:65px;
     --logo-tamaño-responsive: 65px;
 }
@@ -32,9 +33,10 @@
     /*Vendemos a Todo el País*/
 /*===============================*/   
     --descFondo: #f2f2f2;
-    --descSpanColor: #000;
+    --descSpanColor: #d61212;
     /* --descSpanColorDest: #ae0d24; */
     --descH4Color: #0e103d;
+    --descH4Fondo: #ffcaca;
     --descButtonFondo: #ffffff;
     --descButtonFondoHover: rgb(7, 147, 240);
     --descButtonBorder: #000;
@@ -52,21 +54,24 @@
     --prodTittleFondo1: #da1f3b;
     --prodTittleFondo2: #ae0d24;
     --prodTittleText: #fff;
-    --prodAcnButtonFondo: #1c77c3;
-    --prodAcnButtonText: #fff;
-    --prodAcntContFondo: #146597;
-    --prodAcntCardFondo: #f7f7f7;
-    --prodAcntCardText: #000;
-    --prodAcntCardBorder: #5e5e5e;
-    --prodAcntCardBorderHover: #cf0707;
-    --prodDetailProdTextColor: #000;
-    --prodDetailProdFondo: #f8f9fa;
-    --prodDetailProdButton: #007bff;
-    --prodDetailProdButtonHover: #0056b3;
+    --prodCardFondo: #fff;
+    --prodCardTexto: #333;
+    --prodCardIcons: #ae0d24;
     --prodButtonText: #fff;
-    --prodButtonSM: #cb1a35;
-/*===============================*/
-/*===============================*/
+    --prodButtonSM: #146597;
+/*===============================
+--prodAcnButtonFondo: #1c77c3;
+--prodAcnButtonText: #fff;
+--prodAcntContFondo: #146597;
+--prodAcntCardFondo: #f7f7f7;
+--prodAcntCardText: #000;
+--prodAcntCardBorder: #5e5e5e;
+--prodAcntCardBorderHover: #cf0707;
+--prodDetailProdTextColor: #000;
+--prodDetailProdFondo: #f8f9fa;
+--prodDetailProdButton: #007bff;
+--prodDetailProdButtonHover: #0056b3;
+===============================*/
 
 
 /*==============================*/
@@ -123,7 +128,7 @@ body[tema="dark"] {
 
 /*========================================*/
 /*Nuestros Productos*/
-/*========================================*/
+/*========================================*
 --prodFondo: #181a1b;
 --prodTittleFondo1: #ae192f;
 --prodTittleFondo2: #8b0a1d;
@@ -138,9 +143,16 @@ body[tema="dark"] {
 --prodDetailProdFondo: #1b1e1f;
 --prodDetailProdButton: #0062cc;
 --prodDetailProdButtonHover: #00458f;
+========================================*/
+--prodFondo: #181a1b;
+--prodTittleFondo1: #ae192f;
+--prodTittleFondo2: #8b0a1d;
+--prodTittleText: #e8e6e3;
+--prodCardFondo: #272727;
+--prodCardTexto: #fff;
+--prodCardIcons: #ff4f00;
 --prodButtonText: #e9e9e9;
 --prodButtonSM: #a2152a;
-/*========================================*/
 /*========================================*/
 
 /*========================================*/
@@ -195,13 +207,37 @@ body {
 
 .Carousel .slides .content article{
     position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%);
-    display: flex; align-items: center; justify-content: center;
-    width: 40vw; height: 100px;
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    width: max-content; height: 100px;
     padding: 30px;
     overflow: hidden;
+    text-align: center;
+    gap: 10px;
     display: none;
 }
+.Carousel .slides .content article h1{
+    position: absolute;
+    z-index: 4;
+    filter: blur(0px);
+    font-size: 2.875rem;
+}
+.Carousel .slides .content article span{
+    font-size: 1.125;
+}
+.Carousel .slides .content article button{
+    color: #fff;
+    background-color: #8d0a1d;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
 
+.Carousel .slides .content article button:hover{
+    background-color: #6d0817;
+}
 .content:nth-child(1) { background-image: url(../img/dmd/foto.jpg); }
 .content:nth-child(2) { background-image: url(../img/dmd/fabrica\ 4.jpg); }
 .content:nth-child(3) { background-image: url(../img/dmd/FLOTA\ 3.jpg); }
@@ -334,16 +370,16 @@ span.next:hover, span.prev:hover{
         "span1 span1"
         " h4 btn"
         ;
-        
     }
     
     #descripcion article p {
+        margin-left: 25px;
         grid-area: span1;
         color: var(--descSpanColor);
-        font-size: 1.6rem; font-weight: 700;
-        display: flex; align-items: center;
+        font-size: 2.3em; font-weight: 700;
+        width: max-content;
         height: max-content;
-        margin-left: 20px;
+        color: var(--descSpanColor);
     }
 /*
     #descripcion article span#destacado {
@@ -360,6 +396,8 @@ span.next:hover, span.prev:hover{
         font-size: 1.08rem;
         font-weight: 600;
         border-radius: 5px;
+        padding: 10px;
+        background-color: var(--descH4Fondo);
     }
     #descripcion article .btn {
         grid-area: btn; 
@@ -441,6 +479,59 @@ span.next:hover, span.prev:hover{
 
 /*productos o servicios--------------------------*/
     
+
+.productos{
+    padding: 70px 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+}
+
+.productos .cards{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: #42465445 0px 0px 0.25em, #5a7dbc0d 0px 0.25em 1em;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--prodCardTexto);
+    cursor: pointer;
+    transition: 0.4s ease;
+    background-color: var(--prodCardFondo);
+}
+
+.productos .cards:hover{
+    box-shadow: #ff000077 0px 0px 1em, #ff00000d 0px 1em 2em;
+}
+
+.productos .cards i{
+    color: var(--prodCardIcons);
+    font-size: 3.2rem;
+    margin-bottom: 30px;
+}
+
+.productos .cards h3{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Detalle del Producto ---------------------------------------------------------*/
 
 
