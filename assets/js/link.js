@@ -88,16 +88,16 @@ colorSwitch.addEventListener('change', cambiaTema);
 
 window.addEventListener('scroll', function() {
     var whatsappFloat = document.querySelector('.whatsapp-float');
-    var footer = document.getElementById('footer');
+    var footer = document.querySelector('footer'); // Seleccionar el footer sin id
 
     // Obtener la posición del footer en relación con la parte superior de la ventana
     var footerTop = footer.getBoundingClientRect().top;
     var windowHeight = window.innerHeight;
 
-    // Si el logo está tocando el footer, lo hacemos "sticky" justo antes de que toque el footer
-    if (footerTop <= windowHeight + 0) { // 90px es el tamaño del logo más margen
+    // Si el botón de WhatsApp está tocando el footer, lo hacemos "sticky" justo antes de que toque el footer
+    if (footerTop <= windowHeight) {
         whatsappFloat.style.position = 'absolute';
-        whatsappFloat.style.bottom = (windowHeight - footerTop + 2) + 'px';
+        whatsappFloat.style.bottom = (windowHeight - footerTop + 2) + 'px'; // Ajuste fino
     } else {
         whatsappFloat.style.position = 'fixed';
         whatsappFloat.style.bottom = '2px';
