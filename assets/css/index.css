@@ -496,11 +496,12 @@ span.next:hover, span.prev:hover{
     
 
 .productos{
-    padding: 70px 20px 20px;
+    padding: 40px 20px 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 80px;
+    
 }
 
 .productos .cards{

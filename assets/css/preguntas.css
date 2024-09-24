@@ -29,7 +29,8 @@ body {
 main {
 	max-width: 1000px;
 	width: 90%;
-	margin: 40px auto;
+	margin: 40px auto 120px;
+	height: max-content;
 }
 
 .titulo {

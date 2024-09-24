@@ -97,7 +97,7 @@ window.addEventListener('scroll', function() {
     // Si el botón de WhatsApp está tocando el footer, lo hacemos "sticky" justo antes de que toque el footer
     if (footerTop <= windowHeight) {
         whatsappFloat.style.position = 'absolute';
-        whatsappFloat.style.bottom = (windowHeight - footerTop + 2) + 'px'; // Ajuste fino
+        whatsappFloat.style.bottom = (footerTop + 2) + 'px'; // Ajuste fino
     } else {
         whatsappFloat.style.position = 'fixed';
         whatsappFloat.style.bottom = '2px';
