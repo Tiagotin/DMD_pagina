@@ -60,6 +60,7 @@ body {
 }
 
 .compresor {
+    
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -67,6 +68,8 @@ body {
     flex-grow: 1;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
+    padding: 15px 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .compresor:hover {
@@ -76,10 +79,10 @@ body {
 
 .compresor img {
     margin: 10px;
-    border-radius: 10px;
-    width: 450px;
+    width: 700px;
     height: auto;
     object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
 
 .compresor-info {
@@ -100,6 +103,15 @@ body {
     color: #7f8c8d;
 }
 
+.compresor-info ul{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+
+
 .consult-button {
     background-color: #e74c3c;
     color: #fff;
@@ -116,3 +128,48 @@ body {
     transform: scale(1.05);
 }
 
+.detalleCompresor{
+    margin: 0 auto;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.compresor-img2{
+    width: 500px;
+    height: max-content;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.compresor-img img{
+    width: 400px;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+
+.consul p{
+    background-color: #ae0d24;
+    color: #fff;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 10px 0;
+}
+
+.consul p a{
+    text-decoration: none;
+    color: #fff;
+    text-decoration: underline  transparent;
+    transition: 0.2s ease;
+}
+
+.consul p a:hover{
+    text-decoration: underline ;
+}

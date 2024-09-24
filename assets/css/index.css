@@ -360,6 +360,7 @@ span.next:hover, span.prev:hover{
 /*--------------------------consultar*/
 
 #descripcion {
+    display: none;
     /* Fondo con degradado usando los colores de la paleta */
     background-color: var(--descFondo);
     background: linear-gradient(135deg, var(--descFondoG1) 0%, var(--descFondoG2) 100%);
@@ -506,7 +507,7 @@ span.next:hover, span.prev:hover{
     padding: 20px;
     border-radius: 10px;
     box-shadow: #42465445 0px 0px 0.25em, #5a7dbc0d 0px 0.25em 1em;
-    width: 240px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Selecciona la card de Tratamientos
     document.getElementById('tratamientos-card').addEventListener('click', function() {
         // Redirige a tratamientos.html
-        window.location.href = 'tratamientos.html';
+        window.location.href = 'zero.html';
     });
 });
 
