@@ -1,4 +1,36 @@
-/*productos funcionalidad---------------------------------------------------*/
+
+
+
+
+
+// Espera a que todo el DOM esté cargado
+document.addEventListener('DOMContentLoaded', function() {
+    // Selecciona la card de Compresores
+    document.getElementById('compresores-card').addEventListener('click', function() {
+        // Redirige a detalle.html
+        window.location.href = 'detalle.html';
+    });
+
+    // Selecciona la card de Servicios Técnicos
+    document.getElementById('servicios-card').addEventListener('click', function() {
+        // Redirige a servicios.html
+        window.location.href = 'servicios.html';
+    });
+
+    // Selecciona la card de Tratamientos
+    document.getElementById('tratamientos-card').addEventListener('click', function() {
+        // Redirige a tratamientos.html
+        window.location.href = 'tratamientos.html';
+    });
+});
+
+
+
+
+
+
+
+/*productos funcionalidad---------------------------------------------------
 
 document.addEventListener('DOMContentLoaded',()=>{
     // Obtener elementos del DOM
@@ -86,4 +118,4 @@ accordionButtons.forEach(button => {
         }
     });
 });
-
+*/

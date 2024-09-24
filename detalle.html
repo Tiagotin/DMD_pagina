@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compresores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/detalle.css">
+    <link rel="stylesheet" href="assets/css/componentes/header.css">
+    <link rel="stylesheet" href="assets/css/componentes/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <span id="email">info@dmdcompresores.com</span>
+        
+        <div id="rLogos">
+            <button id="language-toggle">Switch to English</button>
+            <i class="fa-brands fa-linkedin logos" data-url="https://www.linkedin.com/company/dmd-compresores/"></i>
+            <i class="fa-brands fa-whatsapp logos" data-url="https://wa.me/1159380579"></i>
+            <i class="fa-brands fa-facebook-f logos" data-url="https://www.facebook.com/DMDCOMPRESORES"></i>
+            <i class="fa-brands fa-instagram logos" data-url="https://www.instagram.com/dmdcompresores/"></i>
+        </div>
+    </header>
+
+    <nav>
+
+        <div class="dmdLogo"><img id="dmdLogo" src="assets/img/logo2.png" alt="DMD Logo"></div>
+
+        <div class="switchTema">
+            <label id="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        
+        <div class="navText">
+            <!--<i class="fa-solid fa-bars" id="navList"></i>-->
+            <p class="aText" id="inicio" data-es="Inicio" data-en="Home">Inicio</p>
+            <p class="aText" id="nosotros" data-es="Nosotros" data-en="About Us">Nosotros</p>
+            <p class="aText" id="contacto" data-es="Contacto" data-en="Contact">Contacto</p>
+        </div>
+
+    </nav>
+    
+    <!---------------------------------------------------------------->
+
+    <div class="hero">
+        <h1>Compresores</h1>
+        <p>Soluciones avanzadas para sus necesidades de aire comprimido.</p>
+    </div>
+
+    <section class="compresores">
+        <div class="compresor">
+            <img src="assets/img/productos/LUBRICADO.webp" alt="Efficiens VI Compresor">
+            <div class="compresor-info">
+                <h2>Efficiens VI - Lubricado</h2>
+                <p>El compresor lubricado Efficiens VI garantiza mayor eficiencia energética, ofrece cero cautividad y dependencia con insumos de fácil localización, genera ahorros mínimos promedio del 40%, y está respaldado por 15 años de especialización en tecnología de potencia variable con más de 1100 máquinas instaladas en todo el mundo.</p>
+                <button onclick="location.href='contacto.html'" class="consult-button">Consultar sobre Efficiens VI</button>
+            </div>
+        </div>
+
+        <div class="compresor">
+            <img src="assets/img/productos/ZERO.webp" alt="Clase Zero Compresor">
+            <div class="compresor-info">
+                <h2>Clase Zero - Libre de Aceite</h2>
+                <p>El compresor Clase Zero está diseñado para ofrecer el aire más puro y sin riesgo de contaminación. Con su sistema de lubricación a base de agua, elimina completamente el uso de aceite, ideal para aplicaciones farmacéuticas y hospitalarias.</p>
+                <ul>
+                    <li><strong>Caudales:</strong> 1-8 Nm³/min</li>
+                    <li><strong>Presión de trabajo:</strong> 6.5-8 barg</li>
+                    <li><strong>Potencias:</strong> 15-45 kW</li>
+                </ul>
+                <button onclick="location.href='contacto.html'" class="consult-button">Consultar sobre Clase Zero</button>
+            </div>
+        </div>
+    </section>
+    <p>¿Tiene alguna consulta? <a href="contacto.html">Contáctenos</a></p>
+
+
+    <footer >
+        <div class="redes">
+            <h2>Contactanos</h2>
+            <span><i class="fa-solid fa-envelope fContacto"></i>info@dmdcompresores.com</span>
+            <span><i class="fa-solid fa-phone fContacto"></i>11-3959-2363</span>
+        </div>
+        <div class="indnac">
+            <img src="assets/img/arg.jpg" alt="Industria Nacional">
+            <h1>INDUSTRIA NACIONAL</h1>
+            <img src="assets/img/ind.png" alt="Industria Nacional">
+        </div>
+        <div class="ubic">
+            <h2>OFICINA CENTRAL</h2>
+            <span>Gobernador Oliden 2768</span>
+            <span>Lanus Oste, Buenos Aires</span>
+        </div>
+    </footer>
+        
+
+    <script src="assets/js/link.js"></script>
+</body>
+</html>
