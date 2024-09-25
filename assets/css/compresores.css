@@ -62,7 +62,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 15px 5px;
+    padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     display: flex;
     flex-wrap: wrap;
@@ -74,7 +74,6 @@ body {
 }
 
 .compresor-img{
-    border: solid 1px;
     width: 700px;
 }
 
@@ -135,14 +134,25 @@ body {
 .compresor-tecdesc{
     width: 100%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
 }
+
+.compresor-tecdesc h2{margin-left: 20px;}
+
 .compresor-tecdesc table{
-    
     border-radius: 10px;
     border: solid 1px #ececec;
     background-color: #fdfdfd;
-    
+    margin: 0px 50px;
 }
+
+.compresor-tecdesc table:nth-of-type(1) {width: 90%;}
+.compresor-tecdesc table:nth-of-type(2) {width: 40%;}
+.compresor-tecdesc table:nth-of-type(3) {width: 60%;}
+
 
 .compresor-tecdesc table th, .compresor-tecdesc table td{padding: 10px;}
 
