@@ -119,22 +119,39 @@ body {
 }
 
 
+.consult-button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.consult-button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+
 .compresor-tecdesc{
     width: 100%;
-    padding: 20px;
+    padding: 20px 0px;
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 20px;
 }
 
-.compresor-tecdesc h2{margin-left: 20px;}
+.compresor-tecdesc h2{margin-left: 10px;}
 
 .compresor-tecdesc table{
     border-radius: 10px;
     border: solid 1px #ececec;
     background-color: #fdfdfd;
-    margin: 0px 50px;
+    margin: 0px 30px;
 }
 
 #compresorZero table:nth-of-type(1) {width: 90%;}
@@ -145,7 +162,6 @@ body {
 #CompresorVI table:nth-of-type(3) {width: 90%;}
 
 .compresor-tecdesc .text{
-
     font-size: 1.1rem; /* Tamaño de fuente */
     color: #444; /* Color del texto */
     flex-grow: 1; /* Permitir que crezca */
@@ -166,21 +182,7 @@ tbody tr{font-size: 0.9rem;}
 tbody tr:nth-child(odd) {background-color: #ececec;}
 
 
-.consult-button {
-    background-color: #e74c3c;
-    color: #fff;
-    padding: 12px 25px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    border-radius: 5px;
-}
 
-.consult-button:hover {
-    background-color: #c0392b;
-    transform: scale(1.05);
-}
 
 .detalleCompresor{
     margin: 0 auto;
@@ -206,6 +208,7 @@ tbody tr:nth-child(odd) {background-color: #ececec;}
     object-position: center;
     
 }
+
 
 
 .consul p{
