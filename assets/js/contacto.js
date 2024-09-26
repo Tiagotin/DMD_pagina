@@ -33,3 +33,31 @@ document.getElementById('formulario').addEventListener('submit', function(event)
     window.location.href = mailtoLink;
 });
 
+
+/*---------------------------------------------------
+------------------------Aside------------------------
+---------------------------------------------------*/
+
+// Espera a que todo el DOM esté cargado
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Funcionalidad para abrir Google Maps con la ubicación
+    document.querySelector('.fa-location-dot').addEventListener('click', function() {
+        window.open("https://www.google.com/maps?q=Gobernador+Oliden+2768+Lanus+Oeste,+Buenos+Aires", '_blank');
+    });
+
+    // Funcionalidad para abrir el cliente de correo
+    document.querySelector('.fa-envelope').addEventListener('click', function() {
+        window.location.href = "mailto:info@dmdcompresores.com";
+    });
+
+    // Funcionalidad para iniciar una llamada (en dispositivos móviles)
+    document.querySelector('.fa-phone').addEventListener('click', function() {
+        window.location.href = "tel:+5491139592363";
+    });
+
+    // Funcionalidad para buscar colectivos en Google
+    document.querySelector('.fa-bus').addEventListener('click', function() {
+        window.open("https://www.omnilineas.com.ar/buenos-aires/colectivo/linea-158/", '_blank');
+    });
+});
