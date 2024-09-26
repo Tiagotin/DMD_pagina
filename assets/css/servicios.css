@@ -77,6 +77,7 @@ body {
     width: 450px;
     border-radius: 4px;
     margin-top: 65px;
+    position: relative;
 }
 
 .compresor .compresor-img img {

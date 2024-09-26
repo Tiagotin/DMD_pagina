@@ -1,4 +1,7 @@
 /*transition: transform .6s ease-in-out,-webkit-transform .6s ease-in-out;*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 *{
     padding: 0; margin: 0;
     transition: background-color 0.1s ease;
