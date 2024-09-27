@@ -71,14 +71,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const colorSwitch = document.querySelector('#switch input[type="checkbox"]');
 const body = document.body;
+
+
 function cambiaTema(ev) {
     if (ev.target.checked) {
         body.setAttribute('tema', 'dark');
+        localStorage.setItem('modoOscuro', 'true');  // Guardar el estado en localStorage
     } else {
         body.setAttribute('tema', 'light');
+        localStorage.setItem('modoOscuro', 'false'); // Guardar el estado en localStorage
     }
 }
+
+// Verificar si el modo oscuro está guardado en localStorage
+const modoOscuroActivo = localStorage.getItem('modoOscuro');
+
+// Si está activo, aplicar el modo oscuro y marcar el checkbox
+if (modoOscuroActivo === 'true') {
+    body.setAttribute('tema', 'dark');
+    colorSwitch.checked = true;  // Marcar el checkbox
+} else {
+    body.setAttribute('tema', 'light');
+    colorSwitch.checked = false; // Desmarcar el checkbox
+}
+
 colorSwitch.addEventListener('change', cambiaTema);
+
+
+
+
 
 
 
