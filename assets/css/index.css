@@ -60,12 +60,12 @@
     --prodFondo: #ffffff;
     --prodTittleFondo1: #da1f3b;
     --prodTittleFondo2: #ae0d24;
-    --servTittleFondo1: #1a8fbf; /* Cambiado a azul */
-    --servTittleFondo2: #0d4f72;
+    --servTittleFondo1: #da1f3b; /* Cambiado a azul */
+    --servTittleFondo2: #ae0d24;
     --prodTittleText: #fff;
     --prodCardFondo: #fff;
     --prodCardTexto: #333;
-    --prodCardIcons: #0d4f72;
+    --prodCardIcons: #ae0d24;
     --prodButtonText: #fff;
     --prodButtonSM: #146597;
 /*===============================
