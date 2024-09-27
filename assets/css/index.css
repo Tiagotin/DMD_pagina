@@ -60,10 +60,12 @@
     --prodFondo: #ffffff;
     --prodTittleFondo1: #da1f3b;
     --prodTittleFondo2: #ae0d24;
+    --servTittleFondo1: #1a8fbf; /* Cambiado a azul */
+    --servTittleFondo2: #0d4f72;
     --prodTittleText: #fff;
     --prodCardFondo: #fff;
     --prodCardTexto: #333;
-    --prodCardIcons: #ae0d24;
+    --prodCardIcons: #0d4f72;
     --prodButtonText: #fff;
     --prodButtonSM: #146597;
 /*===============================
@@ -90,8 +92,8 @@
 
     /*Paleta de Colores*/
     --azul-dmd: #146597;
-    --azul-oscurito: #0e103d;
     --rojito-dmd: #ae0d24;
+    --azul-oscurito: #0e103d;
     --gold: #e8aa14;
     --ivory: #f5f9e9;
     --azure-web: #e6fdff;
@@ -479,20 +481,18 @@ span.next:hover, span.prev:hover{
 /* Textos Productos y Clientes*/
 
 .pTitulo h1{
-    font-size: 2rem;
-    padding: 7px;  
     text-align: center;
-    width: 100%;
-    background: linear-gradient(to bottom, 
-    var(--prodTittleFondo1),
-    var(--prodTittleFondo2));
-    color: var(--prodTittleText);
-    box-shadow: #00000026 0px 5px 15px 0px;
+    font-size: 2rem;
     letter-spacing: 1.8px;
+    width: 100%;
+    padding: 7px;  
+    color: var(--prodTittleText);
+    box-shadow: #00000026   
+        0px 5px 15px 0px;
+    background: linear-gradient(to bottom, 
+        var(--prodTittleFondo1),
+        var(--prodTittleFondo2));
 }
-
-
-/*productos o servicios--------------------------*/
     
 
 .productos{
@@ -505,15 +505,14 @@ span.next:hover, span.prev:hover{
 }
 
 .productos .cards{
+    width: 400px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: #42465445 0px 0px 0.25em, #5a7dbc0d 0px 0.25em 1em;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
+    box-shadow: #42465445 0px 0px 0.25em, #5a7dbc0d 0px 0.25em 1em;    
+    display: flex; flex-direction: column;
     align-items: center;
+    color: var(--prodCardTexto); 
     text-align: center;
-    color: var(--prodCardTexto);
     cursor: pointer;
     transition: 0.4s ease;
     background-color: var(--prodCardFondo);
@@ -535,117 +534,60 @@ span.next:hover, span.prev:hover{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Detalle del Producto ---------------------------------------------------------*/
-
-
-/*----------- Detalle del producto (modal) ------------------ */
-
-/* Estilos para el acordeón */
-.accordion{
-    background-color: var(--prodFondo);
-    display: flex; align-items: center; flex-direction: column;
-     width: 90%; margin: 0 auto;
-    position: relative;
-}
-
-.accordion-content {
-    display: none;
-    width: 100%;
-    border-radius: 10px;
-    background-color: var(--prodAcntContFondo);
-    position: relative;
-    padding: 40px 0 0;
-    bottom: 40px;
-}
-
-
-.accordion-content .cards{
-    display: grid;
-    margin: 20px;
-    grid-template-columns: repeat(auto-fill, 270px);
-    gap: 20px;
-    justify-content: space-evenly;
-    
-}
-
-
-.accordion-button {
-    width: 100%;
-    margin: 20px 20px 0; 
-    padding: 20px 15px;
-    border-radius: 7px;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-    font-size: 1.4rem;
-    text-align: left;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: relative;
-    z-index: 1;
-    background:var(--prodAcnButtonFondo);
-    color: var(--prodAcnButtonText);
-}
-
-
-
-.accordion-button .flecha{
-    display: inline-block;
-    position: absolute;
-    top: 25%;
-    bottom: 25%;
-    right: 20px;
-    transition: 0.2s;
-}
-
-.accordion-button .flecha.active{
-    transform: scaleY(-1);
-}
-
-
-.productosCards {
-    background-color: var(--prodAcntCardFondo);
-    border: solid 2px var(--prodAcntCardBorder);
-    color:            var(--prodAcntCardText);
-
-    padding: 8px;
-    width: 250px;
+.sTitulo h1{
     text-align: center;
-    border-radius: 5px;
-    transition: transform 0.4s ease;
-    cursor: pointer;
-}
-
-.productosCards:hover {
-    transform: scale(1.05);
-    border-color: var(--prodAcntCardBorderHover);
-
-}
-
-.productosCards img {
+    font-size: 2rem;
+    letter-spacing: 1.8px;
     width: 100%;
-    height: auto;
-    max-width: 250px; /* Ancho máximo de la imagen */
-    max-height: 200px; /* Altura máxima de la imagen */
-    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
-    border-radius: 5px;
+    padding: 7px;  
+    color: var(--prodTittleText);
+    box-shadow: #00000026   
+        0px 5px 15px 0px;
+    background: linear-gradient(to bottom, 
+        var(--servTittleFondo1),
+        var(--servTittleFondo2));
+}
+
+
+.servicios{
+    padding: 40px 20px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+}
+
+
+.servicios .cards{
+    width: 880px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: #42465445 0px 0px 0.25em, #5a7dbc0d 0px 0.25em 1em;    
+    display: flex; flex-direction: column;
+    align-items: center;
+    color: var(--prodCardTexto); 
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s ease;
+    background-color: var(--prodCardFondo);
+}
+
+
+
+.servicios .cards:hover{
+    box-shadow: #ff000077 0px 0px 1em, #ff00000d 0px 1em 2em;
+}
+
+.servicios .cards i{
+    color: var(--prodCardIcons);
+    font-size: 3.2rem;
+    margin-bottom: 30px;
+}
+
+.servicios .cards h3{
+    font-size: 1.3rem;
     margin-bottom: 10px;
 }
-
-
 
 
 
@@ -659,106 +601,6 @@ span.next:hover, span.prev:hover{
         width:100%;
         height: 100%;
     }
-}
-
-
-
-
-
-.product-detail {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 100%;
-    max-height: 80%;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: var(--prodDetailProdFondo);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: visible;
-    z-index: 1000;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-}
-
-
-
-
-
-
-
-/* Imagen dentro del modal */
-.product-detail img {
-    width:auto;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-/* Botón de cierre */
-#close-detail {
-    background-color: var(--prodDetailProdButton);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.1s ease;
-}
-
-#close-detail:hover {
-    background-color: var(--prodDetailProdButtonHover);
-}
-
-/* Fondo oscuro cuando el modal está abierto */
-.modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 999;
-    display: none;
-}
-
-
-.product-detail{
-    color: var(--prodDetailProdTextColor);
-}
-
-/* Imagen normal */
-#product-image {
-    max-width: 100%;
-    transition: all 0.3s ease; /* Transición suave para cambios */
-    cursor: zoom-in; /* Para indicar que se puede hacer zoom */
-}
-
-/* Cuando la imagen está en modo de zoom */
-.product-detail img.enlarged {
-    position: fixed; /* Para que la imagen salga del contenedor */
-    top: 50%; /* Centramos verticalmente */
-    left: 50%; /* Centramos horizontalmente */
-    transform: translate(-50%, -50%) scale(0.9); /* Escalado para agrandar la imagen */
-    z-index: 9999; /* Asegura que la imagen esté encima de todo */
-    cursor: zoom-out; /* Cambia el cursor para indicar que se puede salir del zoom */
-    transition: transform 0s ease; /* Transición suave para el zoom */
-    width: auto;
-    height: auto;
-    max-width: none;
-    max-height: none;
-}
-
-
-/* Centrado de la imagen dentro del modal */
-.modal-content img {
-    max-width: 90%; /* Asegura que la imagen no se desborde */
-    max-height: 90vh; /* Mantiene la imagen dentro de la ventana visible */
-    margin: auto;
-    display: block; /* Centra la imagen */
 }
 
 
@@ -791,6 +633,7 @@ span.next:hover, span.prev:hover{
 }
 
 /*carrusel logos----------------------------------------*/
+
 
 #clientesText{
     text-align: center;
