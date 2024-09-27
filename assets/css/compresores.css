@@ -1,3 +1,6 @@
+
+
+
 /* General Reset */
 * {
     margin: 0;
@@ -5,9 +8,98 @@
     box-sizing: border-box;
 }
 
+[tema="light"]{
+    
+/*          Colores              */
+/*===============================*/
+    --body: #f5f7fa;
+
+    /*Titulo (Hero)*/
+/*===============================*/
+    --heroH1:#fff;
+    --heroP:#ddd;
+/*===============================*/
+/*===============================*/
+
+    /*Detalle*/
+/*===============================*/
+    --compresorFondo: #fff;
+    --compresorBorderColor: #dfdede;
+
+    --compresorInfoH2: #000;
+    --compresorInfoH4: #000;
+    --compresorInfoP: #444;
+
+    --compresorButton: #c53030; 
+    --compresorButtonHover: #a32020;
+
+    --tecdescTableFondo: #fdfdfd;
+    --tecdescTableFondoODD: #ececec;
+    --tecdescTableBorderColor: #ececec;
+    --tecdescTableTextColor: #000;
+    --tecdescH2TextColor: #000;
+    --tecdescTextconFondo: #f9f9f9;
+    --tecdescTextconBorderColor: #007BFF;
+
+    --consultButtonTextColor: #fff;
+
+    --consulPFondo: #ae0d24;
+    --consulPTextColor: #fff;
+    --consulAColor: #fff;
+
+
+/*===============================*/
+/*===============================*/
+}
+
+[tema="dark"] {
+    
+/*          Colores              */
+/*===============================*/
+    --body: #1c1f20;
+
+    /*Titulo (Hero)*/
+/*===============================*/
+    --heroH1:#fff;
+    --heroP:#ddd;
+/*===============================*/
+/*===============================*/
+
+    /*Detalle*/
+/*===============================*/
+    --compresorFondo: #181a1b;
+    --compresorBorderColor: #393e40;
+
+    --compresorInfoH2: #e8e6e3;
+    --compresorInfoH4: #e8e6e3;
+    --compresorInfoP: #bdb7af;
+
+    --compresorButton: #a22114;
+    --compresorButtonHover: #9a2e22;
+
+    --tecdescTableFondo: #191b1c;
+    --tecdescTableFondoODD: #232627;
+    --tecdescTableBorderColor: #353a3c;
+    --tecdescTableTextColor: #e8e6e3;
+    --tecdescH2TextColor: #fff;
+    --tecdescTextconFondo: #1b1e1f;
+    --tecdescTextconBorderColor: #0056b3;
+
+    --consultButtonTextColor: #e8e6e3;
+
+    --consulPFondo: #7c0d1e;
+    --consulPTextColor: #e8e6e3;
+    --consulAColor: #e8e6e3;
+/*===============================*/
+/*===============================*/
+
+}
+
+
+
+
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f7fa;
 }
 
 /* Hero section */
@@ -39,11 +131,9 @@ body {
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #fff; /* Aseguramos que el color del texto sea blanco */
 }
 .hero p {
     font-size: 1.2rem;
-    color: #ddd; /* Ajuste del color para mayor contraste */
 }
 
 
@@ -57,8 +147,7 @@ body {
 
 
 .compresor {
-    background-color: #fff;
-    border: 1px solid #dfdede;
+    border: 1px solid;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -96,13 +185,11 @@ body {
 
 .compresor-info h2 {
     font-size: 2rem;
-    color: #000;
     margin-bottom: 10px;
 }
 
 .compresor-info h4 {
     font-size: 1.4rem;
-    color: #000;
     letter-spacing: 10;
     margin-bottom: 20px;
     
@@ -110,28 +197,23 @@ body {
 
 .compresor-info p {
     font-size: 1.1rem;
-    color: #111;
     flex-grow: 1;
     margin-bottom: 50px;
-    color: #444;
     word-spacing: 2px;
 
 }
 
 
 .consult-button {
-    background-color: #e74c3c;
-    color: #fff;
     padding: 12px 25px;
     border: none;
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    border-radius: 5px;
+    border-radius: 5px;;
 }
 
 .consult-button:hover {
-    background-color: #c0392b;
     transform: scale(1.05);
 }
 
@@ -148,10 +230,10 @@ body {
 .compresor-tecdesc h2{margin-left: 10px;}
 
 .compresor-tecdesc table{
+    border: solid 1px;
     border-radius: 10px;
-    border: solid 1px #ececec;
-    background-color: #fdfdfd;
     margin: 0px 30px;
+    overflow: hidden;
 }
 
 #compresorZero table:nth-of-type(1) {width: 90%;}
@@ -163,13 +245,11 @@ body {
 
 .compresor-tecdesc .text{
     font-size: 1.1rem; /* Tamaño de fuente */
-    color: #444; /* Color del texto */
     flex-grow: 1; /* Permitir que crezca */
     margin: 25px 0 50px; /* Espacio inferior */
     letter-spacing: 1px; /* Espaciado entre letras */
     line-height: 1.6; /* Altura de línea para mayor legibilidad */
-    background-color: #f9f9f9; /* Color de fondo suave */
-    border-left: 4px solid #007BFF; /* Borde izquierdo colorido */
+    border-left: 4px solid; /* Borde izquierdo colorido */
     padding: 15px 20px; /* Relleno interno */
     border-radius: 5px; /* Bordes redondeados */
 }
@@ -179,7 +259,6 @@ body {
 thead th{font-size: 1.3rem;}
 tbody td:nth-child(odd) {font-size: 0.95rem;}
 tbody tr{font-size: 0.9rem;}
-tbody tr:nth-child(odd) {background-color: #ececec;}
 
 
 
@@ -187,7 +266,6 @@ tbody tr:nth-child(odd) {background-color: #ececec;}
 .detalleCompresor{
     margin: 0 auto;
     width: 90%;
-    background-color: #fff;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     display: flex;
@@ -206,14 +284,10 @@ tbody tr:nth-child(odd) {background-color: #ececec;}
     width: 400px;
     object-fit: cover;
     object-position: center;
-    
+        
 }
 
-
-
 .consul p{
-    background-color: #ae0d24;
-    color: #fff;
     margin: 0 auto;
     width: 100%;
     text-align: center;
@@ -223,11 +297,87 @@ tbody tr:nth-child(odd) {background-color: #ececec;}
 
 .consul p a{
     text-decoration: none;
-    color: #fff;
     text-decoration: underline  transparent;
     transition: 0.2s ease;
 }
 
 .consul p a:hover{
     text-decoration: underline ;
+}
+
+
+body {
+    background-color: var(--body);
+}
+
+/* Titulo (Hero) */
+.hero h1 {
+    color: var(--heroH1);
+}
+
+.hero p {
+    color: var(--heroP);
+}
+
+/* Detalle */
+.compresor {
+    background-color: var(--compresorFondo);
+    border: 1px solid var(--compresorBorderColor);
+}
+
+.compresor-info h2 {
+    color: var(--compresorInfoH2);
+}
+
+.compresor-info h4 {
+    color: var(--compresorInfoH4);
+}
+
+.compresor-info p {
+    color: var(--compresorInfoP);
+}
+
+.consult-button {
+    background-color: var(--compresorButton);
+}
+
+.consult-button:hover {
+    background-color: var(--compresorButtonHover);
+}
+
+.compresor-tecdesc h2{
+    color: var(--tecdescH2TextColor);
+}
+
+.compresor-tecdesc table {
+    background-color: var(--tecdescTableFondo);
+    border: 1px solid var(--tecdescTableBorderColor);
+    color: var(--tecdescTableTextColor);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--tecdescTableFondoODD);
+}
+
+.compresor-tecdesc .text {
+    color: var(--tecdescTableTextColor);
+    background-color: var(--tecdescTextconFondo); 
+    border-left: 3px solid var(--tecdescTextconBorderColor);
+}
+
+.consult-button {
+    color: var(--consultButtonTextColor);
+}
+
+.consul p {
+    background-color: var(--consulPFondo);
+    color: var(--consulPTextColor);
+}
+
+.consul p a {
+    color: var(--consulAColor);
+}
+
+.detalleCompresor {
+    background-color: #fff;
 }

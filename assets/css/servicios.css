@@ -1,3 +1,4 @@
+
 /* General Reset */
 * {
     margin: 0;
@@ -7,7 +8,115 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f7fa;
+    transition: 0.1s ease;
+}
+/*
+[tema="dark"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
+  }
+
+@keyframes circle-out-center {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(125%);
+  }
+}
+
+[tema="light"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-out-center both;
+}
+
+@keyframes circle-in-center {
+    from {
+      clip-path: circle(0%);
+    }
+    to {
+      clip-path: circle(125%);
+    }
+  }
+  */
+
+[tema=light]{
+/*          Colores              */
+/*===============================*/
+    --body: #f5f7fa;
+
+    /*Titulo (Hero)*/
+/*===============================*/
+    --heroH1:#fff;
+    --heroP:#ddd;
+/*===============================*/
+/*===============================*/
+
+    /*Detalle*/
+/*===============================*/
+    --compresorFondo: #fff;
+    --compresorBorderColor: #dfdede;
+
+    --contentTitleTextColor: #2c3e50; /*h2*/
+    --contentTitleBorderB: #c0392b; /*underline*/
+
+    --contentPTextColor: #333; /*p*/
+    --contentPList: #ae0d24; /*°*/
+    --contentListStrong: #000;
+    --contentListTextColor: #000; 
+
+/*===============================*/
+/*===============================*/
+
+    /*comTablas*/
+/*===============================*/
+    --CardH2Color: #ae0d24;
+    --CardPColor: #000;
+
+    --cardTablaTextColor: #000;
+    --CardTablaFondo: #fdfdfd;
+    --CardTablaBorder: #dadada;
+    --CardTablaFondoODD: #ececec;
+/*===============================*/
+/*===============================*/
+
+    /*Consulta*/
+/*===============================*/
+    --consulPFondo: #ae0d24;
+    --consulPTextColor: #fff;
+    --consulAColor: #fff;
+/*===============================*/
+/*===============================*/
+
+}
+
+[tema="dark"]{
+
+    --body: #1c1f20;
+
+    --heroH1: #e8e6e3;
+    --heroP: #d3cfc9;
+
+    --compresorFondo: #181a1b;
+    --compresorBorderColor: #393e40;
+
+    --contentTitleTextColor: #aec2d3;
+    --contentTitleBorderB: #972d22;
+
+    --contentPTextColor: #c8c3bc;
+    --contentPList: #f2566c;
+    --contentListStrong: #e8e6e3;
+    --contentListTextColor: #e8e6e3;
+
+    --CardH2Color: #f2566c;
+    --CardPColor: #e8e6e3;
+
+    --cardTablaTextColor: #fff;
+    --CardTablaFondo: #191b1c;
+    --CardTablaBorder: #3a3f42;
+    --CardTablaFondoODD: #232627;
+
+    --consulPFondo: #7c0d1e;
+    --consulPTextColor: #fff;
+    --consulAColor: #fff;
 }
 
 /* Hero section */
@@ -39,11 +148,9 @@ body {
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #fff; /* Aseguramos que el color del texto sea blanco */
 }
 .hero p {
     font-size: 1.2rem;
-    color: #ddd; /* Ajuste del color para mayor contraste */
 }
 
 
@@ -57,8 +164,7 @@ body {
 
 
 .compresor {
-    background-color: #fff;
-    border: 1px solid #dfdede;
+    border: 1px solid ;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -94,9 +200,8 @@ body {
 
 .compresor-info h2 {
     font-size: 2rem; /* Aumentamos el tamaño */
-    color: #2c3e50; /* Color más oscuro para el título */
     font-weight: 600; /* Mayor peso de la fuente */
-    border-bottom: #c0392b solid;
+    border-bottom: solid;
     padding-bottom: 20px;
 }
 
@@ -108,7 +213,6 @@ body {
 
 .content p {
     font-size: 1.2rem; /* Ajustamos el tamaño del texto */
-    color: #333; /* Color gris más suave */
     font-weight: 400;
     margin-bottom: 20px;
 }
@@ -129,7 +233,6 @@ body {
 .content li::before {
     content: "●"; /* Icono circular personalizado */
     font-size: 15px;
-    color: #ae0d24; /* Color naranja para el círculo */
     position: absolute;
     left: 0; /* Posicionamos el círculo */
     top: 20%; /* Centrar verticalmente */
@@ -139,14 +242,11 @@ body {
 
 .content strong {
     font-size: 1.1rem; /* Tamaño del texto */
-    color: #000000; /* Color rojo para el texto en negrita */
 }
 
 
 
 .consult-button {
-    background-color: #e74c3c;
-    color: #fff;
     padding: 12px 25px;
     border: none;
     cursor: pointer;
@@ -156,7 +256,6 @@ body {
 }
 
 .consult-button:hover {
-    background-color: #c0392b;
     transform: scale(1.05);
 }
 
@@ -175,7 +274,6 @@ body {
 .detalleCompresor{
     margin: 0 auto;
     width: 90%;
-    background-color: #fff;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     display: flex;
@@ -205,8 +303,6 @@ body {
 
 
 .consul p{
-    background-color: #ae0d24;
-    color: #fff;
     margin: 0 auto;
     width: 100%;
     text-align: center;
@@ -216,7 +312,6 @@ body {
 
 .consul p a{
     text-decoration: none;
-    color: #fff;
     text-decoration: underline  transparent;
     transition: 0.2s ease;
 }
@@ -240,13 +335,11 @@ body {
     gap: 15px;
 }
 
-#comTablas h2{color: #ae0d24;}
 #comTablas .cards p{margin-bottom: 10px;}
 
 #comTablas table{
     border-radius: 2px;
-    border: solid 1px #dadada;
-    background-color: #fdfdfd;
+    border: solid 1px;
     margin: 0px 30px 30px;
 }
 
@@ -254,4 +347,83 @@ body {
 table th, table td{padding: 10px;}
 tbody td:nth-child(odd) {font-size: 0.95rem; width: 45%;}
 tbody tr{font-size: 0.9rem;}
-tbody tr:nth-child(odd) {background-color: #ececec;}
+
+
+
+
+
+body {
+    background-color: var(--body);
+}
+
+
+    /*Titulo (Hero)*/
+/*===============================*/
+.hero h1 {
+    color: var(--heroH1);
+}
+
+.hero p {
+    color: var(--heroP);
+}
+
+    
+/*===========Contenedor===========*/
+.compresor {
+    background-color: var(--compresorFondo);
+    border: 1px solid var(--compresorBorderColor);
+}
+
+/*============Titulo===========*/
+.compresor-info h2 {
+    color: var(--contentTitleTextColor);
+    border-bottom: var(--contentTitleBorderB) solid;
+}
+
+/*============Contenido===========*/
+.content p {
+    color: var(--contentPTextColor);
+}
+    
+.content li::before {
+    color: var(--contentPList);
+}
+    
+.content li {
+    color: var(--contentListTextColor);
+}
+    
+.content strong {
+    color: var(--contentListStrong);
+}
+
+/*=======Titulo Tablas========*/
+#comTablas h2 {
+    color: var(--CardH2Color);
+}
+
+#comTablas p {
+    color: var(--CardPColor);
+}
+
+/*============Tablas===========*/
+#comTablas table {
+    border: var(--CardTablaBorder);
+    background-color: var(--CardTablaFondo);
+    color: var(--cardTablaTextColor);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--CardTablaFondoODD);
+}
+
+/*============Consulta===========*/
+.consul p {
+    background-color: var(--consulPFondo);
+    color: var(--consulPTextColor);
+}
+
+.consul p a {
+    color: var(--consulAColor);
+}
+
