@@ -1,5 +1,10 @@
 //--------------------------------------------------Carrusel
 
+
+/*----------------------------------------------------------
+-------------------------VARIABLES--------------------------
+----------------------------------------------------------*/
+ const carousel = document.querySelector(".Carousel");
 	// Access the Images
 	let slideImages = document.querySelectorAll('.content');
 	// Access the next and prev buttons
@@ -8,9 +13,38 @@
 	// Access the indicators
 	let dots = document.querySelectorAll('.dot');
 
+
 	var counter = 0;
 	var autoSlideInterval;
-	const delayDuration = 500; // Duración del retraso en milisegundos
+	const delayDuration = 400; // Duración del retraso en milisegundos
+
+
+    // drag
+    let isDragging = false;
+    	
+    const dragStart =()=>{
+    	isDragging = true;
+    }
+    
+     const dragging = (e) => {
+		console.log(e.pageX);
+    	if(!isDragging)return; //if el draggin es falso te devuelve aca
+    	carousel.scrollLeft = e.pageX;
+     }
+
+
+
+
+/*------------------------------------
+---------------CODIGO-----------------
+------------------------------------*/
+
+
+	//DRAG
+	carousel.addEventListener("mousedown",dragStart);
+
+
+
 
 	// Code for next button
 	next.addEventListener('click', function() {
@@ -61,7 +95,7 @@
 		autoSlideInterval = setInterval(function(){
 			slideNext();
 			indicators();
-		}, 6000000); // Cambia la imagen cada 6 segundos
+		}, 6000); // Cambia la imagen cada 6 segundos
 	}
 	startAutoSliding();
 
@@ -110,3 +144,5 @@
 		}
 		indicators();
 	}
+
+
