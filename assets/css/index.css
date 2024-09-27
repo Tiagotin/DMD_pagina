@@ -478,16 +478,16 @@ span.next:hover, span.prev:hover{
 }    
 /* Textos Productos y Clientes*/
 
-.textom{ display: flex; justify-content: center;}
-.textom h1{
+.pTitulo h1{
     font-size: 2rem;
-    padding: 15px;  
+    padding: 7px;  
     text-align: center;
     width: 100%;
     background: linear-gradient(to bottom, 
     var(--prodTittleFondo1),
     var(--prodTittleFondo2));
     color: var(--prodTittleText);
+    box-shadow: #00000026 0px 5px 15px 0px;
     letter-spacing: 1.8px;
 }
 
