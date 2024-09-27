@@ -61,7 +61,7 @@
 		autoSlideInterval = setInterval(function(){
 			slideNext();
 			indicators();
-		}, 6000); // Cambia la imagen cada 6 segundos
+		}, 6000000); // Cambia la imagen cada 6 segundos
 	}
 	startAutoSliding();
 
