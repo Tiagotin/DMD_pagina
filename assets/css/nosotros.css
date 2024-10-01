@@ -183,7 +183,7 @@ section.noParallax {
     --noParallaxH1Borderb: #296599;
 }
 .noParallax .text h1{
-    font-size: 2rem;
+    font-size: 1.9rem;
     width: 100%;
     color: var(--noParallaxH1);
     padding: 0 0 10px 20px;
@@ -200,10 +200,18 @@ section.noParallax {
     
 }
 
+#reversa{
+    flex-direction: row-reverse;
+}
 
-
-
-
+#compromiso{
+    align-items: center;
+}
+#compromiso img{
+    width: 500px;
+    height: 250px;
+    margin-top: 20px;
+}
 
 
 
@@ -433,8 +441,5 @@ section.trayectoria #titulo h3{
     .logros #resultados{
         flex-direction: column;  
         width: 70%;  
-        
-    }
-    logros #resultados .cifras{
     }
 }
