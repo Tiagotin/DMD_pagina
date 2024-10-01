@@ -21,6 +21,26 @@
     }); */
 
 
+
+
+
+//----------------------------------------------------------
+//-------------------- boton carrusel -----------------------------------
+//------------------------------------------------------------
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Selecciona el botón y el elemento de contacto por sus IDs
+   
+    const vermas = document.getElementById('verr');
+    vermas.addEventListener('click', () => {
+        // Redirige al usuario a contacto.html
+        window.location.href = 'nosotros.html';
+    });
+});
+
+
+
+
 //boton de presupuesto
     document.addEventListener('DOMContentLoaded', () => {
         // Selecciona el botón por su ID
