@@ -19,7 +19,7 @@
         <span id="email">info@dmdcompresores.com</span>
         
         <div id="rLogos">
-            <button id="language-toggle">Switch to English</button>
+            
             <i class="fa-brands fa-linkedin logos" data-url="https://www.linkedin.com/company/dmd-compresores/"></i>
             <i class="fa-brands fa-whatsapp logos" data-url="https://wa.me/1159380579"></i>
             <i class="fa-brands fa-facebook-f logos" data-url="https://www.facebook.com/DMDCOMPRESORES"></i>
@@ -44,6 +44,10 @@
                 <span class="slider round"></span>
             </label>
         </div>
+        <div class="lenguaje">
+            <button id="language-toggle">English</button>
+        </div>
+        
         
 
     </nav>
@@ -58,31 +62,37 @@
             <div class="content active">
                 <article id="carouselContent">
                     <p>DMD</p>
-                    <button id="verr">
+                    <button id="verr" data-es="Ver Más" data-en="See More">
                         Ver Más
                     </button>
                 </article>
             </div>
             <div class="content">
                 <article id="carouselContent">
-                    <p>Aire Comprimido</p>
-                    <button id="verr">
+                    <p data-es="Aire Comprimido" data-en="Compressed Air">
+                        Aire Comprimido
+                    </p>
+                    <button id="verr" data-es="Ver Más" data-en="See More">
                         Ver Más
                     </button>
                 </article>
             </div>
             <div class="content">
                 <article id="carouselContent">
-                    <p>Eficiencia Energética</p>
-                    <button id="verr">
+                    <p data-es="Eficiencia Energética" data-en="Energy Efficiency">
+                        Eficiencia Energética
+                    </p>
+                    <button id="verr" data-es="Ver Más" data-en="See More">
                         Ver Más
                     </button>
                 </article>
             </div>
             <div class="content">
                 <article id="carouselContent">
-                    <p>Potencia Confiable</p>
-                    <button id="verr">
+                    <p data-es="Potencia Confiable" data-en="Reliable Power">
+                        Potencia Confiable
+                    </p>
+                    <button id="verr" data-es="Ver Más" data-en="See More">
                         Ver Más
                     </button>
                 </article>
@@ -130,7 +140,9 @@
 <!-------------------PRODUCTOS Y SERVICIOS------------------------------------------- -->
 
     <div class="pTitulo">
-        <h1 data-es="Productos" data-en="Our Products">Generación</h1>
+        <h1 data-es="Generación" data-en="Generation">
+            Generación
+        </h1>        
     </div>
 
     <section class="productos">
@@ -138,41 +150,63 @@
         <div class="cards" id="compresores-card">
             <i class="fas fa-cogs"></i>
             <h3>Compresor VI</h3>
-            <p>Reducción de potencia del 80% y ahorros energéticos del 40% garantizados con nuestra tecnología Efficiens Vi.</p>
+            <p data-es="Reducción de potencia del 80% y ahorros energéticos del 40% garantizados con nuestra tecnología Efficiens VI." 
+            data-en="80% power reduction and 40% energy savings guaranteed with our Efficiens VI technology.">
+            Reducción de potencia del 80% y ahorros energéticos del 40% garantizados con nuestra tecnología Efficiens VI.
+            </p>
+
         </div>
 
         <div class="cards" id="tratamientos-card">
             <i class="fas fa-recycle"></i>
             <h3>Compresor Zero</h3>
-            <span>Test de equipos, diagnósticos y proyectos de ahorro energético con personal calificado.</span>
+            <span data-es="Test de equipos, diagnósticos y proyectos de ahorro energético con personal calificado." 
+            data-en="Equipment tests, diagnostics, and energy-saving projects with qualified personnel.">
+            Test de equipos, diagnósticos y proyectos de ahorro energético con personal calificado.
+            </span>
         </div>
 
     </section>
 
 
     <div class="sTitulo">
-        <h1 data-es="Nuestros Productos" data-en="Our Products">Servicios</h1>
+        <h1 data-es="Servicios" data-en="Services">
+            Servicios
+        </h1>        
     </div>
 
     <section class="servicios">
 
         <div class="cards" id="servicios-card">
             <i class="fas fa-wrench"></i>
-            <h3>Servicios Técnicos</h3>
-            <span>Asistencia técnica y mantenimiento para todas las marcas. Respuesta garantizada en menos de 24 horas.</span>
+            <h3 data-es="Servicios Técnicos" data-en="Technical Services">
+                Servicios Técnicos
+            </h3>
+
+            <span data-es="Asistencia técnica y mantenimiento para todas las marcas. Respuesta garantizada en menos de 24 horas." 
+            data-en="Technical assistance and maintenance for all brands. Guaranteed response within 24 hours.">
+            Asistencia técnica y mantenimiento para todas las marcas. Respuesta garantizada en menos de 24 horas.
+            </span>
         </div>
     </section>
 
     <div class="sTitulo">
-        <h1 data-es="Nuestros Productos" data-en="Our Products">Tratamientos</h1>
+        <h1 data-es="Tratamientos" data-en="Treatments">
+            Tratamientos
+        </h1>
     </div>
     
     <section class="servicios">
 
         <div class="cards" id="servicios-card">
             <i class="fas fa-bolt"></i>
-            <h3>Tratamientos Técnicos</h3>
-            <span>Asistencia técnica y mantenimiento para todas las marcas. Respuesta garantizada en menos de 24 horas.</span>
+            <h3 data-es="Tratamientos Técnicos" data-en="Technical Treatments">
+                Tratamientos Técnicos
+            </h3>            
+            <span data-es="Asistencia técnica y mantenimiento para todas las marcas. Respuesta garantizada en menos de 24 horas." 
+            data-en="Technical assistance and maintenance for all brands. Guaranteed response within 24 hours.">
+            Asistencia técnica y mantenimiento para todas las marcas. Respuesta garantizada en menos de 24 horas.
+            </span>
         </div>
     </section>
 <!--boton de saber mas-->
@@ -182,7 +216,9 @@
  <!--------------- Clientes Carousel --------------------------------------------->
 
 
-    <h1 id="clientesText" style="margin: 0;">Nuestros Clientes</h1>
+    <h1 id="clientesText" style="margin: 0;" data-es="Nuestros Clientes" data-en="Our Clients">
+        Nuestros Clientes
+    </h1>
             
     <div class="sliderClientes" style="
     --width: 140px;
@@ -229,7 +265,9 @@
             <img src="assets/img/ind.png" alt="Industria Nacional">
         </div>
         <div class="ubic">
-            <h2>OFICINA CENTRAL</h2>
+            <h2 data-es="OFICINA CENTRAL" data-en="HEADQUARTERS">
+                OFICINA CENTRAL
+            </h2>            
             <span>Gobernador Oliden 2768</span>
             <span>Lanus Oste, Buenos Aires</span>
             <div class="redesLogosf" id="rLogos">
