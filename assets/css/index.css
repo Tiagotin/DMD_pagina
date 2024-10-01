@@ -240,7 +240,7 @@ body {
     animation:mostrar 0.85s ease forwards  , mover 1.2s forwards ;
     
     display: flex; align-items: center; justify-content: center; flex-direction: column;
-    width: 600px; height: 300px;
+    
     filter: drop-shadow(0px);
 
     padding: 30px;
@@ -249,18 +249,20 @@ body {
     color: #fff;
 }
 
-#carouselContent p{
+
+/* 1° .content */
+
+.content:nth-child(1) #carouselContent p {
     z-index: 4;
     font-size: 8rem;
     margin-bottom: 20px;
     color: var(--ContentTextColor);
     font-weight: 700;
-    -webkit-text-stroke: var(--ContentTextShadow) 1px ;
+    -webkit-text-stroke: var(--ContentTextShadow) 1px;
     text-shadow: 0 0 35px var(--ContentTextShadow);
 }
 
-
-#carouselContent button {
+.content:nth-child(1) #carouselContent button {
     border: solid 1px #fff;
     background-color: transparent;
     width: 180px;
@@ -272,10 +274,97 @@ body {
     transition: 0.3s ease;
 }
 
-#carouselContent button:hover {
+.content:nth-child(1) #carouselContent button:hover {
     background-color: #fff;
     color: #000;
 }
+
+
+
+/* 2° .content */
+.content:nth-child(2) #carouselContent p {
+    z-index: 4;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--ContentTextColor);
+    font-weight: 700;
+    -webkit-text-stroke: var(--ContentTextShadow) 1px;
+}
+
+.content:nth-child(2) #carouselContent button {
+    border: solid 1px #fff;
+    background-color: transparent;
+    width: 180px;
+    color: #fff;
+    font-weight: 500;
+    padding: 5px;
+    font-size: 1.65rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.content:nth-child(2) #carouselContent button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+
+/* 3° .content */
+.content:nth-child(3) #carouselContent p {
+    z-index: 4;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--ContentTextColor);
+    font-weight: 700;
+    -webkit-text-stroke: var(--ContentTextShadow) 1px;
+}
+
+.content:nth-child(3) #carouselContent button {
+    border: solid 1px #fff;
+    background-color: transparent;
+    width: 180px;
+    color: #fff;
+    font-weight: 500;
+    padding: 5px;
+    font-size: 1.65rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.content:nth-child(3) #carouselContent button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* 3° .content */
+.content:nth-child(4) #carouselContent p {
+    z-index: 4;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--ContentTextColor);
+    font-weight: 700;
+    -webkit-text-stroke: var(--ContentTextShadow) 1px;
+}
+
+.content:nth-child(4) #carouselContent button {
+    border: solid 1px #fff;
+    background-color: transparent;
+    width: 180px;
+    color: #fff;
+    font-weight: 500;
+    padding: 5px;
+    font-size: 1.65rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.content:nth-child(4) #carouselContent button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
 @keyframes mostrar {
 	to {
     	opacity: 1; /* Hacer visible al final */
