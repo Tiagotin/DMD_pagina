@@ -154,8 +154,9 @@ body {
 }
 
 
+
 /* Product Section */
-.compresores {
+.serviciosCards {
     display: flex;
     flex-direction:column;
     gap: 35px;
@@ -163,7 +164,7 @@ body {
 }
 
 
-.compresor {
+.servicio {
     border: 1px solid ;
     border-radius: 10px;
     overflow: hidden;
@@ -172,172 +173,26 @@ body {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row-reverse;
 }
 
-.compresor:hover {
+.servicio:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.compresor-img{
-    width: 450px;
-    border-radius: 4px;
-    margin-top: 65px;
-    position: relative;
-}
 
-.compresor .compresor-img img {
-    width: 100%;
-    object-fit: cover; object-position: center;
-    filter: drop-shadow(-8px 30px 18px #0000005d);
-}
-.compresor-info {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 20px 20px 0;
-}
-
-.compresor-info h2 {
-    font-size: 2rem; /* Aumentamos el tamaño */
-    font-weight: 600; /* Mayor peso de la fuente */
-    border-bottom: solid;
-    padding-bottom: 20px;
-}
-
-.compresor-info  .content {
-    padding: 20px;
-    margin: 10px auto 0;
-    border-radius: 5px;
-}
-
-.content p {
-    font-size: 1.2rem; /* Ajustamos el tamaño del texto */
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-.content ul {
-    list-style-type: none; /* Eliminamos el tipo de lista por defecto */
-    padding-left: 20px; /* Alineamos el contenido */
-}
-
-.content li {
-    margin-bottom: 15px; /* Espacio entre elementos */
-    word-spacing: 2px; /* Espaciado entre palabras */
-    line-height: 1.6; /* Interlineado */
-    position: relative;
-    padding-left: 20px;
-}
-
-.content li::before {
-    content: "●"; /* Icono circular personalizado */
-    font-size: 15px;
-    position: absolute;
-    left: 0; /* Posicionamos el círculo */
-    top: 20%; /* Centrar verticalmente */
-    transform: translateY(-50%); /* Ajuste de posición */
-
-}
-
-.content strong {
-    font-size: 1.1rem; /* Tamaño del texto */
-}
-
-
-
-.consult-button {
-    padding: 12px 25px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    border-radius: 5px;
-}
-
-.consult-button:hover {
-    transform: scale(1.05);
-}
-
-
-.compresor-tecdesc{
-    width: 100%;
-    padding: 20px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 20px;
-}
-
-.compresor-tecdesc h2{margin-left: 10px;}
-
-.detalleCompresor{
-    margin: 0 auto;
-    width: 90%;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-    display: flex;
-    justify-content: center;
-    display: none;
-    
-}
-
-.compresor-img2{
-    width: 500px;
-    height: max-content;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.compresor-img img{
-    width: 400px;
-    object-fit: cover;
-    object-position: center;
-    
-}
-
-
-#preventa {
-    flex-direction: row-reverse;
-}
-
-
-
-.consul p{
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-    font-size: 1.6rem;
-    padding: 10px 0;
-}
-
-.consul p a{
-    text-decoration: none;
-    text-decoration: underline  transparent;
-    transition: 0.2s ease;
-}
-
-.consul p a:hover{
-    text-decoration: underline ;
-}
-
-#comTablas{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 50px;
-    padding: 30px 35px;
-}
-
-#comTablas .cards{
+.servicio .cards{
     width: 500px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-#comTablas .cards p{margin-bottom: 10px;}
 
-#comTablas table{
+.cards p{margin-bottom: 10px;}
+
+table{
     border-radius: 2px;
     border: solid 1px;
     margin: 0px 30px 30px;
@@ -352,13 +207,7 @@ tbody tr{font-size: 0.9rem;}
 
 
 
-body {
-    background-color: var(--body);
-}
 
-
-    /*Titulo (Hero)*/
-/*===============================*/
 .hero h1 {
     color: var(--heroH1);
 }
@@ -368,19 +217,57 @@ body {
 }
 
     
-/*===========Contenedor===========*/
-.compresor {
+
+.servicio {
     background-color: var(--compresorFondo);
     border: 1px solid var(--compresorBorderColor);
 }
 
-/*============Titulo===========*/
+ table {
+    border: var(--CardTablaBorder);
+    background-color: var(--CardTablaFondo);
+    color: var(--cardTablaTextColor);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--CardTablaFondoODD);
+}
+
+.consul p {
+    background-color: var(--consulPFondo);
+    color: var(--consulPTextColor);
+}
+
+.consul p a {
+    color: var(--consulAColor);
+}
+*/
+
+
+body {
+    background-color: var(--body);
+}
+/*
+
+
+.hero h1 {
+    color: var(--heroH1);
+}
+
+.hero p {
+    color: var(--heroP);
+}
+
+    
+
+
+
 .compresor-info h2 {
     color: var(--contentTitleTextColor);
     border-bottom: var(--contentTitleBorderB) solid;
 }
 
-/*============Contenido===========*/
+
 .content p {
     color: var(--contentPTextColor);
 }
@@ -397,7 +284,7 @@ body {
     color: var(--contentListStrong);
 }
 
-/*=======Titulo Tablas========*/
+
 #comTablas h2 {
     color: var(--CardH2Color);
 }
@@ -406,7 +293,7 @@ body {
     color: var(--CardPColor);
 }
 
-/*============Tablas===========*/
+
 #comTablas table {
     border: var(--CardTablaBorder);
     background-color: var(--CardTablaFondo);
@@ -417,7 +304,7 @@ tbody tr:nth-child(odd) {
     background-color: var(--CardTablaFondoODD);
 }
 
-/*============Consulta===========*/
+
 .consul p {
     background-color: var(--consulPFondo);
     color: var(--consulPTextColor);
@@ -426,4 +313,4 @@ tbody tr:nth-child(odd) {
 .consul p a {
     color: var(--consulAColor);
 }
-
+*/
