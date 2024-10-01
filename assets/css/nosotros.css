@@ -215,8 +215,6 @@ section.noParallax {
 
 
 
-
-
 .trayectoria{
     
     box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
@@ -341,6 +339,29 @@ section.trayectoria #titulo h3{
     font-size: 1.2rem; text-align: center; font-weight: 800;
 }
 
+
+
+
+
+
+/*
+:root{
+    --imgnsocios: 400px:
+}
+.Nsocios .contenido #aside1 img{
+    height: var(--imgnsocios);
+    object-fit: cover;
+    border: solid 1px;
+}
+.Nsocios .contenido #aside2 img{
+    height: var(--imgnsocios);
+
+    
+    object-fit: cover;
+    border: solid 1px;
+}
+
+*/
 
 .logros{
     background-color: var(--logrosFondo);
