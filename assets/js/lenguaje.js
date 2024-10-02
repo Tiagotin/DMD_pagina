@@ -32,4 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Actualizar el contenido después del cambio de idioma
         updateContent();
     });
+
+
+     // Obtener el elemento
+     const savingsElement = document.getElementById('savings');
+
+     // Obtener el atributo data según el idioma (ejemplo en español)
+     const lang = 'es'; // Cambia esto a 'en' para inglés
+     const savingsText = savingsElement.getAttribute(`data-${lang}`);
+ 
+     // Reemplazar <br> por un elemento <br> real
+     savingsElement.innerHTML = savingsText.replace(/<br>/g, '<br>');
 });
