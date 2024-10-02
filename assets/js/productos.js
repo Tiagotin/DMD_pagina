@@ -17,10 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'servicios.html';
     });
 
+    // Selecciona la card de zero
+    document.getElementById('zero-card').addEventListener('click', function() {
+        // Redirige a tratamientos.html
+        window.location.href = 'zero.html';
+    });
     // Selecciona la card de Tratamientos
     document.getElementById('tratamientos-card').addEventListener('click', function() {
         // Redirige a tratamientos.html
-        window.location.href = 'zero.html';
+        window.location.href = 'tratamientos.html';
     });
 });
 

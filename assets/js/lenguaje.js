@@ -33,14 +33,35 @@ document.addEventListener('DOMContentLoaded', () => {
         updateContent();
     });
 
+        // Función para cambiar el idioma
+    function changeLanguage(lang) {
+        // Obtener todos los elementos con la clase 'savings'
+        const savingsElements = document.getElementsByClassName('savings');
+    
+        // Iterar sobre todos los elementos encontrados
+        for (let i = 0; i < savingsElements.length; i++) {
+            // Obtener el texto del atributo data según el idioma seleccionado
+            const savingsText = savingsElements[i].getAttribute(`data-${lang}`);
+            
+            // Verificar si savingsText tiene un valor antes de asignar
+            if (savingsText) {
+                // Asignar directamente el texto del atributo, incluyendo el <br>
+                savingsElements[i].innerHTML = savingsText;
+            }
+        }
+    }
+    
+    // Manejo del evento de clic en el botón
+    document.getElementById('language-toggle').addEventListener('click', function() {
+        // Verificar el idioma actual y alternar
+        const currentLang = this.textContent === 'English' ? 'en' : 'es';
+        
+        // Cambiar el idioma
+        changeLanguage(currentLang);
+        
+        // Actualizar el texto del botón
+        this.textContent = currentLang === 'en' ? 'Español' : 'English';
+    });
 
-     // Obtener el elemento
-     const savingsElement = document.getElementById('savings');
 
-     // Obtener el atributo data según el idioma (ejemplo en español)
-     const lang = 'es'; // Cambia esto a 'en' para inglés
-     const savingsText = savingsElement.getAttribute(`data-${lang}`);
- 
-     // Reemplazar <br> por un elemento <br> real
-     savingsElement.innerHTML = savingsText.replace(/<br>/g, '<br>');
 });
