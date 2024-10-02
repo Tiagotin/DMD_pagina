@@ -72,19 +72,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Array de enlaces, uno por cada cliente
     const links = [
-        'https://www.bernesa.com/web/BERNESA.php',
         'https://borishnos.com.ar/',
         'https://carpla.com/',
-        'https://www.cdi.com.ar/',
         'https://cotocicsa.com/',
-        'https://dragoberetta.com/',
         'https://geotex.com.ar/es/',
         'https://www.metrogas.com.ar/',
-        'https://www.alvearpalace.com/',
         'https://www.colgatepalmolive.com.ar/',
         'https://www.parnor.com.ar/',
         'https://resiplast.com.ar/',
-        'https://www.taxonera.com/'
     ];
 
     // Asignar un enlace a cada cliente
