@@ -13,17 +13,6 @@
 <body tema="light">
 
 <!--------------- Header y Nav----------------------------------------->
-    <header>
-        <span id="email">info@dmdcompresores.com</span>
-        
-        <div id="rLogos">
-            <button id="language-toggle">Switch to English</button>
-            <i class="fa-brands fa-linkedin logos" data-url="https://www.linkedin.com/company/dmd-compresores/"></i>
-            <i class="fa-brands fa-whatsapp logos" data-url="https://wa.me/1159380579"></i>
-            <i class="fa-brands fa-facebook-f logos" data-url="https://www.facebook.com/DMDCOMPRESORES"></i>
-            <i class="fa-brands fa-instagram logos" data-url="https://www.instagram.com/dmdcompresores/"></i>
-        </div>
-    </header>
 
     
     <nav>
@@ -37,12 +26,11 @@
             <p class="aText" id="contacto" data-es="Contacto" data-en="Contact">Contacto</p>
         </div>
         
-        <div class="switchTema">
-            <label id="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-        </div>
+        <select id="themeSelect">
+            <option value="light">Blanco</option>
+            <option value="dark">Negro</option>
+        </select>
+
         <div class="lenguaje">
             <button id="language-toggle">English</button>
         </div>

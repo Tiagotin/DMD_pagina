@@ -58,33 +58,29 @@ document.addEventListener('DOMContentLoaded', () => {
 // Switch -----------------------------------
 
 
-const colorSwitch = document.querySelector('#switch input[type="checkbox"]');
+const themeSelect = document.querySelector('#themeSelect'); // Cambia esto al ID de tu <select>
 const body = document.body;
 
-
+// Cambia el tema según la selección
 function cambiaTema(ev) {
-    if (ev.target.checked) {
-        body.setAttribute('tema', 'dark');
-        localStorage.setItem('modoOscuro', 'true');  // Guardar el estado en localStorage
-    } else {
-        body.setAttribute('tema', 'light');
-        localStorage.setItem('modoOscuro', 'false'); // Guardar el estado en localStorage
-    }
+    const selectedTheme = ev.target.value; // Obtiene el tema seleccionado
+    body.setAttribute('tema', selectedTheme);
+    localStorage.setItem('modoOscuro', selectedTheme); // Guarda el tema en localStorage
 }
 
 // Verificar si el modo oscuro está guardado en localStorage
 const modoOscuroActivo = localStorage.getItem('modoOscuro');
 
-// Si está activo, aplicar el modo oscuro y marcar el checkbox
-if (modoOscuroActivo === 'true') {
-    body.setAttribute('tema', 'dark');
-    colorSwitch.checked = true;  // Marcar el checkbox
+// Si está activo, aplicar el tema correspondiente
+if (modoOscuroActivo) {
+    body.setAttribute('tema', modoOscuroActivo);
+    themeSelect.value = modoOscuroActivo; // Establecer el valor del <select>
 } else {
-    body.setAttribute('tema', 'light');
-    colorSwitch.checked = false; // Desmarcar el checkbox
+    body.setAttribute('tema', 'light'); // Por defecto se establece en light
+    themeSelect.value = 'light'; // Establecer valor por defecto
 }
 
-colorSwitch.addEventListener('change', cambiaTema);
+themeSelect.addEventListener('change', cambiaTema);
 
 
 
