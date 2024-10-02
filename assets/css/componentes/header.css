@@ -268,101 +268,75 @@ nav .navText .aText.sticky{
 
 /*------------------------------------------------------------------*/
     
-@media (max-width: 700px) {
-    header{
-        padding: 5px;
-        flex-direction: column;
-        justify-content: start;
-        margin: 0;
-        gap: 5px;
-    }
-
-    header #rLogos{
-        gap: 50px;
-        padding: 0 0 10px;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: column;
-        padding: 5px;
+@media (min-width: 769px) and (max-width: 1279px) {
+    nav .navText{
         gap: 10px;
     }
-    .switchTema{
-        margin-left: 0px;
-    }
-    nav .navText {
-        display: flex;
-        justify-content: space-between;
-        padding: 0; margin: 0; gap: 0;
-        width: 80%;
-    }
-
-    nav .dmdLogo #dmdLogo{
-        width: var(--logo-tamaño-responsive);
-        height: 50%;   
-        object-fit: cover;
-        object-position: center;
-    }
-
-    /*----Nav Sticky Responsive----*/
-    nav .dmdLogo #dmdLogo.sticky{display: none;}
-    nav .switchTema.sticky{display: none;}
-
-    nav.sticky{padding: 0; margin: 0;}
-    /*-----------------------------*/
 }
-
-@media (max-width: 340px){
-    
-    header {
-        padding: 10px;
-        font-size: 0.1rem;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: space-around;
+@media (min-width: 481px) and (max-width: 768px){
+    nav{
+        padding: 5px;
         margin: 0;
-        
+        flex-direction: column;      
+        gap: 15px;
+  
     }
 
-    header #rLogos {
-        gap: 20px;
-        padding: 0;
-    }
-
-    
-    nav .dmdLogo #dmdLogo{
-        width: var(--logo-tamaño-responsive);
-        object-fit: cover;
-        height: auto;
-    }
-    nav .dmdLogo {
-        margin: 0;
-        padding: 0;
+    .dmdLogo{
         width: 100%;
-        
         justify-content: center;
-        align-items: center;    
     }
 
-    nav .navText {
-        padding: 10px;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-        margin: 0 auto;
+    .navText{
+        width: 100%;
+        display: flex;
+        gap: 0 !important;
     }
 
-    /*----Nav Sticky Responsive----*/
+
     nav.sticky{
         overflow: hidden;
         flex-direction: row;
+        padding: 3px;
     }
-    nav .navText.sticky {
-        width: 100%;
-        flex-direction: row;
+    nav .dmdLogo.sticky {
+        display: none;
+    }
+}
+
+@media (max-width: 480px){
+    nav{
+        padding: 5px;
+        margin: 0;
+        flex-direction: column;      
+        gap: 15px;
     }
 
-    /*-----------------------------*/
+    .dmdLogo{
+        width: 100%;
+        justify-content: center;
+    }
+    .dmdLogo img{
+        width: var(--logo-tamaño-responsive);
+    }
+    .navText{
+        width: 100%;
+        gap: 0 !important;
+        overflow: scroll;
+        flex-direction: column;
+    }
+
+
+    nav.sticky{
+        padding: 5px 0;
+    }
+    nav .navText.sticky{
+        overflow: hidden;
+        flex-direction: row;
+
+    }
+    nav .dmdLogo.sticky {display: none;}
+
+    nav
 }
 /*------------------------------------------------------*/
