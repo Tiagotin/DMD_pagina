@@ -41,21 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//boton de presupuesto
-    document.addEventListener('DOMContentLoaded', () => {
-        // Selecciona el botón por su ID
-        const button = document.getElementById('buttonH2');
-    
-        // Verifica que el botón exista antes de agregar el evento
-        if (button) {
-            button.addEventListener('click', () => {
-                // Redirige al usuario a contacto.html
-                window.location.href = 'contacto.html';
-            });
-        } else {
-            console.error('El botón con ID "buttonH2" no se encontró en el DOM.');
-        }
-    });
+
     
 //boton de quiero saber mas-------------------------
 document.getElementById('quieroSaberMas').addEventListener('click', function() {
