@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body tema="light">
+
+    <nav>
+
+        <div class="dmdLogo"><img id="dmdLogo" src="assets/img/logo2.png" alt="DMD Logo"></div>
+
+        <div class="navText">
+            <!--<i class="fa-solid fa-bars" id="navList"></i>-->
+            <p class="aText" id="inicio" data-es="Inicio" data-en="Home">Inicio</p>
+            <p class="aText" id="nosotros" data-es="Nosotros" data-en="About Us">Nosotros</p>
+            <p class="aText" id="contacto" data-es="Contacto" data-en="Contact">Contacto</p>
+        </div>
+
+        <div class="temas">
+            <p id="light"><i class='bx bx-sun'></i></p>
+            <p id="dark"><i class='bx bx-moon'></i></p>
+        </div>
+        
+        <hr style="height: 40px; margin: 0 10px;">
+        
+        <div class="lenguaje">
+            <p id="espanol"><img src="arg.png" alt="Español"></p>
+            <p id="ingles"><img src="ingles.png" alt="Inglés"></p>
+        </div>
+        
+        <script>
+            const temalight = document.querySelector("#light");
+            const temaDark = document.querySelector("#dark");
+            const espanol = document.querySelector("#espanol");
+            const ingles = document.querySelector("#ingles");
+        
+            // Cambio de tema
+            temalight.addEventListener("click", function(){
+                temalight.style.display = "none";
+                temaDark.style.display = "block";
+                document.body.setAttribute('tema', 'light');
+            });
+        
+            temaDark.addEventListener("click", function(){
+                temaDark.style.display = "none";
+                temalight.style.display = "block";
+                document.body.setAttribute('tema', 'dark');
+            });
+        
+            // Cambio de lenguaje
+            espanol.addEventListener("click", function(){
+                espanol.style.display = "none";
+                ingles.style.display = "block";
+                document.body.setAttribute('lenguaje', 'espanol');
+                // Aquí puedes agregar lógica para cambiar el contenido a español
+            });
+        
+            ingles.addEventListener("click", function(){
+                ingles.style.display = "none";
+                espanol.style.display = "block";
+                document.body.setAttribute('lenguaje', 'ingles');
+                // Aquí puedes agregar lógica para cambiar el contenido a inglés
+            });
+        </script>
+        
+        
+        
+        
+
+    </nav>
+
+    <div class="a" style="padding-bottom: 1200px; background-color: rgba(0, 0, 255, 0.169);"></div>
+
+    <script>
+    </script>
+</body>
+</html>
