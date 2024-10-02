@@ -13,36 +13,31 @@
 <body tema="light">
 
     <!--------------- Header y Nav----------------------------------------->
-        <header>
-            <span id="email">info@dmdcompresores.com</span>
-            
-            <div id="rLogos">
-                <button id="language-toggle">Switch to English</button>
-                <i class="fa-brands fa-linkedin logos" data-url="https://www.linkedin.com/company/dmd-compresores/"></i>
-                <i class="fa-brands fa-whatsapp logos" data-url="https://wa.me/1159380579"></i>
-                <i class="fa-brands fa-facebook-f logos" data-url="https://www.facebook.com/DMDCOMPRESORES"></i>
-                <i class="fa-brands fa-instagram logos" data-url="https://www.instagram.com/dmdcompresores/"></i>
-            </div>
-        </header>
     
-        <nav>
-    
-            <div class="dmdLogo"><img id="dmdLogo" src="assets/img/logo2.png" alt="DMD Logo"></div>
-    
-            <div class="switchTema">
+    <nav>
+
+        <div class="dmdLogo"><img id="dmdLogo" src="assets/img/logo2.png" alt="DMD Logo"></div>
+
+        <div class="navText">
+            <!--<i class="fa-solid fa-bars" id="navList"></i>-->
+            <p class="aText" id="inicio" data-es="Inicio" data-en="Home">Inicio</p>
+            <p class="aText" id="nosotros" data-es="Nosotros" data-en="About Us">Nosotros</p>
+            <p class="aText" id="contacto" data-es="Contacto" data-en="Contact">Contacto</p>
+        </div>
+        
+        <div class="switchTema">
             <label id="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
             </label>
-            </div>
-            <div class="navText">
-                <!--<i class="fa-solid fa-bars" id="navList"></i>-->
-                <p class="aText" id="inicio" data-es="Inicio" data-en="Home">Inicio</p>
-                <p class="aText" id="nosotros" data-es="Nosotros" data-en="About Us">Nosotros</p>
-                <p class="aText" id="contacto" data-es="Contacto" data-en="Contact">Contacto</p>
-            </div>
-    
-        </nav>
+        </div>
+        <div class="lenguaje">
+            <button id="language-toggle">English</button>
+        </div>
+        
+        
+
+    </nav>
         
     <!-------------------------------------------------------------------------------------------------->
     
@@ -52,8 +47,13 @@
     <section class="noParallax">
         <img src="assets/img/nosotros/img7.webp" alt="Imagen de DMD">
         <div class="text">
-            <h1>Quiénes Somos</h1>
-            <span>Con más de 45 años de experiencia en la industria, DMD se ha consolidado como líder en el diseño y la provisión de soluciones integrales para aire comprimido industrial. Nuestra misión es ofrecer un servicio completo, que abarca desde la asesoría inicial hasta el servicio post venta, garantizando una atención dinámica y personalizada que asegura confiabilidad, eficiencia y un respaldo sólido, sin generar dependencia en nuestros clientes. Nuestro compromiso se basa en entender y satisfacer las necesidades específicas de cada industria, adaptando nuestras soluciones a los distintos sectores.</span>
+            <h1 data-es="Quiénes Somos" data-en="Who We Are">
+                Quiénes Somos
+            </h1>
+            <span data-es="Con más de 45 años de experiencia en la industria, DMD se ha consolidado como líder en el diseño y la provisión de soluciones integrales para aire comprimido industrial. Nuestra misión es ofrecer un servicio completo, que abarca desde la asesoría inicial hasta el servicio post venta, garantizando una atención dinámica y personalizada que asegura confiabilidad, eficiencia y un respaldo sólido, sin generar dependencia en nuestros clientes. Nuestro compromiso se basa en entender y satisfacer las necesidades específicas de cada industria, adaptando nuestras soluciones a los distintos sectores." 
+                  data-en="With over 45 years of experience in the industry, DMD has established itself as a leader in the design and provision of comprehensive solutions for industrial compressed air. Our mission is to offer a full-service approach, from initial consulting to after-sales service, ensuring dynamic and personalized attention that guarantees reliability, efficiency, and solid support without creating dependency for our clients. Our commitment is based on understanding and meeting the specific needs of each industry, adapting our solutions to different sectors.">
+                Con más de 45 años de experiencia en la industria, DMD se ha consolidado como líder en el diseño y la provisión de soluciones integrales para aire comprimido industrial. Nuestra misión es ofrecer un servicio completo, que abarca desde la asesoría inicial hasta el servicio post venta, garantizando una atención dinámica y personalizada que asegura confiabilidad, eficiencia y un respaldo sólido, sin generar dependencia en nuestros clientes. Nuestro compromiso se basa en entender y satisfacer las necesidades específicas de cada industria, adaptando nuestras soluciones a los distintos sectores.
+            </span>
         </div>
     </section>
 
@@ -64,12 +64,13 @@
     <section class="noParallax" id="reversa">
         <img src="assets/img/nosotros/img4.webp" alt="Innovación y Eficiencia Energética">
         <div class="text">
-            <h1>Innovación y Eficiencia Energética</h1>
-            <span>
-                
-                En DMD, nuestra trayectoria se sustenta en una filosofía de progreso continuo y liderazgo técnico. Nos hemos destacado en el mercado gracias a nuestra capacidad para integrar ingeniería propia con tecnología internacional, lo que nos permite fabricar equipos de alta eficiencia energética. Todos nuestros productos están construidos con componentes de primera calidad, garantizando un rendimiento óptimo sin generar cautividad en nuestros clientes.
-                Creemos firmemente en el desarrollo sostenible y en la importancia de implementar soluciones energéticamente eficientes que no solo benefician a nuestros clientes, sino también al medio ambiente. Nuestra especialización en tecnologías de potencia variable y sistemas innovadores nos posiciona a la vanguardia del sector, contribuyendo a la optimización de procesos industriales y al ahorro energético.
-            </span>
+            <h1 data-es="Innovación y Eficiencia Energética" data-en="Innovation and Energy Efficiency">
+                Innovación y Eficiencia Energética
+            </h1>
+            <span data-es="En DMD, nuestra trayectoria se sustenta en una filosofía de progreso continuo y liderazgo técnico. Nos hemos destacado en el mercado gracias a nuestra capacidad para integrar ingeniería propia con tecnología internacional, lo que nos permite fabricar equipos de alta eficiencia energética. Todos nuestros productos están construidos con componentes de primera calidad, garantizando un rendimiento óptimo sin generar cautividad en nuestros clientes. Creemos firmemente en el desarrollo sostenible y en la importancia de implementar soluciones energéticamente eficientes que no solo benefician a nuestros clientes, sino también al medio ambiente. Nuestra especialización en tecnologías de potencia variable y sistemas innovadores nos posiciona a la vanguardia del sector, contribuyendo a la optimización de procesos industriales y al ahorro energético." 
+                  data-en="At DMD, our trajectory is based on a philosophy of continuous progress and technical leadership. We have stood out in the market thanks to our ability to integrate our own engineering with international technology, allowing us to manufacture highly energy-efficient equipment. All our products are built with top-quality components, ensuring optimal performance without creating dependency for our clients. We firmly believe in sustainable development and the importance of implementing energy-efficient solutions that benefit not only our clients but also the environment. Our specialization in variable power technologies and innovative systems positions us at the forefront of the sector, contributing to the optimization of industrial processes and energy savings.">
+                En DMD, nuestra trayectoria se sustenta en una filosofía de progreso continuo y liderazgo técnico. Nos hemos destacado en el mercado gracias a nuestra capacidad para integrar ingeniería propia con tecnología internacional, lo que nos permite fabricar equipos de alta eficiencia energética. Todos nuestros productos están construidos con componentes de primera calidad, garantizando un rendimiento óptimo sin generar cautividad en nuestros clientes. Creemos firmemente en el desarrollo sostenible y en la importancia de implementar soluciones energéticamente eficientes que no solo benefician a nuestros clientes, sino también al medio ambiente. Nuestra especialización en tecnologías de potencia variable y sistemas innovadores nos posiciona a la vanguardia del sector, contribuyendo a la optimización de procesos industriales y al ahorro energético.
+            </span>            
         </div>
     </section>
 
@@ -82,13 +83,15 @@
 
         <img src="assets/img/logos/logo1.png" alt="Innovación y Eficiencia Energética">
         <div class="text">
-            <h1>Compromiso con Nuestros Clientes</h1>
-            <span>
-                
-                Nuestro enfoque centrado en el cliente nos impulsa a brindar un asesoramiento integral y a realizar un análisis detallado de las necesidades de cada empresa. Esto nos permite ofrecer soluciones a medida que garantizan la máxima eficiencia en los sistemas de aire comprimido. Además, estamos comprometidos con la atención 
-                post venta, asegurando un soporte continuo y soluciones rápidas ante cualquier requerimiento.
+            <h1 data-es="Compromiso con Nuestros Clientes" data-en="Commitment to Our Clients">
+                Compromiso con Nuestros Clientes
+            </h1>
+            <span data-es="Nuestro enfoque centrado en el cliente nos impulsa a brindar un asesoramiento integral y a realizar un análisis detallado de las necesidades de cada empresa. Esto nos permite ofrecer soluciones a medida que garantizan la máxima eficiencia en los sistemas de aire comprimido. Además, estamos comprometidos con la atención post venta, asegurando un soporte continuo y soluciones rápidas ante cualquier requerimiento. En DMD, entendemos que la relación con nuestros clientes se basa en la confianza y el compromiso mutuo. Por ello, trabajamos arduamente para ser un socio estratégico en el desarrollo y optimización de sus sistemas de aire comprimido, ayudando a incrementar la competitividad y productividad de sus procesos industriales." 
+                  data-en="Our client-focused approach drives us to provide comprehensive consulting and conduct a detailed analysis of each company's needs. This allows us to offer customized solutions that guarantee maximum efficiency in compressed air systems. Additionally, we are committed to after-sales service, ensuring continuous support and quick solutions to any requirements. At DMD, we understand that the relationship with our clients is based on mutual trust and commitment. For this reason, we work hard to be a strategic partner in the development and optimization of their compressed air systems, helping to increase the competitiveness and productivity of their industrial processes.">
+                Nuestro enfoque centrado en el cliente nos impulsa a brindar un asesoramiento integral y a realizar un análisis detallado de las necesidades de cada empresa. Esto nos permite ofrecer soluciones a medida que garantizan la máxima eficiencia en los sistemas de aire comprimido. Además, estamos comprometidos con la atención post venta, asegurando un soporte continuo y soluciones rápidas ante cualquier requerimiento.
                 En DMD, entendemos que la relación con nuestros clientes se basa en la confianza y el compromiso mutuo. Por ello, trabajamos arduamente para ser un socio estratégico en el desarrollo y optimización de sus sistemas de aire comprimido, ayudando a incrementar la competitividad y productividad de sus procesos industriales.
             </span>
+            
             
         </div>
 
@@ -100,42 +103,72 @@
 
     <section class="trayectoria">
         <div id="titulo">
-            <h3>DEJEMOS QUE LOS NUMEROS HABLEN POR SI MISMOS...</h3>
+            <h3 data-es="DEJEMOS QUE LOS NÚMEROS HABLEN POR SÍ MISMOS..." data-en="LET THE NUMBERS SPEAK FOR THEMSELVES...">
+                DEJEMOS QUE LOS NÚMEROS HABLEN POR SÍ MISMOS...
+            </h3>            
         </div>
         <div class="contenido">
             <aside id="aside1">
                 <img src="assets/img/nosotros/50 años logo.webp" alt="">
-                <span id="trayectoria">Nuestra trayectoria</span>
+                <span id="trayectoria" data-es="Nuestra trayectoria" data-en="Our trajectory">
+                    Nuestra trayectoria
+                </span>                
 
-                <h1>50 AÑOS DE EXPERIENCIA</h1>
-                <span> Desarrollando productos y brindando soluciones a medida en la industria del aire comprimido. </span>
+                <h1 data-es="50 AÑOS DE EXPERIENCIA" data-en="50 YEARS OF EXPERIENCE">
+                    50 AÑOS DE EXPERIENCIA
+                </h1>
+                <span data-es="Desarrollando productos y brindando soluciones a medida en la industria del aire comprimido." data-en="Developing products and providing tailored solutions in the compressed air industry.">
+                    Desarrollando productos y brindando soluciones a medida en la industria del aire comprimido.
+                </span>                
 
                 <hr>
 
-                <h1>MÁS DE 2500 COMPRESORES</h1>
-                <span>De nuestra producción instalados en la actualidad</span>
+                <h1 data-es="MÁS DE 2500 COMPRESORES" data-en="MORE THAN 2500 COMPRESSORS">
+                    MÁS DE 2500 COMPRESORES
+                </h1>
+                <span data-es="De nuestra producción instalados en la actualidad" data-en="From our production currently installed">
+                    De nuestra producción instalados en la actualidad
+                </span>                
 
                 <hr>
 
-                <h1>MÁS DE 28000 kW DE POTENCIA INSTALADA</h1>
-                <span>En máquinas DMD de potencia variable.</span>
+                <h1 data-es="MÁS DE 28000 kW DE POTENCIA INSTALADA" data-en="MORE THAN 28000 kW OF INSTALLED POWER">
+                    MÁS DE 28000 kW DE POTENCIA INSTALADA
+                </h1>
+                <span data-es="En máquinas DMD de potencia variable." data-en="In DMD variable power machines.">
+                    En máquinas DMD de potencia variable.
+                </span>
+                
                 
             </aside>
             <aside id="aside2">
                 <div class="compromiso">
                     <img src="assets/img/nosotros/compromiso1.webp" alt="">
-                    <span>COMPROMISO <br> CON EL CUIDADO <br> DEL MEDIO AMBIENTE</span>
+                    <span data-es="COMPROMISO <br> CON EL CUIDADO <br> DEL MEDIO AMBIENTE" data-en="COMMITMENT <br> TO ENVIRONMENTAL <br> CARE">
+                        COMPROMISO <br> CON EL CUIDADO <br> DEL MEDIO AMBIENTE
+                    </span>                    
                 </div>
 
-                <h4>LA RESPONSABILIDAD SOCIAL DE LA GESTIÓN DEL MEDIO AMBIENTE</h4>
-
-                <h1>MÁS DE 36.000.000 kWh/Año DE AHORRO ENERGÉTICO GENERADO</h1>
-                <span>Desde el año 2005 somos pioneros en darle importancia a la influencia del consumo del aire comprimido industrial sobre la matriz energética de nuestro país, y coherentes con nuestra responsabilidad hacia el cuidado del medio ambiente. </span>
+                <h4 data-es="LA RESPONSABILIDAD SOCIAL DE LA GESTIÓN DEL MEDIO AMBIENTE" data-en="SOCIAL RESPONSIBILITY IN ENVIRONMENTAL MANAGEMENT">
+                    LA RESPONSABILIDAD SOCIAL DE LA GESTIÓN DEL MEDIO AMBIENTE
+                </h4>
+                
+                <h1 data-es="MÁS DE 36.000.000 kWh/Año DE AHORRO ENERGÉTICO GENERADO" data-en="MORE THAN 36,000,000 kWh/YEAR OF ENERGY SAVINGS GENERATED">
+                    MÁS DE 36.000.000 kWh/Año DE AHORRO ENERGÉTICO GENERADO
+                </h1>
+                <span data-es="Desde el año 2005 somos pioneros en darle importancia a la influencia del consumo del aire comprimido industrial sobre la matriz energética de nuestro país, y coherentes con nuestra responsabilidad hacia el cuidado del medio ambiente." data-en="Since 2005, we have been pioneers in emphasizing the impact of industrial compressed air consumption on our country’s energy matrix, consistent with our responsibility towards environmental care.">
+                    Desde el año 2005 somos pioneros en darle importancia a la influencia del consumo del aire comprimido industrial sobre la matriz energética de nuestro país, y coherentes con nuestra responsabilidad hacia el cuidado del medio ambiente.
+                </span>                
 
                 <hr>
 
-                <h1>MÁS DE 15.000 Tn/CO2/Año EVITADOS DE SER EMITIDOS A LA ATMÓSFERA</h1>
-                <span>consecuencia del menor consumo de los SISTEMAS DMD EFFICIENT VI.</span>
+                <h1 data-es="MÁS DE 15.000 Tn/CO2/Año EVITADOS DE SER EMITIDOS A LA ATMÓSFERA" data-en="MORE THAN 15,000 Tn/CO2/YEAR AVOIDED FROM BEING EMITTED INTO THE ATMOSPHERE">
+                    MÁS DE 15.000 Tn/CO2/Año EVITADOS DE SER EMITIDOS A LA ATMÓSFERA
+                </h1>
+                <span data-es="consecuencia del menor consumo de los SISTEMAS DMD EFFICIENT VI." data-en="as a result of the lower consumption of DMD EFFICIENT VI SYSTEMS.">
+                    consecuencia del menor consumo de los SISTEMAS DMD EFFICIENT VI.
+                </span>
+                
             </aside>
         </div>
     </section>
@@ -145,30 +178,49 @@
 
     <section class="logros">
         <img src="assets/img/nosotros/negocios.webp" alt="">
-        <h3>LIDERES EN AHORRO ENERGÉTICO</h3>
+        <h3 data-es="LIDERES EN AHORRO ENERGÉTICO" data-en="LEADERS IN ENERGY SAVINGS">
+            LIDERES EN AHORRO ENERGÉTICO
+        </h3>
+        
         <div id="resultados">
             <div class="cifras">
-                <p>MÁS DE 1100<br>
-                    MÁQUINAS DMD</p>
-                <span>De potencia variable instaladas en la actualidad.</span>
+                <p data-es="MÁS DE 1100<br>MÁQUINAS DMD" data-en="MORE THAN 1100<br>DMD MACHINES">
+                    MÁS DE 1100<br>MÁQUINAS DMD
+                </p>
+                <span data-es="De potencia variable instaladas en la actualidad." data-en="Of variable power installed today.">
+                    De potencia variable instaladas en la actualidad.
+                </span>
+                
             </div>
             <hr>
             <div class="cifras">
-                <p>MÁS DE 28000 kW <br>
-                    DE POTENCIA</p>
-                <span>Instaladas en máquinas DMD de potencia variable.</span>
+                <p data-es="MÁS DE 28000 kW <br>DE POTENCIA" data-en="MORE THAN 28000 kW <br>OF POWER">
+                    MÁS DE 28000 kW <br>DE POTENCIA
+                </p>
+                <span data-es="Instaladas en máquinas DMD de potencia variable." data-en="Installed in DMD variable power machines.">
+                    Instaladas en máquinas DMD de potencia variable.
+                </span>
+                
             </div>
             <hr>
             <div class="cifras">
-                <p>40% DE AHORRO <br>
-                    ENERGÉTICO</p>
-                <span>Mínimo promedio en los sistemas DMD de potencia variable (Efficient VI)</span>
+                <p data-es="40% DE AHORRO <br>ENERGÉTICO" data-en="40% ENERGY <br>SAVINGS">
+                    40% DE AHORRO <br>ENERGÉTICO
+                </p>
+                <span data-es="Mínimo promedio en los sistemas DMD de potencia variable (Efficient VI)" data-en="Minimum average in DMD variable power systems (Efficient VI)">
+                    Mínimo promedio en los sistemas DMD de potencia variable (Efficient VI)
+                </span>
+                
             </div>
             <hr>
             <div class="cifras">
-                <p>MÁS DE 36.000.000 kWh <br>
-                    DE AHORRO ENERGÉTICO</p>
-                <span>Promedio en los sistemas DMD de potencia variable (Efficient VI)</span>
+                <p data-es="MÁS DE 36.000.000 kWh <br>DE AHORRO ENERGÉTICO" data-en="MORE THAN 36,000,000 kWh <br>OF ENERGY SAVINGS">
+                    MÁS DE 36.000.000 kWh <br>DE AHORRO ENERGÉTICO
+                </p>
+                <span data-es="Promedio en los sistemas DMD de potencia variable (Efficient VI)" data-en="Average in DMD variable power systems (Efficient VI)">
+                    Promedio en los sistemas DMD de potencia variable (Efficient VI)
+                </span>
+                
             </div>
         </div>
     </section>
@@ -180,10 +232,10 @@
         <img src="assets/img/logos/whatsapp-logo.jpg" alt="WhatsApp" class="whatsapp-logo">
     </a>
 
-    <footer>
+    <footer >
         <div class="redes">
             <h2>Contactanos</h2>
-            <span><i class="fa-solid fa-envelope fContacto"></i>info@dmdcompresores.com</span>
+            <span><i class="fa-solid fa-envelope fContacto"></i><a href="mailto:" target="_blank">info@dmdcompresores.com</a></span>
             <span><i class="fa-solid fa-phone fContacto"></i>11-3959-2363</span>
         </div>
         <div class="indnac">
@@ -192,9 +244,17 @@
             <img src="assets/img/ind.png" alt="Industria Nacional">
         </div>
         <div class="ubic">
-            <h2>OFICINA CENTRAL</h2>
+            <h2 data-es="OFICINA CENTRAL" data-en="HEADQUARTERS">
+                OFICINA CENTRAL
+            </h2>            
             <span>Gobernador Oliden 2768</span>
             <span>Lanus Oste, Buenos Aires</span>
+            <div class="redesLogosf" id="rLogos">
+                <i class="fa-brands fa-linkedin logos" data-url="https://www.linkedin.com/company/dmd-compresores/"></i>
+                <i class="fa-brands fa-whatsapp logos" data-url="https://wa.me/1159380579"></i>
+                <i class="fa-brands fa-facebook-f logos" data-url="https://www.facebook.com/DMDCOMPRESORES"></i>
+                <i class="fa-brands fa-instagram logos" data-url="https://www.instagram.com/dmdcompresores/"></i>
+            </div>
         </div>
     </footer>
 
