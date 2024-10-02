@@ -1,14 +1,3 @@
-//header-------------------------------------
-document.getElementById("email").addEventListener("click", function() {
-    window.location.href = "mailto:info@dmdcompresores.com";
-  });
-
-  document.querySelectorAll('#rLogos .logos').forEach(icon => {
-    icon.addEventListener('click', function() {
-        const url = this.getAttribute('data-url');
-        window.open(url, '_blank');
-    });
-});
 
 
 //Nav Sticky --------------------------------------------------
