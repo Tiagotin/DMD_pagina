@@ -72,6 +72,7 @@
     --prodTittleFondo2: #ae0d24;
     --servTittleFondo1: #da1f3b; /* Cambiado a azul */
     --servTittleFondo2: #ae0d24;
+    --servTittleShadow: #000000f7;
     --prodTittleText: #fff;
     --prodCardFondo: #fff;
     --prodCardTexto: #333;
@@ -170,7 +171,7 @@ body[tema="dark"] {
 --prodTittleFondo1: #ae192f;
 --prodTittleFondo2: #8b0a1d;
 --servTittleFondo1: transparent; /* Cambiado a azul */
---servTittleFondo2: ;
+--servTittleFondo2: transparent;
 
 --prodTittleText: #e8e6e3;
 --prodCardFondo: #272727;
@@ -249,121 +250,49 @@ body {
     color: #fff;
 }
 
+/* Estilos generales para .content */
+.content #carouselContent p {
+    z-index: 4;
+    margin-bottom: 20px;
+    color: var(--ContentTextColor);
+    font-weight: 700;
+    -webkit-text-stroke: var(--ContentTextShadow) 1px;
+}
 
-/* 1° .content */
+.content #carouselContent button {
+    border: solid 1px #fff;
+    background-color: transparent;
+    width: 180px;
+    color: #fff;
+    font-weight: 500;
+    padding: 5px;
+    font-size: 1.65rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
 
+.content #carouselContent button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Cambios específicos para cada hijo */
 .content:nth-child(1) #carouselContent p {
-    z-index: 4;
-    font-size: 8rem;
-    margin-bottom: 20px;
-    color: var(--ContentTextColor);
-    font-weight: 700;
-    -webkit-text-stroke: var(--ContentTextShadow) 1px;
-    text-shadow: 0 0 35px var(--ContentTextShadow);
+    font-size: 8rem; /* Tamaño específico para el primer hijo */
 }
 
-.content:nth-child(1) #carouselContent button {
-    border: solid 1px #fff;
-    background-color: transparent;
-    width: 180px;
-    color: #fff;
-    font-weight: 500;
-    padding: 5px;
-    font-size: 1.65rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.content:nth-child(1) #carouselContent button:hover {
-    background-color: #fff;
-    color: #000;
-}
-
-
-
-/* 2° .content */
 .content:nth-child(2) #carouselContent p {
-    z-index: 4;
-    font-size: 4rem;
-    margin-bottom: 20px;
-    color: var(--ContentTextColor);
-    font-weight: 700;
-    -webkit-text-stroke: var(--ContentTextShadow) 1px;
+    font-size: 4rem; /* Tamaño específico para el segundo hijo */
 }
 
-.content:nth-child(2) #carouselContent button {
-    border: solid 1px #fff;
-    background-color: transparent;
-    width: 180px;
-    color: #fff;
-    font-weight: 500;
-    padding: 5px;
-    font-size: 1.65rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.content:nth-child(2) #carouselContent button:hover {
-    background-color: #fff;
-    color: #000;
-}
-
-
-
-
-/* 3° .content */
 .content:nth-child(3) #carouselContent p {
-    z-index: 4;
-    font-size: 4rem;
-    margin-bottom: 20px;
-    color: var(--ContentTextColor);
-    font-weight: 700;
-    -webkit-text-stroke: var(--ContentTextShadow) 1px;
+    font-size: 4rem; /* Tamaño específico para el tercer hijo */
 }
 
-.content:nth-child(3) #carouselContent button {
-    border: solid 1px #fff;
-    background-color: transparent;
-    width: 180px;
-    color: #fff;
-    font-weight: 500;
-    padding: 5px;
-    font-size: 1.65rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.content:nth-child(3) #carouselContent button:hover {
-    background-color: #fff;
-    color: #000;
-}
-
-/* 3° .content */
 .content:nth-child(4) #carouselContent p {
-    z-index: 4;
-    font-size: 4rem;
-    margin-bottom: 20px;
-    color: var(--ContentTextColor);
-    font-weight: 700;
-    -webkit-text-stroke: var(--ContentTextShadow) 1px;
+    font-size: 4rem; /* Tamaño específico para el cuarto hijo */
 }
 
-.content:nth-child(4) #carouselContent button {
-    border: solid 1px #fff;
-    background-color: transparent;
-    width: 180px;
-    color: #fff;
-    font-weight: 500;
-    padding: 5px;
-    font-size: 1.65rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.content:nth-child(4) #carouselContent button:hover {
-    background-color: #fff;
-    color: #000;
-}
 
 @keyframes mostrar {
 	to {
@@ -639,8 +568,7 @@ span.next:hover, span.prev:hover{
     width: 100%;
     padding: 7px;  
     color: var(--prodTittleText);
-    box-shadow: #00000026   
-        0px 5px 15px 0px;
+    box-shadow: 0px 5px 15px 0px var(--servTittleShadow) ;
     background: linear-gradient(to bottom, 
         var(--servTittleFondo1),
         var(--servTittleFondo2));

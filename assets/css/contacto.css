@@ -300,13 +300,6 @@ textarea{
 
 
 @media (max-width: 600px){
-    #sectionForm form{
-        border: solid 1px;
-        width: 70%;
-        min-width: none;
-        max-width: s;
-    }
-
     #sectionForm form input,label{
         width: 60%;
     }
