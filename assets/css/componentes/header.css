@@ -337,6 +337,28 @@ nav .navText .aText.sticky{
     }
     nav .dmdLogo.sticky {display: none;}
 
-    nav
 }
 /*------------------------------------------------------*/
+
+
+
+.temas{
+    font-size: 2rem;
+}
+.temas p{
+    cursor: pointer;
+    
+}
+.temas #light{
+    display: none;
+    color: #fff;
+}
+
+p img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.lenguaje p:nth-child(2){
+    display: none;
+}
