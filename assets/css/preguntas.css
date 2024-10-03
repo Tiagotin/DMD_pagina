@@ -26,6 +26,15 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
+
+#particles-js{
+    z-index: -2;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+
 main {
 	max-width: 1000px;
 	width: 90%;

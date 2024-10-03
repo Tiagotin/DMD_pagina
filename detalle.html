@@ -17,7 +17,7 @@
     <nav>
 
         <div class="dmdLogo"><img id="dmdLogo" src="assets/img/logo2.png" alt="DMD Logo"></div>
-
+    
         <div class="navText">
             <!--<i class="fa-solid fa-bars" id="navList"></i>-->
             <p class="aText" id="inicio" data-es="Inicio" data-en="Home">Inicio</p>
@@ -25,13 +25,13 @@
             <p class="aText" id="contacto" data-es="Contacto" data-en="Contact">Contacto</p>
         </div>
         
-
+    
         <div class="temas" id="themeSelect">
             <p id="light"><i class='bx bx-sun'></i></p>
             <p id="dark"><i class='bx bx-moon'></i></p>
         </div>
         
-        <hr style="height: 40px; margin: 0 10px;">
+        <hr class="hrNav" style="height: 40px; margin: 0 10px;">
         
         <div class="lenguaje">
             <p id="espanol"><img src="assets/img/logos/ingles.png" alt="Inglés"></p>
@@ -39,8 +39,9 @@
         </div>
         
         
-
+    
     </nav>
+    
     
     <!---------------------------------------------------------------->
 
@@ -161,10 +162,19 @@
             <p>¿Tiene alguna consulta? <a href="contacto.html">Contáctenos</a></p>
         </div>
 
-    <footer>
+
+        <!----------------------------logo flotante y footer-------------------------- -->
+    
+    <!-- Logo flotante de WhatsApp -->
+    <a href="https://wa.me/1139592363" class="whatsapp-float" target="_blank">
+        <img src="assets/img/logos/whatsapp-logo.jpg" alt="WhatsApp" class="whatsapp-logo">
+    </a>
+
+
+    <footer >
         <div class="redes">
             <h2>Contactanos</h2>
-            <span><i class="fa-solid fa-envelope fContacto"></i>info@dmdcompresores.com</span>
+            <span><i class="fa-solid fa-envelope fContacto"></i><a href="mailto:" target="_blank">info@dmdcompresores.com</a></span>
             <span><i class="fa-solid fa-phone fContacto"></i>11-3959-2363</span>
         </div>
         <div class="indnac">
@@ -173,13 +183,23 @@
             <img src="assets/img/ind.png" alt="Industria Nacional">
         </div>
         <div class="ubic">
-            <h2>OFICINA CENTRAL</h2>
+            <h2 data-es="OFICINA CENTRAL" data-en="HEADQUARTERS">
+                OFICINA CENTRAL
+            </h2>            
             <span>Gobernador Oliden 2768</span>
             <span>Lanus Oste, Buenos Aires</span>
+            <div class="redesLogosf" id="rLogos">
+                <i class="fa-brands fa-linkedin logos" data-url="https://www.linkedin.com/company/dmd-compresores/"></i>
+                <i class="fa-brands fa-whatsapp logos" data-url="https://wa.me/1159380579"></i>
+                <i class="fa-brands fa-facebook-f logos" data-url="https://www.facebook.com/DMDCOMPRESORES"></i>
+                <i class="fa-brands fa-instagram logos" data-url="https://www.instagram.com/dmdcompresores/"></i>
+            </div>
         </div>
     </footer>
+
         
 
     <script src="assets/js/link.js"></script>
+    <script src="assets/js/lenguaje.js"></script>
 </body>
 </html>
