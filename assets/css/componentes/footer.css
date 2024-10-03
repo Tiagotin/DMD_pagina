@@ -130,9 +130,7 @@ footer .redes a:hover{
 }
 
 
-#rLogos i.logos{
-    cursor: pointer;
-}
+#rLogos i.logos{cursor: pointer;}
 
 @media (max-width: 767px){
     footer{

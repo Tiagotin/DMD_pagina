@@ -271,15 +271,15 @@ nav .navText .aText.sticky{
 @media (min-width: 769px) and (max-width: 1279px) {
     nav .navText{
         gap: 10px;
+        justify-content: center;
     }
 }
 @media (min-width: 481px) and (max-width: 768px){
     nav{
         padding: 5px;
-        margin: 0;
-        flex-direction: column;      
+        margin: 0;    
         gap: 15px;
-  
+        flex-wrap: wrap;
     }
 
     .dmdLogo{
@@ -287,12 +287,19 @@ nav .navText .aText.sticky{
         justify-content: center;
     }
 
-    .navText{
-        width: 100%;
+    nav .navText{
         display: flex;
         gap: 0 !important;
+        flex: none;
+        width: 100%;
+        
+        
     }
 
+    .temas, .lenguaje{
+        width: max-content;
+        margin: 0 auto;
+    }
 
     nav.sticky{
         overflow: hidden;
@@ -302,13 +309,13 @@ nav .navText .aText.sticky{
     nav .dmdLogo.sticky {
         display: none;
     }
+    
 }
 
 @media (max-width: 480px){
     nav{
         padding: 5px;
         margin: 0;
-        flex-direction: column;      
         gap: 15px;
     }
 
