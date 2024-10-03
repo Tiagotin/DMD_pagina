@@ -2,24 +2,30 @@
 
 //Nav Sticky --------------------------------------------------
 
-window.addEventListener("scroll", function(){
-    const nav = document.querySelector("nav");
-    const logo = document.querySelector(".dmdLogo");
-    const logoHeight = document.querySelector("#dmdLogo");
-    const navText = document.querySelector(".navText");
-    const aText = document.querySelectorAll(".aText");
-    const switchTema = document.querySelector(".lenguaje");
 
-    switchTema.classList.toggle("sticky", window.scrollY > 0);
-    nav.classList.toggle("sticky", window.scrollY > 0);
-    logo.classList.toggle("sticky", window.scrollY > 0);
-    logoHeight.classList.toggle("sticky", window.scrollY > 0);
-    navText.classList.toggle("sticky", window.scrollY > 0);
-    aText.forEach(function(element) {
-        element.classList.toggle("sticky", window.scrollY > 0);
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("scroll", function() {
+        const nav = document.querySelector("nav");
+        const logo = document.querySelector(".dmdLogo");
+        const logoHeight = document.querySelector("#dmdLogo");
+        const navText = document.querySelector(".navText");
+        const aText = document.querySelectorAll(".aText");
+        const switchTema = document.querySelector(".temas");
+        const hrTI = document.querySelector(".hrNav");
+        const idioma = document.querySelector(".lenguaje");
+
+        switchTema.classList.toggle("sticky", window.scrollY > 0);
+        hrTI.classList.toggle("sticky", window.scrollY > 0);
+        idioma.classList.toggle("sticky", window.scrollY > 0);
+        nav.classList.toggle("sticky", window.scrollY > 0);
+        logo.classList.toggle("sticky", window.scrollY > 0);
+        logoHeight.classList.toggle("sticky", window.scrollY > 0);
+        navText.classList.toggle("sticky", window.scrollY > 0);
+        aText.forEach(function(element) {
+            element.classList.toggle("sticky", window.scrollY > 0);
+        });
     });
-})
-
+});
 
 //-------------------------------------------------------------
 

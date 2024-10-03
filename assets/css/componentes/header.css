@@ -309,6 +309,9 @@ nav .navText .aText.sticky{
     nav .dmdLogo.sticky {
         display: none;
     }
+    .lenguaje.sticky, .temas.sticky, .hrNav.sticky{
+        display: none;
+    }
     
 }
 
@@ -317,6 +320,7 @@ nav .navText .aText.sticky{
         padding: 5px;
         margin: 0;
         gap: 15px;
+        flex-wrap: wrap;
     }
 
     .dmdLogo{
@@ -327,22 +331,36 @@ nav .navText .aText.sticky{
         width: var(--logo-tamaño-responsive);
     }
     .navText{
-        width: 100%;
         gap: 0 !important;
         overflow: scroll;
         flex-direction: column;
+        flex: none !important;
+        width: 100%;
     }
 
+    .lenguaje, .temas{
+        margin: 0 auto;
+    }
 
     nav.sticky{
         padding: 5px 0;
     }
+
+    .dmdLogo.sticky{
+        display: none;
+    }
     nav .navText.sticky{
         overflow: hidden;
         flex-direction: row;
-
     }
-    nav .dmdLogo.sticky {display: none;}
+    nav .navText.sticky p{
+        padding: 0;
+    }
+    .lenguaje.sticky, .temas.sticky, .hrNav.sticky{
+        display: none;
+    }
+    
+
 
 }
 /*------------------------------------------------------*/
