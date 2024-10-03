@@ -130,6 +130,10 @@ footer .redes a:hover{
 }
 
 
+#rLogos i.logos{
+    cursor: pointer;
+}
+
 @media (max-width: 767px){
     footer{
         flex-direction: column;
@@ -169,8 +173,6 @@ footer .redes a:hover{
     .redesLogosf{
         margin: 30px 0;
     }
-    .redesLogosf i{
-        cursor: pointer;
-    }
 }
+
 
