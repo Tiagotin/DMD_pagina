@@ -57,31 +57,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Switch -----------------------------------
 
+const temalight = document.querySelector("#light");
+const temaDark = document.querySelector("#dark");
 
-const themeSelect = document.querySelector('#themeSelect'); // Cambia esto al ID de tu <select>
-const body = document.body;
-
-// Cambia el tema según la selección
-function cambiaTema(ev) {
-    const selectedTheme = ev.target.value; // Obtiene el tema seleccionado
-    body.setAttribute('tema', selectedTheme);
-    localStorage.setItem('modoOscuro', selectedTheme); // Guarda el tema en localStorage
+// Función para cambiar el tema y actualizar el estado de los íconos
+function cambiaTema(theme) {
+    if (theme === 'light') {
+        temalight.style.display = "none";
+        temaDark.style.display = "block";
+        document.body.setAttribute('tema', 'light');
+        localStorage.setItem('modoOscuro', 'light');
+    } else {
+        temaDark.style.display = "none";
+        temalight.style.display = "block";
+        document.body.setAttribute('tema', 'dark');
+        localStorage.setItem('modoOscuro', 'dark');
+    }
 }
 
-// Verificar si el modo oscuro está guardado en localStorage
+// Eventos para cambiar el tema cuando se hace clic en los íconos
+temalight.addEventListener("click", function() {
+    cambiaTema('light');
+});
+
+temaDark.addEventListener("click", function() {
+    cambiaTema('dark');
+});
+
+// Verificar si el modo oscuro está guardado en localStorage y aplicar el tema correspondiente
 const modoOscuroActivo = localStorage.getItem('modoOscuro');
 
-// Si está activo, aplicar el tema correspondiente
-if (modoOscuroActivo) {
-    body.setAttribute('tema', modoOscuroActivo);
-    themeSelect.value = modoOscuroActivo; // Establecer el valor del <select>
+if (modoOscuroActivo === 'dark') {
+    cambiaTema('dark');  // Aplica el tema oscuro si estaba guardado
 } else {
-    body.setAttribute('tema', 'light'); // Por defecto se establece en light
-    themeSelect.value = 'light'; // Establecer valor por defecto
+    cambiaTema('light'); // Aplica el tema claro por defecto
 }
-
-themeSelect.addEventListener('change', cambiaTema);
-
 
 
 

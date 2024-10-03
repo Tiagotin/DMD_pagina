@@ -1,43 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const languageToggleButton = document.getElementById('language-toggle');
+    const espanol = document.querySelector("#espanol");
+    const ingles = document.querySelector("#ingles");
     const elements = document.querySelectorAll('[data-es]');
 
     // Cargar el idioma guardado en localStorage o usar 'es' como predeterminado
     let currentLanguage = localStorage.getItem('selectedLanguage') || 'es';
 
-    // Función para actualizar el contenido según el idioma seleccionado
+    // Función para actualizar el contenido general según el idioma seleccionado
     const updateContent = () => {
         elements.forEach(el => {
-            el.textContent = el.getAttribute(`data-${currentLanguage}`);
+            el.innerHTML = el.getAttribute(`data-${currentLanguage}`); // Usamos innerHTML para mantener etiquetas
         });
 
-        // Cambiar el texto del botón según el idioma actual
+        // Mostrar/ocultar los íconos de idioma según el idioma actual
         if (currentLanguage === 'es') {
-            languageToggleButton.textContent = 'Switch to English';
+            espanol.style.display = "none";
+            ingles.style.display = "block";
         } else {
-            languageToggleButton.textContent = 'Cambiar a Español';
+            ingles.style.display = "none";
+            espanol.style.display = "block";
         }
+
+        // Actualizar también el contenido de los elementos con la clase 'savings'
+        changeLanguage(currentLanguage);
     };
 
-    // Aplicar el idioma guardado al cargar la página
-    updateContent();
-
-    // Evento para cambiar el idioma al hacer clic en el botón
-    languageToggleButton.addEventListener('click', () => {
-        currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
-
-        // Guardar el idioma seleccionado en localStorage
-        localStorage.setItem('selectedLanguage', currentLanguage);
-
-        // Actualizar el contenido después del cambio de idioma
-        updateContent();
-    });
-
-        // Función para cambiar el idioma
+    // Función para cambiar el idioma de los elementos con la clase 'savings'
     function changeLanguage(lang) {
         // Obtener todos los elementos con la clase 'savings'
         const savingsElements = document.getElementsByClassName('savings');
-    
+        
         // Iterar sobre todos los elementos encontrados
         for (let i = 0; i < savingsElements.length; i++) {
             // Obtener el texto del atributo data según el idioma seleccionado
@@ -45,23 +37,25 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Verificar si savingsText tiene un valor antes de asignar
             if (savingsText) {
-                // Asignar directamente el texto del atributo, incluyendo el <br>
+                // Asignar directamente el texto del atributo manteniendo las etiquetas HTML
                 savingsElements[i].innerHTML = savingsText;
             }
         }
     }
-    
-    // Manejo del evento de clic en el botón
-    document.getElementById('language-toggle').addEventListener('click', function() {
-        // Verificar el idioma actual y alternar
-        const currentLang = this.textContent === 'English' ? 'en' : 'es';
-        
-        // Cambiar el idioma
-        changeLanguage(currentLang);
-        
-        // Actualizar el texto del botón
-        this.textContent = currentLang === 'en' ? 'Español' : 'English';
+
+    // Aplicar el idioma guardado al cargar la página
+    updateContent();
+
+    // Eventos para cambiar el idioma al hacer clic en los íconos
+    espanol.addEventListener("click", function() {
+        currentLanguage = 'es';
+        localStorage.setItem('selectedLanguage', currentLanguage);
+        updateContent();
     });
 
-
+    ingles.addEventListener("click", function() {
+        currentLanguage = 'en';
+        localStorage.setItem('selectedLanguage', currentLanguage);
+        updateContent();
+    });
 });
