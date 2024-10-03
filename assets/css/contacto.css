@@ -44,6 +44,10 @@
     --formMsjComentButtonBorderHover: #000;
     --formMsjComentButtonTextoHover: #fff;
     --formMsjComentButtonFondoHover:  #146597;
+
+    --consulPFondo: #ae0d24;
+    --consulPTextColor: #fff;
+    --consulAColor: #fff;
 }
 
     [tema="dark"]{
@@ -72,6 +76,11 @@
     --formMsjComentButtonBorderHover: #8c8273;
     --formMsjComentButtonTextoHover: #e8e6e3;
     --formMsjComentButtonFondoHover: #105179;
+
+
+    --consulPFondo: #7c0d1e;
+    --consulPTextColor: #fff;
+    --consulAColor: #fff;
 }
 
 
@@ -273,6 +282,33 @@ textarea{
     background-color: var(--formMsjComentFondo);
     color: var(--formMsjComentText);
 }
+.consul p{
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 10px 0;
+}
+
+.consul p a{
+    text-decoration: none;
+    text-decoration: underline  transparent;
+    transition: 0.2s ease;
+}
+
+.consul p a:hover{
+    text-decoration: underline ;
+}
+
+.consul p {
+    background-color: var(--consulPFondo);
+    color: var(--consulPTextColor);
+}
+
+.consul p a {
+    color: var(--consulAColor);
+}
+
 
 @media (max-width: 750px){
     #sectionForm{

@@ -185,28 +185,6 @@ body {
     flex: 1;
     min-width: 250px;
 }
-@media (max-width:1071px){.compresor-info{margin-top: 20px;}}
-@media (max-width: 768px) and (min-width: 481px){ 
-    .compresor{
-        padding: 0;
-    }
-    .compresor-img{
-        margin: 20px auto;
-        padding: 0 20px;
-        border-radius: 4px;
-        overflow: hidden;
-    }
-    .compresor-img img {
-        border-radius: 6px;
-    }
-
-    .compresor-info{
-        padding: 0 20px;
-    }    
-    .compresor-info p {
-        padding: 0 10px;
-    }
-}
 .compresor-info h2 {
     font-size: 2rem;
     margin-bottom: 10px;
@@ -404,4 +382,70 @@ tbody tr:nth-child(odd) {
 
 .detalleCompresor {
     background-color: #fff;
+}
+
+
+
+
+@media (max-width:1071px){.compresor-info{margin-top: 20px;}}
+@media (max-width: 768px) and (min-width: 481px){ 
+    .compresor{
+        padding: 0;
+    }
+    .compresor-img{
+        margin: 40px auto;
+        padding: 0 35px;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    .compresor-img img {
+        border-radius: 6px;
+    }
+
+    .compresor-info{
+        padding: 0 50px;
+    }    
+    .compresor-info p {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px){
+    .compresores {
+        padding: 0 10px;
+    }
+    .compresor{
+        padding: 0;
+    }
+    .compresor-img{
+        margin: 20px auto 0;
+        padding: 0 10px;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    .compresor-img img {
+        border-radius: 6px;
+    }
+
+    .compresor-info{
+        padding: 0 20px;
+    }    
+    .compresor-info h2{
+        text-align: center;
+        font-size: 1.5rem !important;
+    }
+    .compresor-info p {
+        padding: 0 10px;
+        max-height: 650px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .compresor-tecdesc table{
+        margin: 0 auto;}
+
+        tbody td:nth-child(odd) {display: flex; align-items: start;}
+        #CompresorVI table:nth-of-type(2){
+            width: 80%;
+        }
 }
