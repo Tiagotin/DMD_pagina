@@ -77,7 +77,7 @@ particlesJS(
               "mode": "grab"
             },
             "onclick": {
-              "enable": true,
+              "enable": false,
               "mode": "bubble"
             },
             "resize": true
