@@ -296,12 +296,17 @@ body {
     
 }
 
-@media (max-width: 769px) and (min-width:481px){
+@media (max-width: 769px){
     .compresor-img{width: 100%;}
     .compresor-info{
         min-width: 0;
     } 
-    .compresor-info
+    .compresor-info{
+        padding: 20px 1px 0!important;
+    }
+    .compresor-info .content{
+        padding: 20px 5px;
+    }
 }
 #preventa {
     flex-direction: row-reverse;
