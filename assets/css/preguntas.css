@@ -15,6 +15,9 @@
     --rich-black: #0e0f19;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -63,20 +66,20 @@ main {
 	text-align: center;
 	padding: 20px;
 	border-radius: 10px;
-	background: #fff;
 	font-weight: 700;
-	color: var(--gris-claro);
 	border: 2px solid transparent;
 	transition: .3s ease all;
+	background-color: var(--categoria-background-color); /*background: #fff;*/
+	color: var(--categoria-text-color); /*#B8B8B8*/
 }
 
 .categoria:hover {
-	box-shadow: var(--sombra);
-	color: #000;
+	box-shadow: var(--categoria-hover-shadow); /*0 0 13px 0 rgba(185,185,185, .25)*/
+	color:var(--categoria-hover-text-color); /*#000*/
 }
 
 .categoria:hover path {
-	fill: var(--primario);
+	fill: var(--primario) /*e23939*/;
 }
 
 .categoria svg {

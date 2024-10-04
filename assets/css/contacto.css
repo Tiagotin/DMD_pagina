@@ -254,6 +254,8 @@ input:focus, textarea:focus{
 .mensaje label{
     margin-bottom: 10px;
     color: var(--formMsjTituloTexto);
+    width: 100%;
+    text-align: center;
 }
 form button{
     border: none;

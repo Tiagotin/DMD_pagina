@@ -279,6 +279,7 @@ body {
 /* Cambios específicos para cada hijo */
 .content:nth-child(1) #carouselContent p {
     font-size: 8rem; /* Tamaño específico para el primer hijo */
+    text-shadow: 0 0 20px var(--ContentTextShadow);
 }
 
 .content:nth-child(2) #carouselContent p {
