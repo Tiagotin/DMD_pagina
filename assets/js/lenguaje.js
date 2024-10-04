@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Actualizar también el contenido de los elementos con la clase 'savings'
         changeLanguage(currentLanguage);
+
+        // Actualizar los placeholders de los campos de entrada y textarea
+        const inputs = document.querySelectorAll('input[data-es], input[data-en], textarea[data-es], textarea[data-en]');
+        inputs.forEach(input => {
+            input.placeholder = input.getAttribute(`data-${currentLanguage}`);
+        });
     };
 
     // Función para cambiar el idioma de los elementos con la clase 'savings'

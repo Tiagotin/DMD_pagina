@@ -100,33 +100,37 @@
         </aside>
         
         <div class="formcont">
-            <h2>FORMULARIO</h2>
+            <h2 data-es="FORMULARIO" data-en="FORM">FORMULARIO</h2>
             <form id="formulario" action="">
                 <!--<label for="telefono">Telefono:</label><br>-->
-                <input type="tel" id="telefono" name="telefono" placeholder="Telefono" required pattern="[0-9]+" title="Por favor, ingresa solo números">
+                <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required pattern="[0-9]+" title="Por favor, ingresa solo números" data-es="Teléfono" data-en="Phone">
 
                 <!--<label for="empresa">Empresa:</label><br>-->
-                <input type="text" id="empresa" name="empresa" placeholder="Empresa" required>
+                <input type="text" id="empresa" name="empresa" placeholder="Empresa" required data-es="Empresa" data-en="Company">
                 
                 <!--<label for="localidad">Localidad:</label><br>-->
-                <input type="text" id="localidad" name="localidad" placeholder="Localidad" required>
+                <input type="text" id="localidad" name="localidad" placeholder="Localidad" required data-es="Localidad" data-en="Location">
+
 
                 <!--<label for="nombre">Tu nombre:</label><br>-->
-                <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required data-es="Tu Nombre" data-en="Your Name">
 
                 <div class="mensaje">
-                    <label for="mensaje">Mensaje:</label><br>
-                    <textarea id="mensaje" name="mensaje" required></textarea><br><br>
+                    <label for="mensaje" data-es="Mensaje:" data-en="Message:">Mensaje:</label><br>
+                    <textarea class="savings" id="mensaje" name="mensaje" placeholder="Escribe Aquí" required data-es="Escribe Aquí" data-en="Write Here"></textarea><br><br>
                 </div>
                 
-                <button type="submit">Enviar</button>
+                <button type="submit" data-es="Enviar" data-en="Send">Enviar</button>
             </form>
         </div>
     </section>
 
 
     <div class="consul">
-        <p>¿Querés Saber Más? <a href="preguntas.html" style="margin-left: 3px;">Click Acá</a></p>
+        <p class="savings" data-es="¿Querés Saber Más? <a href='preguntas.html' style='margin-left: 3px;'>Click Acá</a>" 
+            data-en="Want to Know More? <a href='preguntas.html' style='margin-left: 3px;'>Click Here</a>">
+            ¿Querés Saber Más? <a href="preguntas.html" style="margin-left: 3px;">Click Acá</a>
+         </p>         
     </div>
 
     
@@ -141,13 +145,13 @@
     
     <footer >
         <div class="redes">
-            <h2>Contactanos</h2>
+            <h2 data-es="Contactanos" data-en="Contact Us">Contactanos</h2>
             <span><i class="fa-solid fa-envelope fContacto"></i><a href="mailto:" target="_blank">info@dmdcompresores.com</a></span>
             <span><i class="fa-solid fa-phone fContacto"></i>11-3959-2363</span>
         </div>
         <div class="indnac">
             <img src="assets/img/arg.jpg" alt="Industria Nacional">
-            <h1>INDUSTRIA NACIONAL</h1>
+            <h1 data-es="INDUSTRIA NACIONAL" data-en="NATIONAL INDUSTRY">INDUSTRIA NACIONAL</h1>
             <img src="assets/img/ind.png" alt="Industria Nacional">
         </div>
         <div class="ubic">
