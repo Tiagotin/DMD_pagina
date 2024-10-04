@@ -147,7 +147,7 @@ body {
 }
 .hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin:35px 0 10px;
 }
 .hero p {
     font-size: 1.2rem;
@@ -173,7 +173,18 @@ body {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+}
+.servicio:nth-child(even){
     flex-direction: row-reverse;
+}
+.img-contenedor{
+    width: 420px;
+}
+
+.img-contenedor img{
+    width: 100%;
+    object-fit: cover;
 }
 
 .servicio:hover {
@@ -187,6 +198,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin: 20px 20px 0;
 }
 
 

@@ -308,6 +308,23 @@ body {
         padding: 20px 5px;
     }
 }
+
+@media (max-width: 481px){
+    .compresor-info h2{
+        font-size: 8vw;
+    }
+
+    .compresor-info .content{
+        font-size: 0.8rem;
+    }
+    .content li, .content ul{
+        padding: 0;
+    }
+
+    .content li::before {
+        transform: translate(-30px, -35px);
+}
+}
 #preventa {
     flex-direction: row-reverse;
 }

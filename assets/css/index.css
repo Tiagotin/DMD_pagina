@@ -98,6 +98,7 @@
     /*Nuestros Clientes*/
 /*===============================*/   
     --ClientesText: #000;
+    --clientes-hover-shadow: grayscale(0) drop-shadow(0px 0px 10px #b8b8b81f) drop-shadow(0px 0px 30px #00000063);
 /*===============================*/
 /*===============================*/
 
@@ -185,6 +186,7 @@ body[tema="dark"] {
 /*Nuestros Clientes*/
 /*========================================*/   
 --ClientesText: #e8e6e3;
+--clientes-hover-shadow: grayscale(0) drop-shadow(0px 0px 10px #00000093) drop-shadow(0px 0px 30px #00000093);
 /*========================================*/
 /*========================================*/
 
@@ -623,7 +625,7 @@ filter: grayscale(1);
 }
 
 .sliderClientes .clientes:hover{
-filter: grayscale(0) drop-shadow(0px 0px 10px #b8b8b81f) drop-shadow(0px 0px 30px #00000063) ;
+filter: var(--clientes-hover-shadow);
 }
 
 
