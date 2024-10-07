@@ -14,18 +14,20 @@ document.addEventListener("DOMContentLoaded", function() {
         const hrTI = document.querySelector(".hrNav");
         const idioma = document.querySelector(".lenguaje");
         const menunav = document.querySelector(".navmenu")
+        const menudesp = document.querySelector(".menudesp")
 
         switchTema.classList.toggle("sticky", window.scrollY > 0);
         hrTI.classList.toggle("sticky", window.scrollY > 0);
         idioma.classList.toggle("sticky", window.scrollY > 0);
         menunav.classList.toggle("sticky", window.scrollY > 0);
+        menudesp.classList.toggle("sticky", window.scrollY > 0);
         nav.classList.toggle("sticky", window.scrollY > 0);
         logo.classList.toggle("sticky", window.scrollY > 0);
         logoHeight.classList.toggle("sticky", window.scrollY > 0);
-        navText.classList.toggle("sticky", window.scrollY > 0);
-        aText.forEach(function(element) {
-            element.classList.toggle("sticky", window.scrollY > 0);
-        });
+        //navText.classList.toggle("sticky", window.scrollY > 0);
+        //aText.forEach(function(element) {
+        //    element.classList.toggle("sticky", window.scrollY > 0);
+        //});
     });
 });
 
