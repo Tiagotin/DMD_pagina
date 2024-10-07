@@ -11,7 +11,8 @@
 
     /*tamaños*/
     --Logo-tamaño:65px;
-    --logo-tamaño-responsive: 25px;
+    --logo-tamaño-responsive: 50px;
+    --logo-tamaño-sticky-responsive: 50px;
 
     /*Paleta de Colores*/
     --rojo-pantone: #9d034f; /* Pantone 200 C */
@@ -142,37 +143,27 @@ nav .dmdLogo {
     padding: 0px 7px; 
     display: flex; align-items: center;
 }
+nav .dmdLogo a{display: flex;}
+nav .dmdLogo #dmdLogo{ height: var(--Logo-tamaño); object-fit: cover;}
 
+nav .menudesp{flex: 1; display: flex; align-items: center;}
 
-nav .dmdLogo #dmdLogo{
-    height: var(--Logo-tamaño);
-    object-fit: cover;
-}
-    
-
-
-nav .navText {
+.menudesp .navText {
+    font-size: 1rem; color: var(--navTextColor); 
     display: flex; 
-    gap: 100px;
-    color: var(--navTextColor);
-    font-size: 1rem;
-    flex: 1;
-    justify-content: space-around;
+    justify-content: space-around; align-items: center;
+    flex: 1; gap: 100px;
 }
-
-
-nav .navText .aText{
-    /*clapm(min,def,max*/
+.navText .aText{
     padding: 5px 30px;
     font-size: 1.3rem;
     display: flex;
     align-items: center; justify-content: center;
     border-radius: 5px;
     transition: 0.2s ease;
-    
 }
 
-nav .navText .aText:hover{
+.navText .aText:hover{
     cursor: pointer;
     background-color: var(--navTextFondoHover);
     color: var(--navTextColorHover);
@@ -180,99 +171,31 @@ nav .navText .aText:hover{
 }
 
 
-.switchTema{
-    margin-left: 20px;
-}
 
- /* Estilo general del switch */
- #switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 26px;
-    flex-grow: 1;
-}
+.temas{font-size: 2rem;}
+.temas p{cursor: pointer;}
+.temas #light{display: none; color: #fff;}
 
-/* Ocultar el checkbox real */
-#switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-/* Estilo del slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--navSwitchThemeFondo); /* Fondo del slider */
-    transition: .4s; /* Transición suave */
-    
-}
-
-.slider:after {
-    position: absolute;
-    content: "";
-    height: 80%; /* Altura del círculo */
-    width: 35%; /* Ancho del círculo */
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    
-    background-color: var(--navSwitchThemeColor); /* Color del círculo */
-    transition: .4s; /* Transición suave */
-    border-radius: 50%; /* Hacer el círculo redondo */
-}
-
-/* Cuando el input está marcado (checked) */
-input:checked + .slider:after {
-    left: 75%;
-    background-color: var(--navSwitchThemeColorDark);
-}
-
-/* Para aplicar otros estilos al slider en estado checked */
-input:checked + .slider {
-    background-color:  var(--navSwitchThemeFondoDark); /* Cambia el fondo del slider */
-}
-
-.slider.round {
-    border-radius: 34px; /* Redondea el slider */
-}
-
-.slider.round:before {
-    border-radius: 50%; /* Hace el círculo completamente redondo */
-}
-
-    
+.lenguaje p:nth-child(2){display: none;}
+.lenguaje p img{ width: 30px; cursor: pointer;}
 
 
-/*---------------------------Nav Sticky---------------------------*/
+
+/*===========================Nav Sticky=============================*/
 
 
-nav .dmdLogo #dmdLogo.sticky{
-    
-    height: 40px;
-    
-}
-nav.sticky{  
-    padding: 0px 30px 0 10px;
-    margin: 0;
-}
-nav .navText .aText.sticky{
-    font-size: 1.1rem;
-
-}
+nav .dmdLogo #dmdLogo.sticky{height: 40px;}
+nav.sticky{padding: 0px 30px 0 10px; margin: 0;}
+.navText .aText.sticky{font-size: 1.1rem;}
 
 /*------------------------------------------------------------------*/
-    
+
+
 @media (min-width: 769px) and (max-width: 1279px) {
-    nav .navText{
-        gap: 10px;
-    }
+    .navText{gap: 10px !important;}
 }
+
+
 @media (min-width: 481px) and (max-width: 768px){
     nav{
         padding: 5px;
@@ -281,37 +204,13 @@ nav .navText .aText.sticky{
         flex-wrap: wrap;
     }
 
-    .dmdLogo{
+    .dmdLogo{width: 100%; justify-content: center;}
+    .menudesp{width: 100%;flex-wrap: wrap; justify-content: center;}
+
+    .navText{
+        flex: none !important;
         width: 100%;
-        justify-content: center;
     }
-
-    nav .navText{
-        display: flex;
-        gap: 0 !important;
-        flex: none;
-        width: 100%;
-        
-        
-    }
-
-    .temas, .lenguaje{
-        width: max-content;
-        margin: 0 auto;
-    }
-
-    nav.sticky{
-        overflow: hidden;
-        flex-direction: row;
-        padding: 3px;
-    }
-    nav .dmdLogo.sticky {
-        display: none;
-    }
-    .lenguaje.sticky, .temas.sticky, .hrNav.sticky{
-        display: none;
-    }
-    
 }
 
 .navmenu{
@@ -320,105 +219,77 @@ nav .navText .aText.sticky{
 }
 
 .navmenu i{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 
 @media (max-width: 480px){
+
     nav{
-        padding: 5px 10px;
+        padding: 0px 10px;
         margin: 0;
         gap: 15px;
         flex-wrap: wrap;
         justify-content: space-between;
+        height: max-content;
     }
 
     .navmenu{
-        display: block;
-        margin: 0 15px;
+        display: block; 
+        margin-right: 12px; 
+        display: flex; justify-content: center;
     }
     
-    .dmdLogo{
-        justify-content: center;
-        padding: 0 !important;
-        margin: 0;
-        border: solid 1px;
-        width: 55px;
-        overflow: hidden;
+    .dmdLogo{height: var(--logo-tamaño-responsive) !important; width: max-content;}
+    .dmdLogo a{display: flex; height: var(--logo-tamaño-responsive) !important;}
+    .dmdLogo a img{ object-fit: contain !important; height: 100% !important;}
 
-    }
-    .dmdLogo img{
-        width: 100%;
-        object-fit: cover;
-
-    }
     .navText{
-        /*
         gap: 0 !important;
         overflow: scroll;
         flex-direction: column;
         flex: none !important;
         width: 100%;
-        */
-        display: none !important
 
     }
-
-    .lenguaje, .temas{
-        margin: 0 auto;
-        display: none;
-    }
-    .hrNav{ display: none ;}
+    .lenguaje, .temas{margin: 0 auto;}
     
-    nav.sticky{
-        padding: 5px 0;
+    .navText, .lenguaje, .temas, .hrNav{
+        position: relative;
+        right: -100%;
+        animation: navanim 0.7s steps(3) forwards;
     }
 
-    .dmdLogo.sticky img{
-        width: auto;
-        padding: 0 10px;
-    }
-    .navmenu.sticky i{
-        font-size: 1.5rem;
+    @keyframes navanim {
+        to{
+            right: 0%
+        }
     }
 
-    .nav
-    nav .navText.sticky{
-        overflow: hidden;
-        flex-direction: row;
-    }
-    nav .navText.sticky p{
-        padding: 0;
-    }
-    .lenguaje.sticky, .temas.sticky, .hrNav.sticky{
-        display: none;
-    }
+/*====================================Sticky================================================*/
+    nav.sticky{padding: 0px 5px;}
+
+
+    .dmdLogo.sticky{
+        width: var(--logo-tamaño-sticky-responsive) !important; 
+        height: 100%;}
+
+    .dmdLogo.sticky a{display: flex; 
+        height: var(--logo-tamaño-sticky-responsive) !important;}
+
+    .dmdLogo.sticky a img{ object-fit: contain !important;
+        height: 100% !important;}
+
+
+    .navmenu.sticky i{font-size: 1.5rem;}
     
 
-
-}
-/*------------------------------------------------------*/
-
-
-
-.temas{
-    font-size: 2rem;
-}
-.temas p{
-    cursor: pointer;
+    nav .navText.sticky{display: none;}
+    .lenguaje.sticky, .temas.sticky, .hrNav.sticky{display: none;}
     
-}
-.temas #light{
-    display: none;
-    color: #fff;
+
+/*-------------------------------------------------------------------------------------------*/
+
 }
 
-p img{
-    width: 30px;
-    cursor: pointer;
-}
-
-.lenguaje p:nth-child(2){
-    display: none;
-}
 
