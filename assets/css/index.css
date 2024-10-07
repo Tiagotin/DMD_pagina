@@ -311,8 +311,8 @@ body {
 }
 
 .content:nth-child(1) { background-image: url(../img/dmd/luces.jpg); }
-.content:nth-child(2) { background-image: url(../img/dmd/fabrica\ 4.jpg); }
-.content:nth-child(3) { background-image: url(../img/dmd/FLOTA\ 3.jpg); }
+.content:nth-child(2) { background-image: url(../img/dmd/franco1.jpeg); }
+.content:nth-child(3) { background-image: url(../img/dmd/galpon.jpeg); }
 .content:nth-child(4) { background-image: url(../img/dmd/FLOTA\ 5.jpg); }
 
 .content:not(.active){
