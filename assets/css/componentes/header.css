@@ -11,7 +11,7 @@
 
     /*tamaños*/
     --Logo-tamaño:65px;
-    --logo-tamaño-responsive: 65px;
+    --logo-tamaño-responsive: 25px;
 
     /*Paleta de Colores*/
     --rojo-pantone: #9d034f; /* Pantone 200 C */
@@ -314,40 +314,75 @@ nav .navText .aText.sticky{
     
 }
 
+.navmenu{
+    display: none;    
+    cursor: pointer;
+}
+
+.navmenu i{
+    font-size: 1.8rem;
+}
+
+
 @media (max-width: 480px){
     nav{
-        padding: 5px;
+        padding: 5px 10px;
         margin: 0;
         gap: 15px;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
+    .navmenu{
+        display: block;
+        margin: 0 15px;
+    }
+    
     .dmdLogo{
-        width: 100%;
         justify-content: center;
+        padding: 0 !important;
+        margin: 0;
+        border: solid 1px;
+        width: 55px;
+        overflow: hidden;
+
     }
     .dmdLogo img{
-        width: var(--logo-tamaño-responsive);
+        width: 100%;
+        object-fit: cover;
+
     }
     .navText{
+        /*
         gap: 0 !important;
         overflow: scroll;
         flex-direction: column;
         flex: none !important;
         width: 100%;
+        */
+        display: none !important
+
     }
 
     .lenguaje, .temas{
         margin: 0 auto;
+        display: none;
     }
-
+    .hrNav{ display: none ;}
+    
     nav.sticky{
         padding: 5px 0;
     }
 
-    .dmdLogo.sticky{
-        display: none;
+    .dmdLogo.sticky img{
+        width: auto;
+        padding: 0 10px;
     }
+    .navmenu.sticky i{
+        font-size: 1.5rem;
+    }
+
+    .nav
     nav .navText.sticky{
         overflow: hidden;
         flex-direction: row;
@@ -386,3 +421,4 @@ p img{
 .lenguaje p:nth-child(2){
     display: none;
 }
+
