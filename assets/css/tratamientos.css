@@ -6,37 +6,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    transition: 0.1s ease;
-}
-/*
-[tema="dark"] {
-    animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-in-center both;
-  }
-
-@keyframes circle-out-center {
-  from {
-    clip-path: circle(0%);
-  }
-  to {
-    clip-path: circle(125%);
-  }
-}
-
-[tema="light"] {
-  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-out-center both;
-}
-
-@keyframes circle-in-center {
-    from {
-      clip-path: circle(0%);
-    }
-    to {
-      clip-path: circle(125%);
-    }
-  }
-  */
 
 [tema=light]{
 /*          Colores              */
@@ -52,8 +21,8 @@ body {
 
     /*Detalle*/
 /*===============================*/
-    --compresorFondo: #fff;
-    --compresorBorderColor: #dfdede;
+    --serviciosFondo: #fff;
+    --serviciosBorderColor: #dfdede;
 
     --contentTitleTextColor: #2c3e50; /*h2*/
     --contentTitleBorderB: #c0392b; /*underline*/
@@ -82,7 +51,7 @@ body {
 /*===============================*/
     --consulPFondo: #ae0d24;
     --consulPTextColor: #fff;
-    --consulAColor: #fff;
+    --consulAColor: #000000;
 /*===============================*/
 /*===============================*/
 
@@ -95,8 +64,8 @@ body {
     --heroH1: #e8e6e3;
     --heroP: #d3cfc9;
 
-    --compresorFondo: #181a1b;
-    --compresorBorderColor: #393e40;
+    --serviciosFondo: #181a1b;
+    --serviciosBorderColor: #393e40;
 
     --contentTitleTextColor: #aec2d3;
     --contentTitleBorderB: #972d22;
@@ -119,6 +88,10 @@ body {
     --consulAColor: #fff;
 }
 
+body{
+    background-color: var(--body);
+    font-family: 'Roboto', sans-serif;
+}
 /* Hero section */
 .hero {
     background-image: url('../img/nosotros/img1.webp');
@@ -161,6 +134,7 @@ body {
     flex-direction:column;
     gap: 35px;
     padding: 50px 35px;
+    background-color: var(--serviciosFondo);
 }
 
 
@@ -201,7 +175,9 @@ body {
     margin: 20px 20px 0;
 }
 
-
+.cards h2, .cards p{
+    color: var(--contentPTextColor);
+}
 .cards p{margin-bottom: 10px;}
 
 table{
@@ -231,8 +207,8 @@ tbody tr{font-size: 0.9rem;}
     
 
 .servicio {
-    background-color: var(--compresorFondo);
-    border: 1px solid var(--compresorBorderColor);
+    background-color: var(--serviciosFondo);
+    border: 1px solid var(--serviciosBorderColor);
 }
 
  table {
@@ -256,9 +232,26 @@ tbody tr:nth-child(odd) {
 */
 
 
-body {
-    background-color: var(--body);
+
+.consul p{
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 10px 0;
 }
+
+.consul p a{
+    text-decoration: none;
+    text-decoration: underline  transparent;
+    transition: 0.2s ease;
+}
+
+.consul p a:hover{
+    text-decoration: underline ;
+}
+
+
 /*
 
 
