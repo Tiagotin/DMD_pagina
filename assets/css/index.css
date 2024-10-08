@@ -235,66 +235,23 @@ body {
 
 
 
-#carouselContent{
+.carouselContent{
     position: absolute; 
     top: 60%; left: 50%; 
     transform: translate(-50%, -50%);
     opacity: 0;
-    animation:mostrar 0.85s ease forwards  , mover 1.2s forwards ;
-    
-    display: flex; align-items: center; justify-content: center; flex-direction: column;
-    
-    filter: drop-shadow(0px);
+    animation:mostrar 0.85s ease forwards , mover 1.2s forwards ;
+    width: 80%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column;
 
     padding: 30px;
     overflow: hidden;
+
     text-align: center;
-    color: #fff;
 }
-
-/* Estilos generales para .content */
-.content #carouselContent p {
-    z-index: 4;
-    margin-bottom: 20px;
-    color: var(--ContentTextColor);
-    font-weight: 700;
-    /*-webkit-text-stroke: var(--ContentTextShadow) 1px;*/
-}
-
-.content #carouselContent button {
-    border: solid 1px #fff;
-    background-color: transparent;
-    width: 180px;
-    color: #fff;
-    font-weight: 500;
-    padding: 5px;
-    font-size: 1.65rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.content #carouselContent button:hover {
-    background-color: #fff;
-    color: #000;
-}
-
-/* Cambios específicos para cada hijo */
-.content:nth-child(1) #carouselContent p {
-    font-size: 8rem; /* Tamaño específico para el primer hijo */
-}
-
-.content:nth-child(2) #carouselContent p {
-    font-size: 4rem; /* Tamaño específico para el segundo hijo */
-}
-
-.content:nth-child(3) #carouselContent p {
-    font-size: 4rem; /* Tamaño específico para el tercer hijo */
-}
-
-.content:nth-child(4) #carouselContent p {
-    font-size: 4rem; /* Tamaño específico para el cuarto hijo */
-}
-
 
 @keyframes mostrar {
 	to {
@@ -309,11 +266,82 @@ body {
 	}
 }
 
-.content:nth-child(1) { background-image: url(../img/dmd/luces.jpg); }
-.content:nth-child(2) { background-image: url(../img/dmd/franco1.jpeg); }
-.content:nth-child(3) { background-image: url(../img/dmd/galpon.jpeg); }
-.content:nth-child(4) { background-image: url(../img/dmd/FLOTA\ 5.jpg); }
+/* Estilos generales para .content */
+/*-webkit-text-stroke: var(--ContentTextShadow) 1px;*/
+.content .carouselContent h1 {
+    z-index: 4;
+    margin-bottom: 20px;
+    color: var(--ContentTextColor);
+    font-weight: 600;
+    
+}
+.content .carouselContent p{color: var(--ContentTextColor);}
 
+.content .carouselContent button {
+    border: solid 1px #fff;
+    background-color: transparent;
+    width: 180px;
+    color: #fff;
+    font-weight: 500;
+    padding: 5px;
+    font-size: 1.65rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.content .carouselContent button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/*==============================Texto================================*/
+/* Cambios específicos para cada hijo */
+.content:nth-child(1) .carouselContent h1 { font-size: 4rem; margin: 0; }
+.content:nth-child(1) .carouselContent p { font-size: 2.2rem; margin-bottom: 20px; }
+
+.content:nth-child(2) .carouselContent h1 { font-size: 4rem; margin: 0;}
+.content:nth-child(2) .carouselContent p { font-size: 2.2rem; margin-bottom: 20px;}
+
+
+.content:nth-child(3) .carouselContent h1 { font-size: 4rem; margin: 0;}
+.content:nth-child(3) .carouselContent p { font-size: 2.2rem; margin-bottom: 20px;}
+
+
+.content:nth-child(4) .carouselContent h1 { font-size: 5rem; margin: 0;}
+.content:nth-child(4) .carouselContent p { font-size: 2.2rem; margin-bottom: 20px;}
+
+.content:nth-child(5) .carouselContent h1 { font-size: 4rem; margin: 0; }
+.content:nth-child(5) .carouselContent p { font-size: 2.2rem; margin-bottom: 20px; font-weight: 400; }
+
+
+/*----------------------------------------------------------------------*/
+/*==============================IMAGENES================================*/
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.content:nth-child(1)::before { background-image: url(../img/dmd/luces.jpg); 
+    filter: brightness(75%); 
+}
+.content:nth-child(2)::before { background-image: url(../img/dmd/galpon.jpeg); 
+    filter: brightness(60%); 
+}
+.content:nth-child(3)::before { background-image: url(../img/dmd/franco1.jpeg); 
+    filter: brightness(80%); 
+}
+.content:nth-child(4)::before { background-image: url(../img/carrusel/FLOTA\ 5.webp); 
+    filter: brightness(75%); 
+}
+.content:nth-child(5)::before { background-image: url(../img/carrusel/empleado2.jpeg); 
+    filter: brightness(60%); 
+}
+
+/*----------------------------------------------------------------------*/
 .content:not(.active){
     top: 0;
     left: -100%;
@@ -324,7 +352,7 @@ span.next, span.prev{
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-    font-size: 24px;
+    font-size: 1.9rem;
     font-weight: bold;
     user-select: none;
     cursor: pointer;
@@ -476,6 +504,7 @@ span.next:hover, span.prev:hover{
 .productos .cards h3{
     font-size: 1.3rem;
     margin-bottom: 10px;
+    padding: 0 20px;
 }
 
 
