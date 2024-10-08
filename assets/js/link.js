@@ -114,7 +114,7 @@ if (modoOscuroActivo === 'dark') {
 
 window.addEventListener('scroll', function() {
     var whatsappFloat = document.querySelector('.whatsapp-float');
-    var footer = document.querySelector('footer'); // Seleccionar el footer sin id
+    var footer = document.getElementById('footer'); // Seleccionar el footer sin id
 
     // Obtener la posición del footer en relación con la parte superior de la ventana
     var footerTop = footer.getBoundingClientRect().top;
