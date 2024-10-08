@@ -35,7 +35,7 @@
     --arrowsHoverFondo: #2833886b;
 
     --ContentTextColor: #fff;
-    --ContentTextShadow:#ae0d24; 
+    --ContentTextShadow:#000; 
 /*==============================*/
 
 
@@ -258,7 +258,7 @@ body {
     margin-bottom: 20px;
     color: var(--ContentTextColor);
     font-weight: 700;
-    -webkit-text-stroke: var(--ContentTextShadow) 1px;
+    /*-webkit-text-stroke: var(--ContentTextShadow) 1px;*/
 }
 
 .content #carouselContent button {
@@ -281,7 +281,6 @@ body {
 /* Cambios específicos para cada hijo */
 .content:nth-child(1) #carouselContent p {
     font-size: 8rem; /* Tamaño específico para el primer hijo */
-    text-shadow: 0 0 20px var(--ContentTextShadow);
 }
 
 .content:nth-child(2) #carouselContent p {
@@ -343,6 +342,7 @@ span.prev{left: 20px;}
 span.next:hover, span.prev:hover{
     color: var(--arrowsHover);
     background-color: var(--arrowsHoverFondo);
+    
 } 
 
 .dotsContainer {
