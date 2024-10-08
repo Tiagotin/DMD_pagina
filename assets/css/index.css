@@ -326,7 +326,7 @@ body {
 }
 
 .content:nth-child(1)::before { background-image: url(../img/dmd/luces.jpg); 
-    filter: brightness(75%); 
+    filter: brightness(55%); 
 }
 .content:nth-child(2)::before { background-image: url(../img/dmd/galpon.jpeg); 
     filter: brightness(60%); 
@@ -338,7 +338,7 @@ body {
     filter: brightness(75%); 
 }
 .content:nth-child(5)::before { background-image: url(../img/carrusel/empleado2.jpeg); 
-    filter: brightness(60%); 
+    filter: brightness(75%); 
 }
 
 /*----------------------------------------------------------------------*/
@@ -398,6 +398,7 @@ span.next:hover, span.prev:hover{
     transition: background-color 1s ease;
     transition: 0.5s ease;
     background-color: var(--dots);
+    filter: brightness(55%); 
 }
 
 /* Expande el área clicable sin cambiar el tamaño visual */
@@ -414,6 +415,7 @@ span.next:hover, span.prev:hover{
 .dotsContainer .active{
     background-color: var(--dotsActive);
     width: 25px;
+    filter: brightness(100%); 
 }
 
 @keyframes next1{
@@ -597,7 +599,7 @@ section#socios{
 
 section #sociosText{
     width: 100%;
-    padding: 40px 0 60px;
+    padding: 40px 0 10px;
     text-align: center;
     font-size: 2.35rem;
     color: var(--ClientesText);
@@ -661,9 +663,9 @@ width: var(--width);
 height: var(--height);
 position: absolute;
 left: 110%;
-animation: autoRun 6s linear infinite;
+animation: autoRun 9s linear infinite;
 transition: filter 0.3s;
-animation-delay: calc( (6s / var(--quantity)) * (var(--position) - 1) );
+animation-delay: calc( (9s / var(--quantity)) * (var(--position) - 1) );
 
 }
 

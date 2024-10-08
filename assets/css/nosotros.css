@@ -170,7 +170,6 @@ section.noParallax {
 
 .noParallax img {
     width: var(--nplx-img);
-    height: auto;
     object-fit: cover;
 }
 
@@ -212,7 +211,6 @@ section.noParallax {
 }
 #compromiso img{
     width: 500px;
-    height: 250px;
     margin-top: 20px;
 }
 
