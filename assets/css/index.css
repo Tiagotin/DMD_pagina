@@ -6,7 +6,6 @@
 
 :root{
     /*tamaños*/
-    --Cheight: 700px;
     --Logo-tamaño:65px;
     --logo-tamaño-responsive: 65px;
 }
@@ -213,9 +212,11 @@ body {
 
 
 .Carousel{
+    --Cheight: 43.75em;
     position: relative;
     width: 100%;
     height: var(--Cheight);
+    max-height: 2000px;
 }
 .Carousel .slides{
     width: 100%;
@@ -398,7 +399,6 @@ span.next:hover, span.prev:hover{
     transition: background-color 1s ease;
     transition: 0.5s ease;
     background-color: var(--dots);
-    filter: brightness(55%); 
 }
 
 /* Expande el área clicable sin cambiar el tamaño visual */
@@ -415,7 +415,6 @@ span.next:hover, span.prev:hover{
 .dotsContainer .active{
     background-color: var(--dotsActive);
     width: 25px;
-    filter: brightness(100%); 
 }
 
 @keyframes next1{
@@ -737,7 +736,55 @@ filter: var(--clientes-hover-shadow);
     }
 }    
 
+@media (max-width: 900px){
+    .Carousel{
+        --Cheight: 400px;
+    }
 
+    .content .carouselContent h1 {
+    }
+    .content .carouselContent p{color: var(--ContentTextColor);}
+    
+    .content .carouselContent button {
+        width: 115px;
+        padding: 1px;
+        font-size: 1.15rem;
+    }
+    
+    .content .carouselContent button:hover {
+        background-color: #fff;
+        color: #000;
+    }
+    
+    /*==============================Texto================================*/
+    /* Cambios específicos para cada hijo */
+    .content:nth-child(1) .carouselContent h1 { font-size: 2.4rem; margin: 0; }
+    .content:nth-child(1) .carouselContent p { font-size: 1.25rem; margin-bottom: 15px;}
+    
+    .content:nth-child(2) .carouselContent h1 { font-size: 2.4rem; margin: 0; }
+    .content:nth-child(2) .carouselContent p { font-size: 1.25rem; margin-bottom: 15px;}
+    
+    
+    .content:nth-child(3) .carouselContent h1 { font-size: 2.4rem; margin: 0; }
+    .content:nth-child(3) .carouselContent p { font-size: 1.25rem; margin-bottom: 15px;}
+    
+    
+    .content:nth-child(4) .carouselContent h1 { font-size: 2.4rem; margin: 0; }
+    .content:nth-child(4) .carouselContent p { font-size: 1.25rem; margin-bottom: 15px;}
+    
+    .content:nth-child(5) .carouselContent h1 { font-size: 2.4rem; margin: 0;}
+    .content:nth-child(5) .carouselContent p { font-size: 1.25rem; margin-bottom: 15px;}
+
+    
+    span.next, span.prev{
+        font-size: 1.4rem; 
+        padding: 5px;
+    }
+
+    .dotsContainer{
+        
+    }
+}
 
 
 @media (max-width: 450px){
