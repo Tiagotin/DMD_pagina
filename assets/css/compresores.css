@@ -47,6 +47,8 @@
     --consulPTextColor: #fff;
     --consulAColor: #fff;
 
+    --fondoBtn: #0056b3;
+
 
 /*===============================*/
 /*===============================*/
@@ -380,11 +382,33 @@ tbody tr:nth-child(odd) {
     color: var(--consulAColor);
 }
 
-.detalleCompresor {
-    background-color: #fff;
+
+
+/*-------------------
+-------DOTTON-------*/
+
+.consult-dotton {
+    background-color: var(--fondoBtn);
+    color: var(--consultButtonTextColor);
+}
+
+.consult-dotton:hover {
+    background-color: var(--compresorButtonHover);
 }
 
 
+.consult-dotton {
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 3px;;
+}
+
+.consult-dotton:hover {
+    transform: scale(1.05);
+}
 
 
 @media (max-width:1071px){.compresor-info{margin-top: 20px;}}
