@@ -120,13 +120,16 @@ window.addEventListener('scroll', function() {
     var footerTop = footer.getBoundingClientRect().top;
     var windowHeight = window.innerHeight;
 
-    // Si el botón de WhatsApp está tocando el footer, lo hacemos "sticky" justo antes de que toque el footer
+    /* Obtener la altura total del footer para hacer el ajuste
+    var footerHeight = footer.offsetHeight;*/
+
+    // Si el botón de WhatsApp está tocando el footer, ocultarlo
     if (footerTop <= windowHeight) {
-        whatsappFloat.style.position = 'absolute';
-        whatsappFloat.style.bottom = (footerTop + 2) + 'px'; // Ajuste fino
+        whatsappFloat.style.display = 'none'; // Ocultar el logo de WhatsApp
     } else {
+        whatsappFloat.style.display = 'block'; // Mostrar el logo de WhatsApp
         whatsappFloat.style.position = 'fixed';
-        whatsappFloat.style.bottom = '2px';
+        whatsappFloat.style.bottom = '2px'; // Ajuste a la posición normal cuando no toca el footer
     }
 });
 
