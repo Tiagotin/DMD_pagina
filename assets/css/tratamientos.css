@@ -51,7 +51,7 @@
 /*===============================*/
     --consulPFondo: #ae0d24;
     --consulPTextColor: #fff;
-    --consulAColor: #000000;
+    --consulAColor: #fff;
 /*===============================*/
 /*===============================*/
 
@@ -229,7 +229,7 @@ tbody tr:nth-child(odd) {
 .consul p a {
     color: var(--consulAColor);
 }
-*/
+
 
 
 

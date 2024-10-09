@@ -247,19 +247,6 @@ body {
 
 
 
-.consult-button {
-    padding: 12px 25px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    border-radius: 5px;
-}
-
-.consult-button:hover {
-    transform: scale(1.05);
-}
-
 
 .compresor-tecdesc{
     width: 100%;
@@ -340,7 +327,6 @@ body {
 }
 
 .consul p a{
-    text-decoration: none;
     text-decoration: underline  transparent;
     transition: 0.2s ease;
 }
