@@ -326,19 +326,19 @@ body {
     z-index: -1;
 }
 
-.content:nth-child(1)::before { background-image: url(../img/dmd/luces.jpg); 
-    filter: brightness(55%); 
+.content:nth-child(1)::before { background-image: url(../img/carrusel/Backroom5.webp); 
+    filter: brightness(50%); 
 }
-.content:nth-child(2)::before { background-image: url(../img/dmd/galpon.jpeg); 
+.content:nth-child(2)::before { background-image: url(../img/carrusel/galpon.webp); 
     filter: brightness(60%); 
 }
-.content:nth-child(3)::before { background-image: url(../img/dmd/franco1.jpeg); 
+.content:nth-child(3)::before { background-image: url(../img/carrusel/franco1.webp); 
     filter: brightness(80%); 
 }
 .content:nth-child(4)::before { background-image: url(../img/carrusel/FLOTA\ 5.webp); 
     filter: brightness(75%); 
 }
-.content:nth-child(5)::before { background-image: url(../img/carrusel/empleado2.jpeg); 
+.content:nth-child(5)::before { background-image: url(../img/carrusel/empleado2.webp); 
     filter: brightness(75%); 
 }
 
