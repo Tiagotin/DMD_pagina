@@ -142,7 +142,7 @@ body {
 #sectionForm aside .info-wrap .row{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 50px;
     height: 100%;
 }
 
@@ -259,9 +259,10 @@ input:focus, textarea:focus{
 }
 form button{
     border: none;
-    width: 50%;
-    height: 30px;
+    width: 80%;
+    height: 35px;
     border-radius: 20px;
+    margin-top:10px ;
     transition: 0.2s ease;
     cursor: pointer;
     color: var(--formMsjComentButtonTexto);
@@ -283,6 +284,12 @@ textarea{
     max-height: 300px; min-height: 50px;
     background-color: var(--formMsjComentFondo);
     color: var(--formMsjComentText);
+}
+.g-recaptcha{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
 }
 .consul p{
     margin: 0 auto;

@@ -9,7 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para actualizar el contenido general según el idioma seleccionado
     const updateContent = () => {
         elements.forEach(el => {
-            el.innerHTML = el.getAttribute(`data-${currentLanguage}`); // Usamos innerHTML para mantener etiquetas
+            // Si es un input o textarea, cambia el placeholder
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.setAttribute('placeholder', el.getAttribute(`data-${currentLanguage}`));
+            } else {
+                // Para otros elementos, actualiza el contenido con innerHTML
+                el.innerHTML = el.getAttribute(`data-${currentLanguage}`);
+            }
         });
 
         // Mostrar/ocultar los íconos de idioma según el idioma actual
@@ -23,28 +29,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Actualizar también el contenido de los elementos con la clase 'savings'
         changeLanguage(currentLanguage);
-
-        // Actualizar los placeholders de los campos de entrada y textarea
-        const inputs = document.querySelectorAll('input[data-es], input[data-en], textarea[data-es], textarea[data-en]');
-        inputs.forEach(input => {
-            input.placeholder = input.getAttribute(`data-${currentLanguage}`);
-        });
     };
 
     // Función para cambiar el idioma de los elementos con la clase 'savings'
     function changeLanguage(lang) {
-        // Obtener todos los elementos con la clase 'savings'
         const savingsElements = document.getElementsByClassName('savings');
         
-        // Iterar sobre todos los elementos encontrados
         for (let i = 0; i < savingsElements.length; i++) {
-            // Obtener el texto del atributo data según el idioma seleccionado
             const savingsText = savingsElements[i].getAttribute(`data-${lang}`);
             
-            // Verificar si savingsText tiene un valor antes de asignar
             if (savingsText) {
-                // Asignar directamente el texto del atributo manteniendo las etiquetas HTML
-                savingsElements[i].innerHTML = savingsText;
+                // Si es un input o textarea, cambia solo el placeholder
+                if (savingsElements[i].tagName === 'INPUT' || savingsElements[i].tagName === 'TEXTAREA') {
+                    savingsElements[i].setAttribute('placeholder', savingsText);
+                } else {
+                    // Para otros elementos, usa innerHTML
+                    savingsElements[i].innerHTML = savingsText;
+                }
             }
         }
     }

@@ -4,6 +4,14 @@
 document.getElementById('formulario').addEventListener('submit', function(event) {
     event.preventDefault();
 
+    // Verificar si el reCAPTCHA fue resuelto
+    const recaptchaResponse = grecaptcha.getResponse();
+
+    if (recaptchaResponse.length === 0) {
+        alert("Por favor, verifica que no eres un robot.");
+        return;  // Detener el envío si el reCAPTCHA no se ha resuelto
+    }
+
     // Obtener el nombre y el mensaje
     const nombre = document.getElementById('nombre').value;
     const mensaje = document.getElementById('mensaje').value;
