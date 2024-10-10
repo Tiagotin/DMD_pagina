@@ -565,6 +565,19 @@ span.next:hover, span.prev:hover{
 
 
 
+.cards {
+    opacity: 0; /* Comienza invisible */
+    transform: translateY(20px); /* Mueve ligeramente hacia abajo */
+    transition: opacity 0.7s ease, transform 0.7s ease; /* Transición suave */
+}
+
+.cards.visible {
+    opacity: 1; /* Se vuelve visible */
+    transform: translateY(0); /* Regresa a su posición original */
+}
+
+
+
 /*========================*/
 /*boton quiero saber mas*/
 /*========================*/
@@ -590,36 +603,41 @@ span.next:hover, span.prev:hover{
 
 
 /*====================Socios====================*/
-section#socios{
+section#socios {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 80px;
 }
 
-section #sociosText{
+section #sociosText {
     width: 100%;
     padding: 40px 0 10px;
     text-align: center;
     font-size: 2.35rem;
     color: var(--ClientesText);
-    
 }
 
-section .socios{
+section .socios {
     width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 10px;
-
 }
 
-.socios img{
+.socios img {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
-    object-fit: cover; 
+    opacity: 0; /* Comienza invisible */
+    transform: translateY(20px); /* Mueve ligeramente hacia abajo */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Transición suave */
+}
+
+.socios img.visible {
+    opacity: 1; /* Se vuelve visible */
+    transform: translateY(0); /* Regresa a su posición original */
 }
 
 /*==============================================*/
@@ -741,8 +759,7 @@ filter: var(--clientes-hover-shadow);
         --Cheight: 400px;
     }
 
-    .content .carouselContent h1 {
-    }
+    
     .content .carouselContent p{color: var(--ContentTextColor);}
     
     .content .carouselContent button {
@@ -779,11 +796,7 @@ filter: var(--clientes-hover-shadow);
     span.next, span.prev{
         font-size: 1.4rem; 
         padding: 5px;
-    }
-
-    .dotsContainer{
-        arg
-    }
+    };
 }
 
 
@@ -804,5 +817,4 @@ filter: var(--clientes-hover-shadow);
         width: 40%;
     }
 }
-
 

@@ -1,62 +1,23 @@
-//https://wa.me/<number> 
-//window.open('https://www.ejemplo.com', '_blank');
-
-
-/* document.querySelectorAll('#rLogos .logos').forEach(icon => {
-        icon.addEventListener('click', function() {
-            const webUrl = this.getAttribute('data-url');
-            const appUrl = this.getAttribute('data-app-url');
-
-            // Intentar redirigir a la aplicación
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            iframe.src = appUrl;
-            document.body.appendChild(iframe);
-
-            // Esperar un momento para ver si la aplicación se abre
-            setTimeout(() => {
-                window.location.href = webUrl; // Redirigir a la página web si la aplicación no se abre
-            }, 1000); // Puedes ajustar el tiempo de espera si es necesario
-        });
-    }); */
-
-
-
-
-
-//----------------------------------------------------------
-//-------------------- boton carrusel -----------------------------------
-//------------------------------------------------------------
-
+// Manejo de redirecciones a aplicaciones y páginas web
 document.addEventListener('DOMContentLoaded', () => {
-    // Selecciona el botón y el elemento de contacto por sus IDs
-   
+    
+
+    //----------------------------------------------------------
+    //-------------------- Botón carrusel --------------------
+    //------------------------------------------------------------
     const vermas = document.getElementById('verr');
     vermas.addEventListener('click', () => {
         // Redirige al usuario a contacto.html
         window.location.href = 'nosotros.html';
     });
-});
 
+    // Botón de "Quiero saber más"
+    document.getElementById('quieroSaberMas').addEventListener('click', () => {
+        window.location.href = 'preguntas.html';
+    });
 
-
-
-
-    
-//boton de quiero saber mas-------------------------
-document.getElementById('quieroSaberMas').addEventListener('click', function() {
-    window.location.href = 'preguntas.html';
-});
-
-
-
-
-
-// Añadir enlaces a las imágenes de clientes------------------------------------------------------
-document.addEventListener('DOMContentLoaded', () => {
+    // Añadir enlaces a las imágenes de clientes
     const clientes = document.querySelectorAll('.clientes');
-    
-    // Array de enlaces, uno por cada cliente
     const links = [
         'https://borishnos.com.ar/',
         'https://carpla.com/',
@@ -70,15 +31,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Asignar un enlace a cada cliente
     clientes.forEach((cliente, index) => {
-        const link = document.createElement('a');
-        link.href = links[index];
-        link.target = '_blank';  // Para abrir el enlace en una nueva pestaña
-        link.appendChild(cliente.querySelector('img'));
-        cliente.appendChild(link);
+        if (index < links.length) { // Asegurarse de que no exceda el número de enlaces
+            const link = document.createElement('a');
+            link.href = links[index];
+            link.target = '_blank'; // Para abrir el enlace en una nueva pestaña
+            link.appendChild(cliente.querySelector('img'));
+            cliente.appendChild(link);
+        }
+    });
+
+    // Intersección Observer para animación de fade
+    const cards = document.querySelectorAll('.cards');
+
+    const options = {
+        root: null, // Usar el viewport como root
+        rootMargin: '0px',
+        threshold: 0.1 // Se activa cuando el 10% del elemento es visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Agrega la clase visible al elemento
+                entry.target.classList.add('visible');
+                // Deja de observar el elemento una vez que es visible
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    // Observa cada card
+    cards.forEach(card => {
+        observer.observe(card);
     });
 });
 
 
+// Intersección Observer para animación de imágenes de socios
+const sociosImages = document.querySelectorAll('#socios img');
 
+const options = {
+    threshold: 0.1 // Ajusta el umbral según necesites
+};
 
+const sociosObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Agrega la clase visible al elemento
+            entry.target.classList.add('visible');
+            // Deja de observar el elemento una vez que es visible
+            observer.unobserve(entry.target);
+        }
+    });
+}, options);
 
+// Observa cada imagen de socios
+sociosImages.forEach(image => {
+    sociosObserver.observe(image);
+});
