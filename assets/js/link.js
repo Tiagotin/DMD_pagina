@@ -1,112 +1,59 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const closeMenuButton = document.querySelector(".close-menu");
+    const navigation = document.querySelector(".navigation");
+    const navTexts = document.querySelector(".nav-items");
+    const temasLeg = document.querySelector(".iditema");
+    const navItems = document.querySelectorAll(".nav-item");
+    const navImg = document.getElementById("navimg");
 
-
-//Nav Sticky --------------------------------------------------
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    window.addEventListener("scroll", function() {
-        const nav = document.querySelector("nav");
-        const logo = document.querySelector(".dmdLogo");
-        const logoHeight = document.querySelector("#dmdLogo");
-        const navText = document.querySelector(".navText");
-        const aText = document.querySelectorAll(".aText");
-        const switchTema = document.querySelector(".temas");
-        const hrTI = document.querySelector(".hrNav");
-        const idioma = document.querySelector(".lenguaje");
-        const menunav = document.querySelector(".navmenu")
-        const menudesp = document.querySelector(".menudesp")
-
-        switchTema.classList.toggle("sticky", window.scrollY > 0);
-        hrTI.classList.toggle("sticky", window.scrollY > 0);
-        idioma.classList.toggle("sticky", window.scrollY > 0);
-        menunav.classList.toggle("sticky", window.scrollY > 0);
-        menudesp.classList.toggle("sticky", window.scrollY > 0);
-        nav.classList.toggle("sticky", window.scrollY > 0);
-        logo.classList.toggle("sticky", window.scrollY > 0);
-        logoHeight.classList.toggle("sticky", window.scrollY > 0);
-        //navText.classList.toggle("sticky", window.scrollY > 0);
-        //aText.forEach(function(element) {
-        //    element.classList.toggle("sticky", window.scrollY > 0);
-        //});
-    });
-});
-
-//-------------------------------------------------------------
-
-//Botones de nav --------------------------------
-// Espera a que el DOM esté completamente cargado
-document.addEventListener('DOMContentLoaded', () => {
-    // Selecciona el botón y el elemento de contacto por sus IDs
-   
-    const contacto = document.getElementById('contacto');
-    const inicio = document.getElementById('inicio');
-    const nosotros = document.getElementById('nosotros');
-    const dmdLogo = document.getElementById('dmdLogo');
-
-      // Crear un elemento <a> y envolver la imagen dentro de este
-   const logoLink = document.createElement('a');
-   logoLink.href = 'index.html'; // Enlace al que quieres que redirija
-   dmdLogo.parentNode.insertBefore(logoLink, dmdLogo); // Inserta el enlace antes de la imagen
-   logoLink.appendChild(dmdLogo); // Mueve la imagen dentro del enlace
-  
-    contacto.addEventListener('click', () => {
-        // Redirige al usuario a contacto.html
-        window.location.href = 'contacto.html';
-    });
-    inicio.addEventListener('click', () => {
-        // Redirige al usuario a contacto.html
-        window.location.href = 'index.html';
-    });
-    nosotros.addEventListener('click', () => { 
-        // Redirige al usuario a contacto.html
-        window.location.href = 'nosotros.html';
+    // Función para manejar el clic en .nav-item
+    navItems.forEach((navItem) => {
+      navItem.addEventListener("click", () => {
+        const mainMenu = navItem.querySelector("span");
+        const submenu = navItem.querySelector(".submenu");
+        if (submenu) {
+          mainMenu.classList.toggle("active");
+          submenu.classList.toggle("active");
+        }
+      });
     });
 
- 
-});
+    menuToggle.addEventListener("click", () => {
+      navigation.classList.toggle("active");
+    });
 
-// Switch -----------------------------------
+    closeMenuButton.addEventListener("click", () => {
+      navigation.classList.remove("active");
+    });
 
-const temalight = document.querySelector("#light");
-const temaDark = document.querySelector("#dark");
+    // Función para manejar la clase sticky
+    const toggleStickyClasses = () => {
+      const scrollPosition = window.scrollY;
 
-// Función para cambiar el tema y actualizar el estado de los íconos
-function cambiaTema(theme) {
-    if (theme === 'light') {
-        temalight.style.display = "none";
-        temaDark.style.display = "block";
-        document.body.setAttribute('tema', 'light');
-        localStorage.setItem('modoOscuro', 'light');
-    } else {
-        temaDark.style.display = "none";
-        temalight.style.display = "block";
-        document.body.setAttribute('tema', 'dark');
-        localStorage.setItem('modoOscuro', 'dark');
-    }
-}
+      if (scrollPosition > 0) {
+        // Ajusta este valor según lo necesites
+        navigation.classList.add("sticky");
+        navTexts.classList.add("sticky");
+        temasLeg.classList.add("sticky");
+        navImg.classList.add("sticky");
+        navItems.forEach((navItem) => {
+          navItem.classList.add("sticky");
+        });
+      } else {
+        navigation.classList.remove("sticky");
+        navTexts.classList.remove("sticky");
+        temasLeg.classList.remove("sticky");
+        navImg.classList.remove("sticky");
+        navItems.forEach((navItem) => {
+          navItem.classList.remove("sticky");
+        });
+      }
+    };
 
-// Eventos para cambiar el tema cuando se hace clic en los íconos
-temalight.addEventListener("click", function() {
-    cambiaTema('light');
-});
-
-temaDark.addEventListener("click", function() {
-    cambiaTema('dark');
-});
-
-// Verificar si el modo oscuro está guardado en localStorage y aplicar el tema correspondiente
-const modoOscuroActivo = localStorage.getItem('modoOscuro');
-
-if (modoOscuroActivo === 'dark') {
-    cambiaTema('dark');  // Aplica el tema oscuro si estaba guardado
-} else {
-    cambiaTema('light'); // Aplica el tema claro por defecto
-}
-
-
-
-
-
+    // Escuchar el evento scroll
+    window.addEventListener("scroll", toggleStickyClasses);
+  });
 
 //----------------------------------------------------------
 //-------------------- wpp -----------------------------------
