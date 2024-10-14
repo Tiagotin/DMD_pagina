@@ -1,6 +1,7 @@
-LEERME
 
 ---
+
+# LEERME
 
 # Proyecto: DMD - Soluciones Integrales de Aire Comprimido
 
@@ -13,6 +14,7 @@ Este proyecto representa la página web y sistema de gestión de **DMD**, una em
 - [Requisitos Previos](#requisitos-previos)
 - [Instalación](#instalación)
 - [Uso](#uso)
+- [Estructura de Archivos](#estructura-de-archivos)
 - [Contribuciones](#contribuciones)
 - [Licencia](#licencia)
 - [Contacto](#contacto)
@@ -44,8 +46,6 @@ Para ejecutar este proyecto localmente, necesitas tener instalado:
 - **Node.js** versión X.X.X o superior
 - **NPM** o **Yarn** como gestor de paquetes
 - **Browser** compatible (Chrome, Firefox, Edge)
-
-
 
 ## Instalación
 
@@ -100,6 +100,14 @@ npm start   # Inicia el servidor en modo desarrollo
 npm run build   # Compila la aplicación para producción
 ```
 
+## Estructura de Archivos
+
+- **`/assets/js/min/`**: Contiene la minificación y ofuscación del código JavaScript.
+- **`/assets/css/componentes/`**: Contiene los estilos del header y footer.
+- **`/assets/js/efectos/`**: Contiene la librería de las partículas y efectos de fondo.
+- **`zero.html`** y **`detalle.html`**: Páginas que contienen información sobre los compresores.
+- **`preguntas.html`**: Página dedicada a preguntas frecuentes.
+
 ## Contribuciones
 
 Si quieres contribuir al proyecto de **DMD**, sigue estos pasos:
@@ -125,5 +133,3 @@ Para consultas o soporte sobre **DMD**, puedes contactarnos a través de:
 - **LinkedIn**: [DMD LinkedIn](https://www.linkedin.com/company/dmd-compresores/)
 
 ---
-
-Este `README.md` está adaptado a la estructura y enfoque de **DMD** y su plataforma de soluciones de aire comprimido. Puedes ajustar los detalles específicos según el avance del proyecto o cualquier funcionalidad extra que agregues.
