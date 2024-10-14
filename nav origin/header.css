@@ -316,13 +316,13 @@ body {
     opacity: 0; 
     animation: opacidad 0.4s ease-out forwards, menulistanim 0.4s ease forwards; 
   }
-}
-
-.submenu.active .submenu-items{
+.navigation.active .submenu.active .submenu-items{
   margin-top: 10px;
   flex-direction: column;
   gap: 10px;
 }
+}
+
 /*========================================================================*/
 
 /*===================/Sticky/===================*/
