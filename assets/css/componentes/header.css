@@ -24,15 +24,22 @@ body {
   padding: 0 42px;
   gap: 25px;
   user-select: none;
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 2000;
   background-color: #fff;
+  position: fixed;
+}
+.navigation::after {
+  content: '';
+  display: block;
+  padding: 0 42px;
+  width: 100%;
+  visibility: hidden; /* Hace que el pseudo-elemento sea invisible */
 }
 
 /*IMG*/
-.navigation #dmdLogo {
+.navigation #navimg {
   height: 80px;
   transition: 0.3s ease-in-out;
   grid-area: logo;
@@ -79,7 +86,6 @@ body {
   position: relative;
   z-index: 20;
 }
-
 .submenu {
   position: absolute;
   z-index: -1; 
@@ -120,6 +126,11 @@ body {
 .submenu .submenu-items li {
   width: 100%;
   padding: 10px 15px;
+}
+
+
+.submenu-items li span{
+  font-size: 1rem;
 }
 
 .submenu .submenu-items li:hover {
@@ -298,6 +309,8 @@ body {
     background-color: #146597;
     color: #fff; 
   }
+
+  .navigation.active .tooltipOff{pointer-events: none;}
 
   .navigation.active .nav-items .nav-item .submenu {
     position: static;
