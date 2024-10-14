@@ -8,13 +8,61 @@
   margin: 0;
   transition: background-color 0.1s ease-in-out;
 }
-:root {
+[tema="light"] {
   --font-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
     --navBgColor: #fff;
-    --navBShadow: ;
+    --navBShadow: 0 -10px 30px #000 ;
+
+    --navTextBgColor: #fff;
+    --navTextBgHover: #ffaaaa;
+    --navTextSpanColor: #2c2c2c;
+
+    --SubMenuBShadow: 0 15px 30px #00000025;
+    --SubMenuBgColor: #fff;
+    --SubMenuBgColorHover: #C4DFFF;
+    --subMenuTextColor: #2c2c2c;
+
+    --botonNavLateral: #000;
+
+    --navLateralBgColor: #fff;
+
+    --navLateralMainTextColor: #434343;
+    --navLateralMainBgColor: #fff;
+
+    --navLateralMainTextColorHover: #fff;
+    --navLateralMainBgColorHover: #146597;
+    --navLateralMainTextColorActive: #fff;
+    --navLateralMainBgColorActive: #146597;
+
 }
+
+[tema="dark"]{
+    --navBgColor: #181a1b;
+    --navBShadow: 0 -10px 30px #000;
+
+    --navTextBgColor: #181a1b;
+    --navTextBgHover: #660000;
+    --navTextSpanColor: #ccc8c1;
+
+    --SubMenuBShadow: 0 15px 30px #00000025;
+    --SubMenuBgColor: #181a1b;
+    --SubMenuBgColorHover: #292c2e;
+    --subMenuTextColor: #ccc8c1;
+
+    --botonNavLateral: #ccc8c1;
+
+    --navLateralBgColor: #181a1b;
+
+    --navLateralMainTextColor: #beb8b0;
+    --navLateralMainBgColor: #181a1b;
+    
+    --navLateralMainTextColorHover: #e8e6e3;
+    --navLateralMainBgColorHover: #105179;
+    --navLateralMainTextColorActive: #e8e6e3;
+    --navLateralMainBgColorActive: #105179;
+  }
 body {
   font-family: var(--font-system);
 }
@@ -24,14 +72,14 @@ body {
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-template-areas: "logo nav-items";
-  box-shadow: var(--navBShadow) /*  0 -10px 30px #000 */;
+  box-shadow: var(--navBShadow);
   padding: 0 42px;
   gap: 25px;
   user-select: none;
   top: 0;
   width: 100%;
   z-index: 2000;
-  background-color: var(--navBgColor); /*  #fff */
+  background-color: var(--navBgColor); 
   position: sticky;
 }
 
@@ -54,13 +102,15 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+  background-color: var(--navBgColor);
 }
 
 .nav-items {
   flex: 1;
   height: 100%;
-  display: flex;
+  display: flex; 
 }
+
 .nav-item {
   padding: 0 20px;
   display: flex;
@@ -69,6 +119,7 @@ body {
   cursor: pointer;
   position: relative;
   z-index: 4;
+  background-color: var(--navTextBgColor);
 }
 .nav-item span::after{
   content: ""; 
@@ -77,26 +128,28 @@ body {
   right:-10px;  bottom:-10px;
 }
 .nav-item:hover {
-  background-color: #ff000054;
+  background-color: var(--navTextBgHover) /* #FFAAAA */;
 }
 /*========================================*/
 
 /*============Boton Menu Desplegable=============*/
 .nav-item span {
   letter-spacing: 1px;
-  color: #2c2c2c;
+  color: var(--navTextSpanColor);
   font-size: 1.3rem;
   font-weight: 500;
   position: relative;
   z-index: 20;
 }
+
+
 .submenu {
   position: absolute;
   z-index: -1; 
   top: 80%;
   left: 0;
   width: 100%;
-  box-shadow: 0 15px 30px #00000025;
+  box-shadow: var(--SubMenuBShadow);
   display: none; 
 }
 
@@ -122,7 +175,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: start;
-  background-color: #fff;
+  background-color: var(--SubMenuBgColor) /* #ffffff */;
+  
   cursor: default !important;
   list-style: none;
 }
@@ -135,11 +189,12 @@ body {
 
 .submenu-items li span{
   font-size: 1rem;
+  color: var(--subMenuTextColor);
 }
 
 .submenu .submenu-items li:hover {
   cursor: pointer;
-  background-color: #006eff3b;
+  background-color: var(--SubMenuBgColorHover);
 }
 /*==============================================*/
 
@@ -154,15 +209,17 @@ body {
 .lenguaje p{height: 100%;}
 .lenguaje p img{height: 100%;}
 
-.hrNav{height: 40px;}
+.hrNav{height: 40px; color: #fff}
 
 .temas p{
   cursor: pointer;
   font-size: 2.1rem;
+  color: #fff;
 }
 
 .temas p:nth-child(2) {
   display: none;
+  color: #000;
 }
 
 /*=================================================*/
@@ -197,6 +254,7 @@ body {
     grid-template-areas: "logo menu-toggle"; 
     justify-content: space-between; 
     gap: 0; 
+  
   }
   /*===*/
 
@@ -206,7 +264,7 @@ body {
     grid-area: menu-toggle; 
     align-items: center; 
     text-decoration: none; 
-    color: #000; 
+    color: var(--botonNavLateral);
   }
   /*=================*/
 
@@ -245,12 +303,13 @@ body {
     top: 0;
     width: 75%; 
     max-width: 400px; 
-    height: 100%; 
-    background-color: #fff; 
+    height: 100vh; 
+    background-color: var(--navLateralBgColor);
     display: grid; 
     grid-template-areas: "close-menu" "nav-items" "iditema"; 
-    grid-template-rows: max-content 1fr max-content; 
+    grid-template-rows: repeat(3, max-content); 
     align-items: start; 
+    overflow: scroll;
   }
   /*=======================*/
 
@@ -261,6 +320,7 @@ body {
     display: flex; 
     justify-content: end; 
     grid-area: close-menu; 
+    color: var(--botonNavLateral);
   }
   /*===========================*/
 
@@ -289,16 +349,22 @@ body {
 
   .navigation.active .iditema {
     max-height: 80px; 
-    width: 100%; 
+    width: 70%; 
+    margin: 0 auto;
     position: static; 
     padding: 10px 0; 
     justify-content: center;
-    
+    flex-wrap: wrap;
     grid-area: iditema; 
   }
-
+@media (max-width: 250px){
+  .navigation.active .iditema {
+    flex-direction: column;
+  }
+}
   .navigation.active .nav-item {
     flex-wrap: wrap; 
+    background-color: var(--NavLateral);
   }
 
   .navigation.active .nav-items .nav-item span {
@@ -306,14 +372,15 @@ body {
     padding: 20px 30px; 
     cursor: pointer; 
     transition: 0.2s ease; 
-    color: #434343;    
+    color: var(--navLateralMainTextColor);    
+    background-color: var(--navLateralMainBgColor);
     border-radius: 5px;
     margin: 0 15px;
   }
 
   .navigation.active .nav-items .nav-item span:hover {
-    background-color: #146597;
-    color: #fff; 
+    background-color: var(--navLateralMainBgColorHover);
+    color: var(--navLateralMainTextColorHover); 
   }
 
 
@@ -332,8 +399,8 @@ body {
   }
 
   .navigation.active .nav-item span.active{
-    background-color: #146597;
-    color: #fff;
+    background-color: var(--navLateralMainBgColorActive);
+    color: var(--navLateralMainTextColorActive);
   }
 
   .navigation.active .submenu.active {
