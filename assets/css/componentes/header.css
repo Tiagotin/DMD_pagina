@@ -6,6 +6,7 @@
 * {
   padding: 0;
   margin: 0;
+  transition: background-color 0.1s ease-in-out;
 }
 :root {
   --font-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -66,7 +67,12 @@ body {
   position: relative;
   z-index: 4;
 }
-
+.nav-item span::after{
+  content: ""; 
+  position: absolute; 
+  top:-10px;    left:-10px;
+  right:-10px;  bottom:-10px;
+}
 .nav-item:hover {
   background-color: #ff000054;
 }
@@ -204,7 +210,7 @@ body {
   /*Barra Lateral No-Activa*/
   #nav-container {
     position: absolute; 
-    transform: translateX(100%); 
+    transform: translateX(200%); 
     opacity: 0; 
   }
   /*=======================*/
@@ -232,6 +238,7 @@ body {
   .navigation.active #nav-container {
     position: fixed; 
     right: 0; 
+    top: 0;
     width: 75%; 
     max-width: 400px; 
     height: 100%; 
