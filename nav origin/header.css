@@ -1,0 +1,335 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --font-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+  font-family: var(--font-system);
+}
+
+/*Nav*/
+.navigation {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-areas: "logo nav-items";
+  box-shadow: 0 -10px 30px #000;
+  padding: 0 42px;
+  gap: 25px;
+  user-select: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+  background-color: #fff;
+}
+
+/*IMG*/
+.navigation img {
+  height: 80px;
+  transition: 0.3s ease-in-out;
+  grid-area: logo;
+}
+/*-----*/
+
+#navimg.sticky {
+  height: 40px;
+}
+
+/*===============NavText===============*/
+#nav-container {
+  grid-area: nav-items;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-items {
+  flex: 1;
+  height: 100%;
+  display: flex;
+}
+.nav-item {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  transition: 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 4;
+}
+
+.nav-item:hover {
+  background-color: #ff000054;
+}
+/*========================================*/
+
+/*============Boton Menu Desplegable=============*/
+.nav-item span {
+  letter-spacing: 1px;
+  color: #2c2c2c;
+  font-size: 1.3rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 20;
+}
+
+.submenu {
+  position: absolute;
+  z-index: -1; /* Mover el menú hacia atrás */
+  top: 80%;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 15px 30px #00000025;
+  display: none; /* Oculto por defecto */
+}
+
+@keyframes opacidad {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes menulistanim {
+  to {
+    top: 100%;
+  }
+}
+
+.nav-item:hover .submenu {
+  display: block; /* Muestra el menú al pasar el ratón */
+  opacity: 0;
+  animation: opacidad 0.4s ease-out forwards, menulistanim 0.4s ease forwards;
+}
+
+.submenu .submenu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: #fff;
+  cursor: default !important;
+  list-style: none;
+}
+
+.submenu .submenu-items li {
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.submenu .submenu-items li:hover {
+  cursor: pointer;
+  background-color: #006eff3b;
+}
+/*==============================================*/
+
+/*===============Tema y Lenguaje ===============*/
+
+.iditema {
+  position: absolute; /* Cambiar a posición absoluta */
+  right: 0; /* Coloca el elemento en la parte inferior */
+  width: 140px;
+  background-color: #00000038;
+  height: 100%; /* Mantener la altura deseada */
+}
+
+/*=================================================*/
+
+.background {
+  height: 2000px;
+  background-color: rgba(0, 0, 255, 0.192);
+}
+/*================================================*/
+
+/*======================Boton Desplegable No-Responsive=========================*/ /*======================Boton Desplegable No-Responsive=========================*/
+/* Estilos para el botón de menú y el botón de cerrar en pantallas grandes */
+.menu-toggle,
+.close-menu {
+  display: none; /* No visible por defecto */
+  border: none; /* Sin borde */
+  background-color: transparent; /* Sin fondo */
+  font-size: 2rem; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  position: relative; /* Posición relativa para posicionar elementos internos */
+}
+
+.menu-toggle::before,
+.close-menu::before {
+  content: ""; /* Contenido vacío para expandir el área de clic */
+  position: absolute; /* Posicionamiento absoluto */
+  top: -7px; /* Expande hacia arriba */
+  left: -7px; /* Expande hacia la izquierda */
+  right: -7px; /* Expande hacia la derecha */
+  bottom: -7px; /* Expande hacia abajo */
+}
+/*========================================================================*/
+
+/*======================Boton Desplegable Responsive=========================*/
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 840px) {
+  /*nav*/
+  .navigation {
+    grid-template-columns: max-content max-content; /* Dos columnas para logo y botón */
+    grid-template-areas: "logo menu-toggle"; /* Áreas de la cuadrícula */
+    justify-content: space-between; /* Espacio entre elementos */
+    gap: 0; /* Sin espacio entre elementos */
+  }
+  /*===*/
+
+  /*Boton Desplegable*/
+  .menu-toggle {
+    display: flex; /* Muestra el botón de menú */
+    grid-area: menu-toggle; /* Define el área de la cuadrícula */
+    align-items: center; /* Centra verticalmente */
+    text-decoration: none; /* Sin subrayado */
+    color: #000; /* Color del texto */
+  }
+  /*=================*/
+
+  /*Barra Lateral No-Activa*/
+  #nav-container {
+    position: absolute; /* Posicionamiento absoluto para que no afecte el flujo del documento */
+    transform: translateX(100%); /* Inicia fuera de la vista a la derecha */
+    opacity: 0; /* Iniciar oculto */
+  }
+  /*=======================*/
+
+  /*Animaciones*/
+  @keyframes contentAnim {
+    to {
+      transform: translateX(0%);
+    }
+  } /* Animación para mover a la vista */
+  @keyframes contentOpac {
+    to {
+      opacity: 1;
+    }
+  } /* Animación para la opacidad */
+  /*============*/
+
+  /*Barra Lateral Activa*/
+  .navigation.active #nav-container,
+  .navigation.active .iditema {
+    display: flex; /* Muestra el contenedor y la clase iditema */
+    animation: contentAnim 0.8s ease forwards, contentOpac 0.4s ease forwards; /* Animaciones al activar */
+  }
+
+  .navigation.active #nav-container {
+    position: fixed; /* Posiciona el menú fijo */
+    right: 0; /* Alineado a la derecha */
+    width: 75%; /* Ancho del menú */
+    max-width: 400px; /* Ancho máximo */
+    height: 100%; /* Altura completa */
+    background-color: #fff; /* Color de fondo */
+    display: grid; /* Usar cuadrícula para el layout */
+    grid-template-areas: "close-menu" "nav-items" "iditema"; /* Definición de áreas */
+    grid-template-rows: max-content 1fr max-content; /* Filas para el layout */
+    align-items: start; /* Alinea al inicio */
+  }
+  /*=======================*/
+
+  /*Mostrar Boton Para Cerrar*/
+  .navigation.active .close-menu {
+    padding: 20px 40px 50px; /* Espaciado interno */
+    width: 100%; /* Ancho completo */
+    display: flex; /* Muestra el botón */
+    justify-content: end; /* Alinea a la derecha */
+    grid-area: close-menu; /* Define el área de la cuadrícula */
+  }
+  /*===========================*/
+
+  /*Estilos de los elementos de navegación activos*/
+  .navigation.active .nav-items {
+    grid-area: nav-items; /* Define el área de la cuadrícula */
+    display: flex; /* Usar flex para los nav-item */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    gap: 20px; /* Espaciado entre elementos */
+    margin: 0 auto; /* Centra el contenido */
+    overflow: scroll; /* Permitir el desplazamiento */
+    height: 100%; /* Altura completa */
+    align-content: start; /* Alinea al inicio */
+    cursor: default; /* Cursor por defecto */
+  }
+
+  .navigation.active .nav-item {
+    width: 100%; /* Ancho completo */
+    display: flex; /* Usar flex */
+    justify-content: center; /* Centra el contenido */
+    padding: 0; /* Sin espaciado interno */
+    height: max-content; /* Altura según el contenido */
+    background-color: #fff; /* Color de fondo */
+    transition: 0.2s ease; /* Transición suave */
+  }
+
+  .navigation.active .iditema {
+    max-height: 80px; /* Altura máxima */
+    width: 100%; /* Ancho completo */
+    position: static; /* Posición estática */
+    padding: 30px 0; /* Espaciado interno */
+    grid-area: iditema; /* Define el área de la cuadrícula */
+  }
+
+  .navigation.active .nav-item {
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+  }
+
+  .navigation.active .nav-items .nav-item span {
+    width: 100%; /* Ancho completo */
+    padding: 20px 30px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: 0.2s ease; /* Transición suave */
+    color: #434343;    
+    border-radius: 5px;
+    margin: 0 15px;
+  }
+
+  .navigation.active .nav-items .nav-item span:hover {
+    background-color: #146597;
+    color: #fff; /* Color del texto al pasar el mouse */
+  }
+
+  .navigation.active .nav-items .nav-item .submenu {
+    position: static;
+    padding: 0 15px;
+  }
+
+  /* Ocultar el submenu al pasar el mouse */
+  .nav-item:hover .submenu {
+    display: none; /* No muestra el submenu */
+    opacity: 0; /* Inicia oculto */
+  }
+
+  .submenu.active .submenu-items li{
+    border-radius: 5px;
+}
+
+
+  /* Estilos para el submenu activo */
+  .navigation.active .nav-item span.active{
+    background-color: #146597;
+    color: #fff;
+  }
+
+  .navigation.active .submenu.active {
+    box-shadow: none; /* Sin sombra */
+    display: block; /* Muestra el submenu */
+    opacity: 0; /* Inicia oculto */
+    animation: opacidad 0.4s ease-out forwards, menulistanim 0.4s ease forwards; /* Animaciones */
+  }
+}
+
+.submenu.active .submenu-items{
+  margin-top: 10px;
+  flex-direction: column;
+  gap: 10px;
+}
+/*========================================================================*/
+
+/*===================/Sticky/===================*/
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="header.css"/>
+    <title>DMD</title>
+  </head>
+
+  <body>
+    <nav class="navigation">
+      <img loading="lazy" src="logo2.png" alt="Logo" id="navimg" />
+
+      <button class="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul id="nav-container">
+        <button class="close-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-items">
+          <!-- Contenedor para los elementos de navegación -->
+          <li class="nav-item">
+            <span>Inicio</span>
+          </li>
+          <li class="nav-item">
+            <span>Empresa</span>
+            <div class="submenu">
+              <ul class="submenu-items">
+                <li><span>Nosotros</span></li>
+                <li><span>Saber Más</span></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <span>Soluciones</span>
+            <div class="submenu">
+              <ul class="submenu-items">
+                <li><span>Compresores</span></li>
+                <li><span>Servicios</span></li>
+                <li><span>Tratamientos</span></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <span>Contacto</span>
+          </li>
+        </ul>
+
+        <div class="iditema"></div>
+      </ul>
+    </nav>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const closeMenuButton = document.querySelector(".close-menu");
+        const navigation = document.querySelector(".navigation");
+        const navTexts = document.querySelector(".nav-items");
+        const temasLeg = document.querySelector(".iditema");
+        const navItems = document.querySelectorAll(".nav-item");
+        const navImg = document.getElementById("navimg");
+
+        // Función para manejar el clic en .nav-item
+        navItems.forEach((navItem) => {
+          navItem.addEventListener("click", () => {
+            const mainMenu = navItem.querySelector("span");
+            const submenu = navItem.querySelector(".submenu");
+            if (submenu) {
+              mainMenu.classList.toggle("active");
+              submenu.classList.toggle("active");
+            }
+          });
+        });
+
+        menuToggle.addEventListener("click", () => {
+          navigation.classList.toggle("active");
+        });
+
+        closeMenuButton.addEventListener("click", () => {
+          navigation.classList.remove("active");
+        });
+
+        // Función para manejar la clase sticky
+        const toggleStickyClasses = () => {
+          const scrollPosition = window.scrollY;
+
+          if (scrollPosition > 0) {
+            // Ajusta este valor según lo necesites
+            navigation.classList.add("sticky");
+            navTexts.classList.add("sticky");
+            temasLeg.classList.add("sticky");
+            navImg.classList.add("sticky");
+            navItems.forEach((navItem) => {
+              navItem.classList.add("sticky");
+            });
+          } else {
+            navigation.classList.remove("sticky");
+            navTexts.classList.remove("sticky");
+            temasLeg.classList.remove("sticky");
+            navImg.classList.remove("sticky");
+            navItems.forEach((navItem) => {
+              navItem.classList.remove("sticky");
+            });
+          }
+        };
+
+        // Escuchar el evento scroll
+        window.addEventListener("scroll", toggleStickyClasses);
+      });
+    </script>
+    <div class="background"></div>
+  </body>
+</html>
