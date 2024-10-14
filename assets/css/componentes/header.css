@@ -129,22 +129,13 @@ body {
 /*==============================================*/
 
 /*===============Tema y Lenguaje ===============*/
-
-.iditema {
-  position: absolute; 
-  right: 0; 
-  width: 140px;
-  background-color: #00000038;
-  height: 100%; 
+.iditema{
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px;
+  width: 30%;
 }
-
 /*=================================================*/
-
-.background {
-  height: 2000px;
-  background-color: rgba(0, 0, 255, 0.192);
-}
-/*================================================*/
 
 /*======================Boton Desplegable No-Responsive=========================*/
 .menu-toggle,

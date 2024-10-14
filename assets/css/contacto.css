@@ -41,7 +41,7 @@
     --formMsjComentButtonTexto: #000000;
     --formMsjComentButtonFondo:  #dedede;
     
-    --formMsjComentButtonBorderHover: #000;
+    
     --formMsjComentButtonTextoHover: #fff;
     --formMsjComentButtonFondoHover:  #146597;
 
@@ -73,7 +73,6 @@
     --formMsjComentButtonTexto: #e8e6e3;
     --formMsjComentButtonFondo: #2b2e30;
 
-    --formMsjComentButtonBorderHover: #8c8273;
     --formMsjComentButtonTextoHover: #e8e6e3;
     --formMsjComentButtonFondoHover: #105179;
 
@@ -142,7 +141,7 @@ body {
 #sectionForm aside .info-wrap .row{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 25px;
     height: 100%;
 }
 
@@ -247,7 +246,7 @@ input:focus, textarea:focus{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     height: max-content;
 } 
 
@@ -265,14 +264,21 @@ form button{
     margin-top:10px ;
     transition: 0.2s ease;
     cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 400;
     color: var(--formMsjComentButtonTexto);
     background-color: var(--formMsjComentButtonFondo);
+
 }
 
 form button:hover{
     background-color: var(--formMsjComentButtonFondoHover);
     color: var(--formMsjComentButtonTextoHover);
     border: solid 1px var(--formMsjComentButtonBorderHover);
+    box-shadow: 0 5px 10px #00000045;
+    font-size: calc(1.1rem * 1.15);
+    
+
 }
 textarea{
     border: solid 1px;
