@@ -16,36 +16,66 @@
 <body tema="light">
 
     
-    <nav>
-
-        <div class="dmdLogo"><img id="dmdLogo" src="assets/img/logo2.png" alt="DMD Logo"></div>
+    <nav class="navigation">
+        <img loading="lazy" src="assets/img/logos/logo2.png" alt="Logo" id="navimg" />
     
-        <div class="navmenu">
+        <button class="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+    
+        <ul id="nav-container">
+          <button class="close-menu">
             <i class="fa-solid fa-bars"></i>
-        </div>
-
-        <div class="menudesp active">
-            <div class="navText">
-                <!--<i class="fa-solid fa-bars" id="navList"></i>-->
-                <p class="aText" id="inicio" data-es="Inicio" data-en="Home">Inicio</p>
-                <p class="aText" id="nosotros" data-es="Nosotros" data-en="About Us">Nosotros</p>
-                <p class="aText" id="contacto" data-es="Contacto" data-en="Contact">Contacto</p>
-            </div>
-            
+          </button>
+    
+          <ul class="nav-items">
+            <!-- Contenedor para los elementos de navegación -->
+            <li class="nav-item">
+              <span class="link" data-href="index.html">Inicio</span>
+            </li>
+            <li class="nav-item">
+              <span class="link" data-href="nosotros.html">Empresa</span>
+              <div class="submenu">
+                <ul class="submenu-items">
+                  <li><span data-href="nosotros.html" class="tooltipOff link">Nosotros</span></li>
+                  <li><span data-href="preguntas.html" class="tooltipOff link">Saber Más</span></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <span>Soluciones</span>
+              <div class="submenu">
+                <ul class="submenu-items">
+                  <li><span data-href="detalle.html" class="tooltipOff link" >Compresores</span></li>
+                  <li><span data-href="servicios.html" class="tooltipOff link">Servicios</span></li>
+                  <li><span data-href="tratamientos.html" class="tooltipOff link">Tratamientos</span></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <span class="link" data-href="contacto.html" >Contacto</span>
+            </li>
+          </ul>
         
+    
+          <div class="iditema">
+            
             <div class="temas" id="themeSelect">
                 <p id="light"><i class='bx bx-sun'></i></p>
                 <p id="dark"><i class='bx bx-moon'></i></p>
             </div>
-            
-            <hr class="hrNav" style="height: 40px; margin: 0 10px;">
-            
+    
+            <hr class="hrNav">
+    
             <div class="lenguaje">
-                <p id="espanol"><img src="assets/img/logos/ingles.png" alt="Inglés"></p>
-                <p id="ingles"><img src="assets/img/logos/arg.png" alt="Español"></p>
+                <p id="espanol"><img class="idiomas" src="assets/img/logos/ingles.png" alt="Inglés"></p>
+                <p id="ingles"><img class="idiomas" src="assets/img/logos/arg.png" alt="Español"></p>
             </div>
-        </div>
-    </nav>
+    
+    
+          </div>
+        </ul>
+      </nav>
     
     
     <!---------------------------------------------------------------->

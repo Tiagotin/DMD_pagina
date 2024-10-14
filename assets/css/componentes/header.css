@@ -28,15 +28,10 @@ body {
   width: 100%;
   z-index: 2000;
   background-color: #fff;
-  position: fixed;
+  position: sticky;
 }
-.navigation::after {
-  content: '';
-  display: block;
-  padding: 0 42px;
-  width: 100%;
-  visibility: hidden; /* Hace que el pseudo-elemento sea invisible */
-}
+
+
 
 /*IMG*/
 .navigation #navimg {
