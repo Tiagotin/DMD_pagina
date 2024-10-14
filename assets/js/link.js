@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const temasLeg = document.querySelector(".iditema");
   const navItems = document.querySelectorAll(".nav-item");
   const navImg = document.getElementById("navimg");
+  const logoLink = document.getElementById("logo-link");
+
 
   /*-------------------------------
   -----------NAV STICKY------------
@@ -72,6 +74,23 @@ document.addEventListener("DOMContentLoaded", () => {
       "Contacto": "contacto.html"
   };
 
+    logoLink.addEventListener('dragstart', (event) => {
+        // Establecer el enlace como el dato arrastrado
+        event.dataTransfer.setData('text/plain', logoLink.href);
+    });
+
+    // Agregar un manejador para el evento drop
+    window.addEventListener('drop', (event) => {
+        event.preventDefault();
+        const url = event.dataTransfer.getData('text/plain');
+        window.location.href = url; // Redirigir al enlace arrastrado
+    });
+
+    // Prevenir que la página se recargue al arrastrar
+    window.addEventListener('dragover', (event) => {
+        event.preventDefault();
+    });
+  
   navItems.forEach(navItem => {
       const mainLink = navItem.querySelector("span");
       const link = navLinks[mainLink.textContent.trim()];
