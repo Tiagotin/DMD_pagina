@@ -315,7 +315,6 @@ body {
     color: #fff; 
   }
 
-  .navigation.active .tooltipOff{pointer-events: none;}
 
   .navigation.active .nav-items .nav-item .submenu {
     position: static;
