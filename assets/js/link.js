@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //--------------------------------
   const navLinks = {
       "Inicio": "index.html",
-      
+      "Nosotros": "nosotros.html",
       "Saber Más": "preguntas.html",
       "Compresores": "detalle.html",
       "Servicios": "servicios.html",
