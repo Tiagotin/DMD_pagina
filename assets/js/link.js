@@ -55,6 +55,48 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", toggleStickyClasses);
   });
 
+
+//------------------------------------------------
+// Switch DARK -----------------------------------
+//------------------------------------------------
+
+const temalight = document.querySelector("#light");
+const temaDark = document.querySelector("#dark");
+
+// Función para cambiar el tema y actualizar el estado de los íconos
+function cambiaTema(theme) {
+    if (theme === 'light') {
+        temalight.style.display = "none";
+        temaDark.style.display = "block";
+        document.body.setAttribute('tema', 'light');
+        localStorage.setItem('modoOscuro', 'light');
+    } else {
+        temaDark.style.display = "none";
+        temalight.style.display = "block";
+        document.body.setAttribute('tema', 'dark');
+        localStorage.setItem('modoOscuro', 'dark');
+    }
+}
+
+// Eventos para cambiar el tema cuando se hace clic en los íconos
+temalight.addEventListener("click", function() {
+    cambiaTema('light');
+});
+
+temaDark.addEventListener("click", function() {
+    cambiaTema('dark');
+});
+
+// Verificar si el modo oscuro está guardado en localStorage y aplicar el tema correspondiente
+const modoOscuroActivo = localStorage.getItem('modoOscuro');
+
+if (modoOscuroActivo === 'dark') {
+    cambiaTema('dark');  // Aplica el tema oscuro si estaba guardado
+} else {
+    cambiaTema('light'); // Aplica el tema claro por defecto
+}
+
+
 //----------------------------------------------------------
 //-------------------- wpp -----------------------------------
 //------------------------------------------------------------
