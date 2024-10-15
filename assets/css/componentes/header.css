@@ -361,10 +361,16 @@ body {
 
   #themeSelect{
     width: 100%;
+    display: flex; justify-content: center;
   }
 
   .lenguaje{
     width: 100%;
+    display: flex; justify-content: center;
+  } 
+
+  .hrNav{
+    height: auto; width:50%;
   }
 
 }
