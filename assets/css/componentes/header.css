@@ -358,9 +358,15 @@ body {
     grid-area: iditema; 
   }
 @media (max-width: 250px){
-  .navigation.active .iditema {
-    flex-direction: column;
+
+  #themeSelect{
+    width: 100%;
   }
+
+  .lenguaje{
+    width: 100%;
+  }
+
 }
   .navigation.active .nav-item {
     flex-wrap: wrap; 
