@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-width: 0;
 }
 
 [tema="light"]{
@@ -131,11 +132,11 @@ body {
     z-index: 2; /* Aseguramos que el texto esté por encima del fondo oscuro */
 }
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw + 1rem, 3rem); /* Tamaño de fuente del título principal (ajustable) */
     margin-bottom: 10px;
 }
 .hero p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem); /* Tamaño de fuente del párrafo en la sección Hero (ajustable) */
 }
 
 
@@ -188,20 +189,17 @@ body {
     min-width: 250px;
 }
 .compresor-info h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: clamp(1.5rem, 3vw + 0.5rem, 2rem); /* Tamaño de fuente para el encabezado h2 en información del compresor (ajustable) */    margin-bottom: 10px;
 }
 
 .compresor-info h4 {
-    font-size: 1.4rem;
-    letter-spacing: 10;
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.4rem); /* Ajustado */    letter-spacing: 10;
     margin-bottom: 20px;
     
 }
 
 .compresor-info p {
-    font-size: 1rem;
-    flex-grow: 1;
+    font-size: clamp(0.9rem, 1.5vw + 0.5rem, 1rem); /* Ajustado */    flex-grow: 1;
     margin-bottom: 50px;
     word-spacing: 2px;
     min-width: 30px;
@@ -212,8 +210,7 @@ body {
     padding: 12px 25px;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: clamp(0.9rem, 1.5vw + 0.5rem, 1rem); /* Ajustado */    transition: background-color 0.3s ease, transform 0.3s ease;
     border-radius: 5px;;
 }
 
@@ -229,9 +226,13 @@ body {
     flex-direction: column;
     align-items: start;
     gap: 20px;
+    
 }
 
-.compresor-tecdesc h2{margin-left: 10px;}
+.compresor-tecdesc h2{
+    margin-left: 10px; 
+    font-size: clamp(1.2rem, 2vw + 1rem, 1.8rem); /* Ajusta el tamaño según la pantalla */
+}
 
 .compresor-tecdesc table{
     border: solid 1px;
@@ -248,21 +249,20 @@ body {
 #CompresorVI table:nth-of-type(3) {width: 90%;}
 
 .compresor-tecdesc .text{
-    font-size: 1.1rem; /* Tamaño de fuente */
-    flex-grow: 1; /* Permitir que crezca */
-    margin: 25px 0 50px; /* Espacio inferior */
-    letter-spacing: 1px; /* Espaciado entre letras */
-    line-height: 1.6; /* Altura de línea para mayor legibilidad */
-    border-left: 4px solid; /* Borde izquierdo colorido */
-    padding: 15px 20px; /* Relleno interno */
-    border-radius: 5px; /* Bordes redondeados */
+    font-size: clamp(1rem, 1.5vw + 0.5rem, 1.1rem);
+    flex-grow: 1;
+    margin: 25px 0 50px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    border-left: 4px solid;
+    padding: 15px 20px;
+    border-radius: 5px; 
 }
  
 .compresor-tecdesc table th, .compresor-tecdesc table td{padding: 10px;}
-
-thead th{font-size: 1.3rem;}
-tbody td:nth-child(odd) {font-size: 0.95rem;}
-tbody tr{font-size: 0.9rem;}
+thead th{font-size: clamp(1.4rem, 2.5vw + 1rem, 1.6rem); /* Ajusta el tamaño según la pantalla */}
+tbody td:nth-child(odd) {grid-area: tdodd;font-size: clamp(0.9rem, 1.2vw + 0.3rem, 0.95rem);}
+tbody tr{font-size:  clamp(0.8rem, 1vw + 0.2rem, 0.9rem);}
 
 
 
@@ -289,6 +289,59 @@ tbody tr{font-size: 0.9rem;}
     object-fit: cover;
     object-position: center;
         
+}
+
+
+.paginacion{
+    margin: 20px 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.paginacion ul{
+    width: max-content;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.paginacion ul li{
+    border: solid 2px #dadada;
+    color: #646464;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 35px;
+    height: 35px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.paginacion ul li.active{border: solid 2px #3483fa; color: #000; }
+.paginacion ul li:hover{border: solid 2px #5a9cff; color: #000;background-color: #77adff;}
+
+.paginacion span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    padding: 2px 10px;
+    border-radius: 10px;
+    border: solid 2px #dadada;
+    color: #646464;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.paginOff{visibility: hidden;}
+
+.paginacion span:hover{
+    background-color: #4b93ff;
+    color: #fff;
+    border: solid 2px #4b93ff;
 }
 
 .consul p{
@@ -428,15 +481,18 @@ tbody tr:nth-child(odd) {
 
     .compresor-info{
         padding: 0 50px;
+        min-width: 0;
     }    
     .compresor-info p {
         padding: 0 10px;
     }
+    .paginOff{display: none !important;}
+    tbody td{display: block;}
 }
 
 @media (max-width: 480px){
     .compresores {
-        padding: 0 10px;
+        padding: 0 10px 30px;
     }
     .compresor{
         padding: 0;
@@ -453,6 +509,7 @@ tbody tr:nth-child(odd) {
 
     .compresor-info{
         padding: 0 20px;
+        min-width: 0;
     }    
     .compresor-info h2{
         text-align: center;
@@ -461,15 +518,27 @@ tbody tr:nth-child(odd) {
     .compresor-info p {
         padding: 0 10px;
         max-height: 650px;
+        min-width: 0;
+        overflow: scroll;
         height: auto;
         margin-bottom: 20px;
     }
 
-    .compresor-tecdesc table{
-        margin: 0 auto;}
 
-        tbody td:nth-child(odd) {display: flex; align-items: start;}
-        #CompresorVI table:nth-of-type(2){
-            width: 80%;
-        }
+    tbody td:nth-child(odd) {display: flex; align-items: start;}
+
+    tbody td{display: block;}
+    
+    #CompresorVI table{
+        width: 80% !important;
+        margin: 0 auto;
+    }
+    
+    #compresorZero table{
+        width: 80% !important;
+        margin: 0 auto;
+    }
+
+    .paginacion{flex-wrap: wrap;}
+    .paginOff{display: none !important;}
 }
