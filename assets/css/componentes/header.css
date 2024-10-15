@@ -379,7 +379,7 @@ body {
     background-color: var(--NavLateral);
   }
 
-  .navigation.active .nav-items .nav-item span {
+  .mainButton{
     width: 100%; 
     padding: 20px 30px; 
     cursor: pointer; 
@@ -390,7 +390,7 @@ body {
     margin: 0 15px;
   }
 
-  .navigation.active .nav-items .nav-item span:hover {
+  .mainButton:hover {
     background-color: var(--navLateralMainBgColorHover);
     color: var(--navLateralMainTextColorHover); 
   }
@@ -408,7 +408,9 @@ body {
 
   .submenu.active .submenu-items li{
     border-radius: 5px;
+    display: flex;
   }
+  .submenu.active .submenu-items li span{flex: 1;}
 
   .navigation.active .nav-item span.active{
     background-color: var(--navLateralMainBgColorActive);
@@ -426,6 +428,7 @@ body {
     flex-direction: column;
     gap: 10px;
   }
+  
 }
 
 /*========================================================================*/
