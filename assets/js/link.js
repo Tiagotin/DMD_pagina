@@ -14,25 +14,32 @@ document.addEventListener("DOMContentLoaded", () => {
   -------------------------------*/
 
   // Función para manejar el clic en .nav-item
-  navItems.forEach((navItem) => {
-      navItem.addEventListener("click", () => {
-          const mainMenu = navItem.querySelector("span");
-          const submenu = navItem.querySelector(".submenu");
-          if (submenu) {
-              mainMenu.classList.toggle("active");
-              submenu.classList.toggle("active");
-          }
-      });
-  });
+    navItems.forEach((navItem) => {
+        navItem.addEventListener("click", () => {
+            const mainMenu = navItem.querySelector("span");
+            const submenu = navItem.querySelector(".submenu");
+            if (submenu) {
+                mainMenu.classList.toggle("active");
+                submenu.classList.toggle("active");
+            }
+        });
+    });
 
-  menuToggle.addEventListener("click", () => {
-      navigation.classList.toggle("active");
-  });
+    menuToggle.addEventListener("click", () => {
+        navigation.classList.toggle("active");
+    });
 
-  closeMenuButton.addEventListener("click", () => {
-      navigation.classList.remove("active");
-  });
+    closeMenuButton.addEventListener("click", () => {
+        navigation.classList.remove("active");
+    });
 
+  // Cerrar menú al hacer clic fuera de él
+    document.addEventListener("click", (event) => {
+        // Si el clic no está dentro del menú ni del botón que abre/cierra
+        if (!navigation.contains(event.target) && !menuToggle.contains(event.target)) {
+            navigation.classList.remove("active");
+        }
+    });
   // Función para manejar la clase sticky
   const toggleStickyClasses = () => {
       const scrollPosition = window.scrollY;
