@@ -51,6 +51,19 @@
     --fondoBtn: #0056b3;
 
 
+
+    --paginacNumBorderColor: #dadada;
+    --paginacNumTextColor: #646464;
+    --paginacNumBorderColorActive: #3483fa;
+    --paginacNumTextColorActive: #000;
+    --paginacNumBorderColorHover: #5a9cff;
+    --paginacNumTextColorHover: #000;
+    --paginacNumBgColorHover: #77adff;
+    --paginacSpanTextColor: #646464;
+    --paginacSpanBorderColor: #dadada;
+    --paginacSpanBgColorHover: #4b93ff;
+    --paginacSpanTextColorHover: #fff;
+    --paginacSpanBorderColorHover: #4b93ff;
 /*===============================*/
 /*===============================*/
 }
@@ -93,6 +106,19 @@
     --consulPFondo: #7c0d1e;
     --consulPTextColor: #e8e6e3;
     --consulAColor: #e8e6e3;
+
+    --paginacNumBorderColor: #3a3f42;
+    --paginacNumTextColor: #a9a196;
+    --paginacNumBorderColorActive: #0442a0;
+    --paginacNumTextColorActive: #e8e6e3;
+    --paginacNumBorderColorHover: #003d98;
+    --paginacNumTextColorHover: #e8e6e3;
+    --paginacNumBgColorHover: #003585;
+    --paginacSpanTextColor: #a9a196;
+    --paginacSpanBorderColor: #3a3f42;
+    --paginacSpanBgColorHover: #00409f;
+    --paginacSpanTextColorHover: #e8e6e3;
+    --paginacSpanBorderColorHover: #003e9c;
 /*===============================*/
 /*===============================*/
 
@@ -308,8 +334,8 @@ tbody tr{font-size:  clamp(0.8rem, 1vw + 0.2rem, 0.9rem);}
 }
 
 .paginacion ul li{
-    border: solid 2px #dadada;
-    color: #646464;
+    border: solid 2px var(--paginacNumBorderColor);
+    color: var(--paginacNumTextColor);
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -320,8 +346,17 @@ tbody tr{font-size:  clamp(0.8rem, 1vw + 0.2rem, 0.9rem);}
     transition: 0.2s ease;
     cursor: pointer;
 }
-.paginacion ul li.active{border: solid 2px #3483fa; color: #000; }
-.paginacion ul li:hover{border: solid 2px #5a9cff; color: #000;background-color: #77adff;}
+
+.paginacion ul li.active {
+    border: solid 2px var(--paginacNumBorderColorActive);
+    color: var(--paginacNumTextColorActive);
+}
+.paginacion ul li:hover{
+    border: solid 2px var(--paginacNumBorderColorHover);
+    color: var(--paginacNumTextColorHover);
+    background-color:var(--paginacNumBgColorHover);
+}
+    
 
 .paginacion span{
     display: flex;
@@ -330,8 +365,8 @@ tbody tr{font-size:  clamp(0.8rem, 1vw + 0.2rem, 0.9rem);}
     font-size: 1.2rem;
     padding: 2px 10px;
     border-radius: 10px;
-    border: solid 2px #dadada;
-    color: #646464;
+    border: solid 2px var(--paginacSpanBorderColor);
+    color: var(--paginacSpanTextColor);
     transition: 0.2s ease;
     cursor: pointer;
 }
@@ -339,9 +374,9 @@ tbody tr{font-size:  clamp(0.8rem, 1vw + 0.2rem, 0.9rem);}
 .paginOff{visibility: hidden;}
 
 .paginacion span:hover{
-    background-color: #4b93ff;
-    color: #fff;
-    border: solid 2px #4b93ff;
+    background-color: var(--paginacSpanBgColorHover);
+    color: var(--paginacSpanTextColorHover);
+    border: solid 2px var(--paginacSpanBorderColorHover);
 }
 
 .consul p{
