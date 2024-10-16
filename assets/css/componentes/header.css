@@ -335,6 +335,7 @@ body {
     height: 100%; 
     align-content: start; 
     cursor: default; 
+    border: solid 2px green;
   }
 
   .navigation.active .nav-item {
