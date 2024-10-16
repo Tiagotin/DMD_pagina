@@ -307,7 +307,7 @@ body {
     background-color: var(--navLateralBgColor);
     display: grid; 
     grid-template-areas: "close-menu" "nav-items" "iditema"; 
-    grid-template-rows: repeat(3, max-content); 
+    grid-template-rows: max-content max-content max-content; 
     align-items: start; 
     overflow: scroll;
   }
