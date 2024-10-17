@@ -446,9 +446,6 @@ section.trayectoria #titulo h3{
 }
 
 @media (max-width: 768px){
-    section.noParallax, #compromiso{
-        
-    }
     #reversa{flex-direction: row;}
     section.noParallax img, #compromiso img{
         width: 100%;
