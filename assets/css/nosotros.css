@@ -209,12 +209,26 @@ section.noParallax {
 
 
 #video{
-    padding: 0;
+    padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
+[tema="light"]{
+    --videoH1: #000;
+}
+
+[tema="dark"]{
+    --videoH1: #fff;
+}
+#video h1{
+    font-size: 4rem;
+    letter-spacing: 3px;
+    color: var(--videoH1)
+}
 #video .videoInicial {height: 450px;}
 
 #compromiso{
