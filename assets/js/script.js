@@ -5,12 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
     //----------------------------------------------------------
     //-------------------- Botón carrusel --------------------
     //------------------------------------------------------------
-    const vermas = document.getElementById('verr');
-    vermas.addEventListener('click', () => {
-        // Redirige al usuario a contacto.html
-        window.location.href = 'nosotros.html';
-    });
+    const vermas = document.getElementsByClassName('verr');
 
+    // Itera sobre la colección de botones
+    for (let i = 0; i < vermas.length; i++) {
+        vermas[i].addEventListener('click', () => {
+            // Redirige al usuario a contacto.html
+            window.location.href = 'nosotros.html';
+        });
+    }
+    
     // Botón de "Quiero saber más"
     document.getElementById('quieroSaberMas').addEventListener('click', () => {
         window.location.href = 'preguntas.html';
