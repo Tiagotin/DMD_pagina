@@ -326,8 +326,8 @@ body {
     z-index: -1;
 }
 
-.content:nth-child(1)::before { background-image: url(../img/carrusel/Backroom5.webp); 
-    filter: brightness(50%); 
+.content:nth-child(1)::before { background-image: url(../img/carrusel/programando2.webp); 
+    filter: brightness(90%); 
 }
 .content:nth-child(2)::before { background-image: url(../img/carrusel/galpon.webp); 
     filter: brightness(60%); 
