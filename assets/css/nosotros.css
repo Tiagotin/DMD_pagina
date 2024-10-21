@@ -157,6 +157,7 @@ body {
 
 
 
+
 section.noParallax {
     padding: 40px 30px;
     display: flex;
@@ -205,6 +206,16 @@ section.noParallax {
 #reversa{
     flex-direction: row-reverse;
 }
+
+
+#video{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video .videoInicial {height: 450px;}
 
 #compromiso{
     align-items: center;
