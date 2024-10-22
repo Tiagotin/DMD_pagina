@@ -96,7 +96,6 @@ article aside span{font-size: 1.3rem;}
 #aplicaciones ul li .imgContainer{ display: flex; width: 200px; min-height: 150px; max-height: 200px;}
 
 #aplicaciones ul li .imgContainer img{flex: 1; max-width: 200px;}
-#aplicaciones ul li .imgContainer img{background-image: url(../img/productos/condensador.webp); background-position: center; background-size: cover;}
 
 #aplicaciones ul li .text{flex: 1; padding: 10px; min-width: 300px;
     position: relative;}
@@ -138,10 +137,28 @@ article aside span{font-size: 1.3rem;}
 
 #dreycond ul li .imgContainer{width: 150px; margin: 0 auto; display: flex;}
 #dreycond ul li .imgContainer img{flex: 1; min-width: 150px;min-height: 150px; max-height: 150px;}
-#dreycond ul li .imgContainer img{background-image: url(../img/productos/condensador.webp); background-position: center; background-size: cover;}
 
-#dreycond ul li .text{flex: 1;padding: 10px; min-width: 150px; max-height: 200px; overflow: scroll;}
-#dreycond ul li .text h1{color: red;}
+#dreycond ul li .text{flex: 1;padding: 10px; min-width: 150px;}
+#dreycond ul li .text h1 {color: red; font-size:  clamp(12px, 1vw + 0.8rem, 24px);}
+#dreycond ul li .text span {display: block ;font-size:  clamp(12px, 1vw + 0.5rem, 24px); max-height: 150px; overflow: scroll;}    
+
+
+
+
+
+#circuito{
+    margin: 0 auto;
+    width: 40%;
+    height: 600px;
+    display: flex;
+    display: none;
+}
+
+#circuito img{
+    flex: 1;
+    object-fit: cover;
+}
+
 
 @media (max-width:776px){
     article{

@@ -218,16 +218,21 @@ section.noParallax {
 }
 
 [tema="light"]{
-    --videoH1: #000;
+    --videoH1: #ae0d24;
+    --videoBorderB: #ae0d24;
 }
 
 [tema="dark"]{
     --videoH1: #fff;
+    --videoBorderB: #fff;
 }
 #video h1{
     font-size: 4rem;
+    padding: 0 30px;
     letter-spacing: 3px;
-    color: var(--videoH1)
+    color: var(--videoH1);
+    font-weight: 600;
+    border-bottom: var(--videoBorderB) solid 5px;
 }
 #video .videoInicial {height: 450px;}
 
