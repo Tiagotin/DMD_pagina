@@ -1,51 +1,26 @@
-
 /* General Reset */
-* {
-    margin: 0;
+* { margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    list-style-type: none;
 }
 
+html {height: 100%;}
+
+body {/* 
+    margin: 0;
+    padding: 0; */
+    background-color: var(--body);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 [tema=light]{
 /*          Colores              */
 /*===============================*/
     --body: #f5f7fa;
-
-    /*Titulo (Hero)*/
-/*===============================*/
-    --heroH1:#fff;
-    --heroP:#ddd;
-/*===============================*/
-/*===============================*/
-
-    /*Detalle*/
-/*===============================*/
-    --serviciosFondo: #fff;
-    --serviciosBorderColor: #dfdede;
-
-    --contentTitleTextColor: #2c3e50; /*h2*/
-    --contentTitleBorderB: #c0392b; /*underline*/
-
-    --contentPTextColor: #333; /*p*/
-    --contentPList: #ae0d24; /*°*/
-    --contentListStrong: #000;
-    --contentListTextColor: #000; 
-
-/*===============================*/
-/*===============================*/
-
-    /*comTablas*/
-/*===============================*/
-    --CardH2Color: #ae0d24;
-    --CardPColor: #000;
-
-    --cardTablaTextColor: #000;
-    --CardTablaFondo: #fdfdfd;
-    --CardTablaBorder: #dadada;
-    --CardTablaFondoODD: #ececec;
-/*===============================*/
-/*===============================*/
 
     /*Consulta*/
 /*===============================*/
@@ -58,264 +33,159 @@
 }
 
 [tema="dark"]{
+/*          Colores              */
+/*===============================*/
 
     --body: #1c1f20;
 
-    --heroH1: #e8e6e3;
-    --heroP: #d3cfc9;
-
-    --serviciosFondo: #181a1b;
-    --serviciosBorderColor: #393e40;
-
-    --contentTitleTextColor: #aec2d3;
-    --contentTitleBorderB: #972d22;
-
-    --contentPTextColor: #c8c3bc;
-    --contentPList: #f2566c;
-    --contentListStrong: #e8e6e3;
-    --contentListTextColor: #e8e6e3;
-
-    --CardH2Color: #f2566c;
-    --CardPColor: #e8e6e3;
-
-    --cardTablaTextColor: #fff;
-    --CardTablaFondo: #191b1c;
-    --CardTablaBorder: #3a3f42;
-    --CardTablaFondoODD: #232627;
-
+    /*Consulta*/
+/*===============================*/
     --consulPFondo: #7c0d1e;
     --consulPTextColor: #fff;
     --consulAColor: #fff;
+/*===============================*/
+/*===============================*/
 }
 
-body{
-    background-color: var(--body);
-    font-family: 'Roboto', sans-serif;
-}
-/* Hero section */
-.hero {
-    background-image: url('../img/carrusel/maquinin2.webp');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 100px 10px;
-    border-radius: 10px;
-    position: relative;
-    margin-top: 10px;
-}
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia */
-    z-index: 1;
-}
-
-.hero h1, .hero p {
-    position: relative;
-    z-index: 2; /* Aseguramos que el texto esté por encima del fondo oscuro */
-}
-.hero h1 {
-    font-size: 2.5rem;
-    margin:35px 0 10px;
-}
-.hero p {
-    font-size: 1.2rem;
-}
-
-
-
-/* Product Section */
-.serviciosCards {
-    display: flex;
-    flex-direction:column;
-    gap: 35px;
-    padding: 50px 35px;
-    background-color: var(--serviciosFondo);
-}
-
-
-.servicio {
-    border: 1px solid ;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 20px 35px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.servicio:nth-child(even){
-    flex-direction: row-reverse;
-}
-.img-contenedor{
-    width: 420px;
-}
-
-.img-contenedor img{
-    width: 100%;
-    object-fit: cover;
-}
-
-.servicio:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-
-.servicio .cards{
-    width: 500px;
+main{
+    flex-grow: 1;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin: 20px 20px 0;
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 2000px;
 }
 
-.cards h2, .cards p{
-    color: var(--contentPTextColor);
-}
-.cards p{margin-bottom: 10px;}
-
-table{
-    border-radius: 2px;
+article{
     border: solid 1px;
-    margin: 0px 30px 30px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
+article .imgContainer{flex: 1.5; min-height: 500px; padding: 10px; display: flex;}
+article .imgContainer img{flex: 1;}
 
-table th, table td{padding: 10px;}
-tbody td:nth-child(odd) {font-size: 0.95rem; width: 45%;}
-tbody tr{font-size: 0.9rem;}
+article aside{
+    flex: 1;
+    height: max-content;
+    padding: 20px;
+
+}
+article aside span{font-size: 1.3rem;}
 
 
-
-
-
-
-.hero h1 {
-    color: var(--heroH1);
+#aplicaciones ul{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px 70px;
+    gap: 40px;
 }
 
-.hero p {
-    color: var(--heroP);
+#aplicaciones ul li{
+    background-color: #ebebeb;
+    border-radius: 10px;
+    padding: 30px 15px;
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-    
+#aplicaciones ul li .imgContainer{ display: flex; width: 200px; min-height: 150px; max-height: 200px;}
 
-.servicio {
-    background-color: var(--serviciosFondo);
-    border: 1px solid var(--serviciosBorderColor);
+#aplicaciones ul li .imgContainer img{flex: 1; max-width: 200px;}
+#aplicaciones ul li .imgContainer img{background-image: url(../img/productos/condensador.webp); background-position: center; background-size: cover;}
+
+#aplicaciones ul li .text{flex: 1; padding: 10px; min-width: 300px;
+    position: relative;}
+#aplicaciones ul li .text span{display: block ;max-height: 180px; overflow: scroll;}
+
+#aplicaciones ul li .text h1 {color: red; font-size:  clamp(12px, 1vw + 0.8rem, 24px);}
+#aplicaciones ul li .text span {            font-size:  clamp(12px, 1vw + 0.5rem, 24px);}    
+
+#appCard:nth-child(1){ width: 100%;}
+#appCard:nth-child(2){ width: 100%;}
+
+#appCard:nth-child(3),
+#appCard:nth-child(4){ flex: 0.5 ; flex-direction: column;}
+
+#appCard:nth-child(3) .imgContainer,
+#appCard:nth-child(4) .imgContainer{margin: 0 auto;}
+
+#appCard:nth-child(3) .text,
+#appCard:nth-child(4) .text{flex: 1; padding: 10px; min-width: 0 !important;}
+
+
+#dreycond ul{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 30px 15px;
+    gap: 80px;
 }
 
- table {
-    border: var(--CardTablaBorder);
-    background-color: var(--CardTablaFondo);
-    color: var(--cardTablaTextColor);
+#dreycond ul li{
+    padding: 18px 15px;
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    background-color: #ebebeb;
+    border-radius: 10px;
 }
 
-tbody tr:nth-child(odd) {
-    background-color: var(--CardTablaFondoODD);
+#dreycond ul li .imgContainer{width: 150px; margin: 0 auto; display: flex;}
+#dreycond ul li .imgContainer img{flex: 1; min-width: 150px;min-height: 150px; max-height: 150px;}
+#dreycond ul li .imgContainer img{background-image: url(../img/productos/condensador.webp); background-position: center; background-size: cover;}
+
+#dreycond ul li .text{flex: 1;padding: 10px; min-width: 150px; max-height: 200px; overflow: scroll;}
+#dreycond ul li .text h1{color: red;}
+
+@media (max-width:776px){
+    article{
+        flex-direction: column;
+        flex: none;
+    }
+    article .imgContainer{min-height: 100px;}
+    article .imgContainer img{width: 100%;}
+    article aside{padding: 5px 20px 20px;}
+
+
+
+    #aplicaciones ul{padding: 20px 10px;}
+
+    #aplicaciones ul li .text{min-width: 0px;}
+
+    #appCard{width: 100%;}
+    #appCard:nth-child(3), #appCard:nth-child(4){flex: none;flex-direction: row;}
+
+
+
+    #dreycond ul{
+        gap: 5%;
+        
+    }
+    #dreycond ul li{margin-bottom: 20px;}
 }
-
-.consul p {
-    background-color: var(--consulPFondo);
-    color: var(--consulPTextColor);
-}
-
-.consul p a {
-    color: var(--consulAColor);
-}
-
-
 
 
 .consul p{
-    margin: 0 auto;
+    background-color: var(--consulPFondo);
+    color: var(--consulPTextColor);
     width: 100%;
-    text-align: center;
-    font-size: 1.6rem;
     padding: 10px 0;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    text-align: center;
 }
 
+.consul p a:hover{text-decoration: underline ;}
 .consul p a{
-    text-decoration: none;
-    text-decoration: underline  transparent;
+    color: var(--consulAColor);
+    text-decoration: underline transparent;
     transition: 0.2s ease;
 }
 
-.consul p a:hover{
-    text-decoration: underline ;
-}
 
-
-/*
-
-
-.hero h1 {
-    color: var(--heroH1);
-}
-
-.hero p {
-    color: var(--heroP);
-}
-
-    
-
-
-
-.compresor-info h2 {
-    color: var(--contentTitleTextColor);
-    border-bottom: var(--contentTitleBorderB) solid;
-}
-
-
-.content p {
-    color: var(--contentPTextColor);
-}
-    
-.content li::before {
-    color: var(--contentPList);
-}
-    
-.content li {
-    color: var(--contentListTextColor);
-}
-    
-.content strong {
-    color: var(--contentListStrong);
-}
-
-
-#comTablas h2 {
-    color: var(--CardH2Color);
-}
-
-#comTablas p {
-    color: var(--CardPColor);
-}
-
-
-#comTablas table {
-    border: var(--CardTablaBorder);
-    background-color: var(--CardTablaFondo);
-    color: var(--cardTablaTextColor);
-}
-
-tbody tr:nth-child(odd) {
-    background-color: var(--CardTablaFondoODD);
-}
-
-
-.consul p {
-    background-color: var(--consulPFondo);
-    color: var(--consulPTextColor);
-}
-
-.consul p a {
-    color: var(--consulAColor);
-}
-*/
