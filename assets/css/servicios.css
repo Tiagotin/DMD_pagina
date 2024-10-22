@@ -189,7 +189,7 @@ body {
 .compresor .compresor-img img {
     width: 100%;
     object-fit: cover; object-position: center;
-    filter: drop-shadow(-8px 30px 18px #0000005d);
+    filter: drop-shadow(0px 20px 8px #00000041);
 }
 .compresor-info {
     display: flex;
@@ -259,22 +259,6 @@ body {
 
 .compresor-tecdesc h2{margin-left: 10px;}
 
-.detalleCompresor{
-    margin: 0 auto;
-    width: 90%;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-    display: flex;
-    justify-content: center;
-    display: none;
-    
-}
-
-.compresor-img2{
-    width: 500px;
-    height: max-content;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
 
 .compresor-img img{
     width: 400px;
