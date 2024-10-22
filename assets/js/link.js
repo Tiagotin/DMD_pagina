@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const logoLink = document.getElementById("logo-link");
 
 
+
   /*-------------------------------
   -----------NAV STICKY------------
   -------------------------------*/
@@ -193,4 +194,17 @@ document.querySelector('.fa-envelope.fContacto').addEventListener('click', funct
 // Funcionalidad para iniciar una llamada (en dispositivos móviles)
 document.querySelector('.fa-phone.fContacto').addEventListener('click', function () {
   window.location.href = "tel:+541139592363";
+});
+
+
+//redes
+const logos = document.querySelectorAll('.logos');
+logos.forEach(logo => {
+    // Añadimos el evento de clic a cada ícono
+    logo.addEventListener('click', function() {
+        // Obtenemos la URL desde el atributo data-url
+        const url = this.getAttribute('data-url');
+        // Redirigimos al usuario a la URL
+        window.open(url, '_blank');
+    });
 });
