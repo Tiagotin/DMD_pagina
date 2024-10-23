@@ -155,7 +155,7 @@ article aside span strong{font-size: clamp(6px, 0.6rem + 1vw, 24px);}
   display: block;
   max-height: 180px;
   overflow: scroll;
-  font-size: clamp(12px, 1vw + 0.3rem, 24px);
+  font-size: clamp(14px, 1vw + 0.3rem, 24px);
 }
 
 #appCard:nth-child(1) {
