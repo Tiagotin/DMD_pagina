@@ -239,6 +239,28 @@ input:focus, textarea:focus{
     border: none;
 }
 
+
+select{
+    height: 20px; 
+    font-size: 1rem;
+    padding: 20px 1px;
+    color: var(--formInputTextColor);
+    background-color: var(--formInputFondo);
+    border: 1px solid var(--formInputBorder);
+}
+
+select:focus, textarea:focus{
+    transition: 0.2s ease;
+    outline: 1px var(--formInputFocus) solid;
+    border: none;
+}
+
+option{
+   display: flex;
+   justify-content: center;
+}
+
+
 .mensaje{
     width: 100%;
     align-items: center;

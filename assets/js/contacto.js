@@ -17,12 +17,17 @@ document.getElementById('formulario').addEventListener('submit', function(event)
     const mensaje = document.getElementById('mensaje').value;
     const telefono = document.getElementById('telefono').value;
     const empresa = document.getElementById('empresa').value;
+    const rubro = document.getElementById('rubro').value;  // Nuevo campo: Rubro
+    const actividad = document.getElementById('actividad').value; 
 
     // Codificar los datos para el formato URL
     const nombreEncoded = encodeURIComponent(nombre);
     const mensajeEncoded = encodeURIComponent(mensaje);
     const telefonoEncoded = encodeURIComponent(telefono);
     const empresaEncoded = encodeURIComponent(empresa);
+    const rubroEncoded = encodeURIComponent(rubro);  // Codificar rubro
+    const actividadEncoded = encodeURIComponent(actividad); 
+
 
     // Crear el asunto con el nombre
     const asunto = `Consulta de ${nombreEncoded}`;
@@ -31,8 +36,10 @@ document.getElementById('formulario').addEventListener('submit', function(event)
     // Crear el cuerpo del mensaje con todos los datos
     const cuerpoMensaje = `Nombre: ${nombreEncoded}%0A` + 
                           `Teléfono: ${telefonoEncoded}%0A` + 
-                          `Empresa: ${empresaEncoded}%0A%0A` + 
-                          `Mensaje: ${mensajeEncoded}`;
+                          `Empresa: ${empresaEncoded}%0A` + 
+                          `Rubro: ${rubroEncoded}%0A` +  // Agregar rubro al mensaje
+                          `Actividad: ${actividadEncoded}%0A%0A` +
+                          `${mensajeEncoded}`;
     
     // Crear el enlace mailto con destinatario por defecto
     const mailtoLink = `mailto:info@dmdcompresores.com?subject=${asuntoEncoded}&body=${cuerpoMensaje}`;
