@@ -97,7 +97,7 @@ article aside {
 
 article aside span {
   display: block;
-  font-size: clamp(6px, 0.3rem + 1vw, 24px);
+  font-size: clamp(12px, 0.3rem + 1vw, 24px);
   max-height: 260px;
   font-weight: 500;
   letter-spacing: 0.035rem;
