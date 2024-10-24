@@ -237,6 +237,7 @@ article aside span strong{font-size: clamp(6px, 0.6rem + 1vw, 24px);}
     padding: 40px 10px;
   }
   article {
+    padding: 20px 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
