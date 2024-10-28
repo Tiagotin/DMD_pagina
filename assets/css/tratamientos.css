@@ -153,8 +153,7 @@ article aside span strong{font-size: clamp(6px, 0.6rem + 1vw, 24px);}
 }
 #aplicaciones ul li .text span {
   display: block;
-  max-height: 500px;
-  overflow: scroll;
+  overflow: auto;
   font-size: clamp(14px, 1vw + 0.3rem, 24px);
 }
 
@@ -300,7 +299,7 @@ article aside span strong{font-size: clamp(6px, 0.6rem + 1vw, 24px);}
   display: block;
   font-size: clamp(12px, 1vw + 0.3rem, 24px);
   max-height: 150px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 @media (max-width: 768px) {
